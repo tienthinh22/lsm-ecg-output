@@ -1,0 +1,42 @@
+{
+  "accuracy": 0.935588050596573,
+  "macro_f1": 0.3222407613397602,
+  "macro_recall": 0.3333333333333333,
+  "macro_precision": 0.311862683532191,
+  "n": 11147,
+  "confusion_matrix": [
+    [
+      10429,
+      0,
+      0
+    ],
+    [
+      81,
+      0,
+      0
+    ],
+    [
+      637,
+      0,
+      0
+    ]
+  ],
+  "recall_N": 1.0,
+  "precision_N": 0.935588050596573,
+  "f1_N": 0.9667222840192806,
+  "specificity_N": 0.0,
+  "fpr_N": 1.0,
+  "support_N": 10429,
+  "recall_SVEB": 0.0,
+  "precision_SVEB": 0.0,
+  "f1_SVEB": 0.0,
+  "specificity_SVEB": 1.0,
+  "fpr_SVEB": 0.0,
+  "support_SVEB": 81,
+  "recall_VEB": 0.0,
+  "precision_VEB": 0.0,
+  "f1_VEB": 0.0,
+  "specificity_VEB": 1.0,
+  "fpr_VEB": 0.0,
+  "support_VEB": 637
+}

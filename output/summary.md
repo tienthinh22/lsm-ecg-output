@@ -1,5 +1,5 @@
 # LSM-ECG replication: results so far
-_Updated 2026-11-20T23:45:36 UTC, session 20261120_200941. Runner stopped: all planned runs are done._
+_Updated 2026-11-21T09:21:44 UTC, session 20261121_065408. Runner stopped: all planned runs are done._
 
 ## Environment
 | torch | torch_pinned_2_4_0 | gpu | cuda | python | snntorch | sklearn | smoke_test |
@@ -42,8 +42,11 @@ _Updated 2026-11-20T23:45:36 UTC, session 20261120_200941. Runner stopped: all p
 | rrliqmean_cv | 216 | 0 |
 | meanrr_nn | 78 | 0 |
 | hybrid | 390 | 0 |
+| working_diag | 1 | 0 |
+| working_final | 12 | 0 |
+| working_cv | 144 | 0 |
 
-## Self-test (session 20261120_200941): all checks passed
+## Self-test (session 20261121_065408): all checks passed
 - PASS packages: python 3.13.13, torch 2.14.1+cu126, numpy 2.1.3, sklearn 1.7.2, snntorch 0.9.4, wfdb 4.3.1, brian2 2.10.1
 - NOTE torch 2.4.0 (authors'): 2.14.1+cu126 (fine; only matters for the exact-replication attempt)
 - PASS brian2: 2.10.1
@@ -57,13 +60,14 @@ _Updated 2026-11-20T23:45:36 UTC, session 20261120_200941. Runner stopped: all p
 - PASS liquid + readout (fixed): 64 beats: firing 0.0268/step, drive/target 1.00
 - PASS GPU simulator vs reference: fixed: 0 of 109,760 window counts differ; published: 0 of 109,760 window counts differ (simulate() on cuda vs the float64 equations Brian2 matched, 10 DS2 beats)
 - PASS extensions (Huang, hybrid, ELM+RR): Huang 2-matrix ensemble on 200 beats: Macro-F1 0.793; hybrid rule ok; RR window counts ok; Huang beats (50557, 200), mean-RR ratio median 1.000
-- PASS disk: 774 GB free at /root/lsm_ecg/output (all outputs together grow to ~12 GB)
-- PASS RAM / cores: 113.3 GB RAM, 38 cores -> 4 parallel fits
-- PASS log file: /root/lsm_ecg/output/logs/session_20261120_200941.log (tail -f /root/lsm_ecg/output/logs/latest.log)
+- PASS working liquid (g_rec, raster): g_rec scales recurrent weights only: True; raster == simulate(): True; lambda 2: 2666 recurrent synapses
+- PASS disk: 763 GB free at /root/lsm_ecg/output (all outputs together grow to ~12 GB)
+- PASS RAM / cores: 113.3 GB RAM, 38 cores -> 1 parallel fits
+- PASS log file: /root/lsm_ecg/output/logs/session_20261121_065408.log (tail -f /root/lsm_ecg/output/logs/latest.log)
 
 ## Resources this session
-- runner: pipeline, 4 parallel fits; CPU cores 38; RAM 113.3 GB; GPU Tesla P40
-- process peak RAM 20.9 GB; lowest available RAM 90.9 GB; peak GPU memory 5.97 GB (details: logs/resources_20261120_200941.csv)
+- runner: pipeline, 1 parallel fits; CPU cores 38; RAM 113.3 GB; GPU Tesla P40
+- process peak RAM 8.0 GB; lowest available RAM 103.1 GB; peak GPU memory 4.69 GB (details: logs/resources_20261121_065408.csv)
 
 ## Projected time remaining (from measured speeds)
 ```
@@ -211,11 +215,13 @@ torch 2.4.0 active: False; GPU: Tesla P40 (authors: RTX 4060 Laptop, CUDA 11.8).
 | CNN tuned + RR | - | final | 0.6388 | 0.0357 | 0.3488 | 0.3014 | 0.9293 | 0.8852 |  | 3 |
 | RR + beat shape, linear | - | final | 0.6376 |  | 0.1034 | 0.1316 | 0.7552 | 0.9409 |  | 1 |
 | random features (ELM) + RR channels | latency | final | 0.6328 | 0.0016 | 0.1190 | 0.1375 | 0.9185 | 0.9237 |  | 3 |
+| liquid fixed, lambda 2.0, g_rec 30 | multi | final | 0.6294 | 0.0012 | 0.0838 | 0.0989 | 0.9340 | 0.9211 | 0.0331 | 3 |
 | liquid published, RR in liquid (+ mean-RR ratio) | latency | final | 0.6275 | 0.0135 | 0.1504 | 0.1595 | 0.9074 | 0.9198 | 0.3573 | 3 |
 | liquid fixed, RR in liquid (+ mean-RR ratio) | latency | final | 0.6254 | 0.0078 | 0.1363 | 0.1495 | 0.9099 | 0.9246 | 0.0175 | 3 |
 | liquid fixed, RR in readout | multi | final | 0.6216 | 0.0025 | 0.0818 | 0.0953 | 0.9334 | 0.9169 | 0.0276 | 3 |
 | liquid fixed | multi | final | 0.6199 | 0.0028 | 0.0806 | 0.0939 | 0.9323 | 0.9163 | 0.0276 | 3 |
 | liquid fixed, recurrence off | multi | final | 0.6188 | 0.0005 | 0.0813 | 0.0935 | 0.9332 | 0.9152 | 0.0276 | 3 |
+| liquid fixed, recurrence off, lambda 2.0, g_rec 30 | multi | final | 0.6188 | 0.0005 | 0.0813 | 0.0935 | 0.9332 | 0.9152 | 0.0276 | 3 |
 | liquid fixed, lambda 1.5 | multi | final | 0.6188 | 0.0028 | 0.0820 | 0.0958 | 0.9342 | 0.9156 | 0.0277 | 3 |
 | liquid fixed, lambda 2.5 | multi | final | 0.6187 | 0.0018 | 0.0818 | 0.0956 | 0.9329 | 0.9157 | 0.0277 | 3 |
 | no liquid (encoder counts) | multi | final | 0.6092 |  | 0.0849 | 0.1075 | 0.9124 | 0.9144 |  | 1 |
@@ -244,8 +250,6 @@ torch 2.4.0 active: False; GPU: Tesla P40 (authors: RTX 4060 Laptop, CUDA 11.8).
 | liquid fixed | rate | final | 0.5522 | 0.0057 | 0.0220 | 0.0366 | 0.8348 | 0.9048 | 0.0098 | 3 |
 | RR + beat shape, LDA | - | final | 0.5512 |  | 0.0338 | 0.0428 | 0.6033 | 0.9195 |  | 1 |
 | liquid fix_gamma | latency | final | 0.5505 | 0.0085 | 0.0254 | 0.0384 | 0.8598 | 0.8985 | 0.0241 | 3 |
-| liquid published, recurrence off | latency | final | 0.5495 | 0.0107 | 0.0256 | 0.0389 | 0.8568 | 0.8982 | 0.0240 | 3 |
-| no liquid (encoder counts) | latency | final | 0.5386 |  | 0.0114 | 0.0153 | 0.6340 | 0.9037 |  | 1 |
 
 ## Corrected resampled t-tests on DS1 CV (Nadeau & Bengio; seeds averaged per split)
 | comparison | n_splits | mean_diff | t | p |
@@ -316,6 +320,20 @@ Note: stage-2 CV numbers include the rep-1 folds used for the choice (slightly o
 | 21 | latency | 0.5322 | 0.5320 | 0.5241 |
 | 22 | latency | 0.5338 | 0.5301 | 0.5235 |
 
+## Working liquid: perturbation diagnostic (chosen g_rec = 30)
+| label | firing_per_step | last_window_firing_per_step | recurrent_over_input_current | perturbation_early | perturbation_late | damage_ratio | n_recurrent_synapses | chosen |
+|---|---|---|---|---|---|---|---|---|
+| lambda 2, g_rec 1 | 0.0289 | 0.0000 | 0.0124 | 0.4243 | 0.0906 | 0.2135 | 2666 | False |
+| lambda 2, g_rec 3 | 0.0292 | 0.0000 | 0.0376 | 0.4507 | 0.0983 | 0.2182 | 2666 | False |
+| lambda 2, g_rec 10 | 0.0303 | 0.0000 | 0.1299 | 0.5627 | 0.1456 | 0.2587 | 2666 | False |
+| lambda 2, g_rec 30 | 0.0345 | 0.0000 | 0.4498 | 0.9780 | 0.5248 | 0.5366 | 2666 | True |
+| lambda 2, g_rec 100 | 0.1170 | 0.0111 | 5.9407 | 18.6780 | 35.7062 | 1.9117 | 2666 | False |
+| lambda 2, g_rec 300 | 0.4818 | 0.4810 | 58.3022 | 5.5867 | 11.5983 | 2.0761 | 2666 | False |
+| lambda 2, g_rec 1000 | 0.5434 | 0.5490 | 219.8698 | 0.4527 | 0.3112 | 0.6874 | 2666 | False |
+| lambda 2, recurrence off | 0.0288 | 0.0000 | 0.0000 | 0.4133 | 0.0835 | 0.2020 | 0 | False |
+| paper as described (lambda 0.8, g_rec 1) | 0.0289 | 0.0000 | 0.0058 | 0.4177 | 0.0850 | 0.2035 | 163 | False |
+| paper as published (both bugs) | 0.4765 | 0.1987 | 9.1759 | 13.4353 | 1.2751 | 0.0949 | 163 | False |
+
 ## Extensions: Huang baseline, hybrid SVEB rule, mean-RR feature, ELM + RR (descriptive; verdicts come later)
 | variant | encoder | cv_macro_f1 | cv_splits | cv_reps23 | ds2_macro_f1 | ds2_sd | ds2_runs | ds2_recall_SVEB | ds2_precision_SVEB | ds2_recall_VEB | ds2_precision_VEB | rep1_vote_ave_N_VEB | huang_primary |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -341,6 +359,10 @@ Note: stage-2 CV numbers include the rep-1 folds used for the choice (slightly o
 | random features (ELM) + RR channels | rate | 0.6558 | 12 | 0.6469 | 0.6482 | 0.0009 | 3 | 0.1238 | 0.2015 | 0.9127 | 0.7580 |  | False |
 | RR + beat shape + mean-RR ratio, linear | - | 0.5258 | 12 | 0.4985 | 0.6408 |  | 1 | 0.1040 | 0.1837 | 0.7645 | 0.8699 |  | False |
 | random features (ELM) + RR channels | latency | 0.6523 | 12 | 0.6407 | 0.6328 | 0.0016 | 3 | 0.1190 | 0.1633 | 0.9185 | 0.7055 |  | False |
+| liquid fixed, lambda 2.0, g_rec 30 | multi | 0.6131 | 12 | 0.6003 | 0.6294 | 0.0012 | 3 | 0.0838 | 0.1207 | 0.9340 | 0.7498 |  | False |
 | liquid published, RR in liquid (+ mean-RR ratio) | latency | 0.6619 | 12 | 0.6373 | 0.6275 | 0.0135 | 3 | 0.1504 | 0.1704 | 0.9074 | 0.6526 |  | False |
 | liquid fixed, RR in liquid (+ mean-RR ratio) | latency | 0.6360 | 12 | 0.6133 | 0.6254 | 0.0078 | 3 | 0.1363 | 0.1657 | 0.9099 | 0.6496 |  | False |
+| liquid fixed, recurrence off, lambda 2.0, g_rec 30 | multi | 0.6156 | 12 | 0.6004 | 0.6188 | 0.0005 | 3 | 0.0813 | 0.1102 | 0.9332 | 0.7139 |  | False |
 | RR only + mean-RR ratio, linear | - | 0.5393 | 12 | 0.5294 | 0.5558 |  | 1 | 0.0316 | 0.0866 | 0.7167 | 0.5866 |  | False |
+| liquid fixed, lambda 2.0, g_rec 30, last-window readout | multi | 0.3170 | 12 | 0.3169 | 0.3153 | 0.0000 | 3 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  | False |
+| liquid fixed, recurrence off, lambda 2.0, g_rec 30, last-window readout | multi | 0.3170 | 12 | 0.3169 | 0.3153 | 0.0000 | 3 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |  | False |

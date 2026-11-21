@@ -1,0 +1,5 @@
+lsm__fixed_s420_morph-robust-multi_svm_lam2.0_grec30__final__fe471ad0
+macro_f1=0.6285505245598019
+accuracy=0.9215375872706608
+confusion_matrix=[[42244, 984, 988], [1635, 152, 50], [130, 79, 3010]]
+timing={'shared_seconds': 37.79109525680542, 'simulation_seconds': 36.09790897369385, 'beats_simulated': 99829, 'readout_seconds': 107.7108223438263, 'total_seconds': 145.5019176006317, 'readout_threads': 1, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

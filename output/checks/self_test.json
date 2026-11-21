@@ -53,17 +53,21 @@
       "ok": true,
       "detail": "Huang 2-matrix ensemble on 200 beats: Macro-F1 0.793; hybrid rule ok; RR window counts ok; Huang beats (50557, 200), mean-RR ratio median 1.000"
     },
+    "working liquid (g_rec, raster)": {
+      "ok": true,
+      "detail": "g_rec scales recurrent weights only: True; raster == simulate(): True; lambda 2: 2666 recurrent synapses"
+    },
     "disk": {
       "ok": true,
-      "detail": "774 GB free at /root/lsm_ecg/output (all outputs together grow to ~12 GB)"
+      "detail": "763 GB free at /root/lsm_ecg/output (all outputs together grow to ~12 GB)"
     },
     "RAM / cores": {
       "ok": true,
-      "detail": "113.3 GB RAM, 38 cores -> 4 parallel fits"
+      "detail": "113.3 GB RAM, 38 cores -> 1 parallel fits"
     },
     "log file": {
       "ok": true,
-      "detail": "/root/lsm_ecg/output/logs/session_20261120_200941.log (tail -f /root/lsm_ecg/output/logs/latest.log)"
+      "detail": "/root/lsm_ecg/output/logs/session_20261121_065408.log (tail -f /root/lsm_ecg/output/logs/latest.log)"
     }
   },
   "env": {
@@ -93,5 +97,5 @@
     "brian2": "2.10.1",
     "authors_commit": "02e45c4f3232886aed16a40d77de1f851ef4fcdd"
   },
-  "session": "20261120_200941"
+  "session": "20261121_065408"
 }
