@@ -1,0 +1,5 @@
+lsm__published_s2026_morph-standard-rate_lr_ain0.05892__cv-r3f1__e492eaf7
+macro_f1=0.3351900484453081
+accuracy=0.7193654266958425
+confusion_matrix=[[7632, 59, 2588], [90, 2, 11], [327, 3, 256]]
+timing={'shared_seconds': 22.733275651931763, 'simulation_seconds': 22.32497477531433, 'beats_simulated': 50557, 'readout_seconds': 97.77957153320312, 'total_seconds': 120.51284718513489, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

@@ -1,0 +1,9 @@
+
+===== Projected time for everything that is left =====
+ group  runs  jobs  hours
+retune    35    35   0.21
+TOTAL remaining: 0.2 h  ->  one continuous run (safety stop at 240.0 h)
+runner: pipeline: 38 parallel fits (CPU cores 38, RAM allows 39), 222 s per Gcell per fit under load
+machine: local; device: Tesla P40; CPU: Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+measured speeds: ['encode_beats_per_s:latency', 'encode_beats_per_s:multi', 'encode_beats_per_s:rate', 'fit_s_per_Gcell:pipe', 'lsm_job_overhead_s', 'sim_beats_per_s:latency', 'sim_beats_per_s:multi', 'sim_beats_per_s:rate']
+still default guesses (less reliable): nn_s_per_epoch_kbeat:cnn, nn_s_per_epoch_kbeat:gru, nn_unit_s_per_epoch_kbeat:cnn, nn_unit_s_per_epoch_kbeat:gru

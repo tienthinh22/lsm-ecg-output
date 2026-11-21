@@ -1,0 +1,5 @@
+model,best_trial,epochs,n_params,cv_macro_f1,untuned_arch_best_cv_macro_f1,arch
+CNN,21,20,7883,0.6446969541585373,0.4580020772405274,"{""dropout"": 0.1, ""head"": 32, ""kernels"": [5, 5], ""layers"": 2, ""lr"": 0.001, ""pool"": ""flat8"", ""wd"": 0.0, ""width"": 12}"
+CNN + RR,24,10,4563,0.7063554622646996,0.6968315115888741,"{""dropout"": 0.0, ""head"": 32, ""kernels"": [11, 11], ""layers"": 2, ""lr"": 0.001, ""pool"": ""avg"", ""wd"": 0.001, ""width"": 12}"
+GRU,22,20,25299,0.6375198464902717,0.4659473489850934,"{""bidir"": false, ""dropout"": 0.0, ""ds"": 8, ""head"": 64, ""hidden"": 80, ""layers"": 1, ""lr"": 0.003, ""readout"": ""mean"", ""wd"": 0.0}"
+GRU + RR,16,15,18147,0.6915082831770163,0.6907984097288523,"{""bidir"": true, ""dropout"": 0.1, ""ds"": 4, ""head"": 32, ""hidden"": 48, ""layers"": 1, ""lr"": 0.001, ""readout"": ""last"", ""wd"": 0.0}"

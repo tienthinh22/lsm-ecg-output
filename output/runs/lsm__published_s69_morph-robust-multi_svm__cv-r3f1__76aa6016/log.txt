@@ -1,0 +1,5 @@
+lsm__published_s69_morph-robust-multi_svm__cv-r3f1__76aa6016
+macro_f1=0.6405289622080104
+accuracy=0.9468453683442742
+confusion_matrix=[[9787, 73, 419], [52, 24, 27], [7, 5, 574]]
+timing={'shared_seconds': 17.159887313842773, 'simulation_seconds': 16.54315686225891, 'beats_simulated': 50557, 'readout_seconds': 93.4361560344696, 'total_seconds': 110.59604334831238, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

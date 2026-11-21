@@ -1,0 +1,5 @@
+nn__gru-tuned_s2026_e20__cv-r2f1__48e51667
+macro_f1=0.6169387348969573
+accuracy=0.9419574773481654
+confusion_matrix=[[10121, 22, 286], [49, 25, 7], [259, 24, 354]]
+timing={'total_seconds': 14.384725570678711, 'epochs': 20}

@@ -1,0 +1,5 @@
+lsm__published_s420_morph-robust-latency_svm__cv-r1f2__f381e4d2
+macro_f1=0.5706750500377669
+accuracy=0.9753381066030231
+confusion_matrix=[[10920, 5, 53], [101, 26, 78], [38, 4, 88]]
+timing={'shared_seconds': 20.129985809326172, 'simulation_seconds': 19.520861387252808, 'beats_simulated': 50557, 'readout_seconds': 93.22038555145264, 'total_seconds': 113.35037136077881, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

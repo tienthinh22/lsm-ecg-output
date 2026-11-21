@@ -1,0 +1,5 @@
+nn__gru+rr-tuned-meanrr_s69_e15__cv-r2f1__424fa8bd
+macro_f1=0.6225472056255895
+accuracy=0.968332286713914
+confusion_matrix=[[10352, 31, 46], [53, 8, 20], [189, 14, 434]]
+timing={'total_seconds': 16.276774406433105, 'epochs': 15}

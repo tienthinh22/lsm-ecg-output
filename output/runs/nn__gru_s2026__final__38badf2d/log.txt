@@ -1,0 +1,5 @@
+nn__gru_s2026__final__38badf2d
+macro_f1=0.45122935878504294
+accuracy=0.8338407208962494
+confusion_matrix=[[38484, 0, 5732], [1820, 0, 17], [618, 0, 2601]]
+timing={'total_seconds': 15.424496412277222, 'epochs': 15}

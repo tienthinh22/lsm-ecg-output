@@ -1,0 +1,5 @@
+nn__gru-tuned_s69_e20__cv-r3f1__52a4f916
+macro_f1=0.7321752202913702
+accuracy=0.9597921225382933
+confusion_matrix=[[9892, 278, 109], [25, 78, 0], [12, 17, 557]]
+timing={'total_seconds': 14.307688474655151, 'epochs': 20}

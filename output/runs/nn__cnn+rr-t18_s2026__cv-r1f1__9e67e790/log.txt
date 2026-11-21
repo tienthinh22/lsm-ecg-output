@@ -1,0 +1,5 @@
+nn__cnn+rr-t18_s2026__cv-r1f1__9e67e790
+macro_f1=0.6010880301734302
+accuracy=0.9225144895229603
+confusion_matrix=[[9345, 198, 327], [31, 19, 129], [130, 54, 982]]
+timing={'total_seconds': 40.004355669021606, 'epochs': 30}

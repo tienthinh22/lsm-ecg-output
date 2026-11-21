@@ -1,0 +1,49 @@
+{
+  "A_in_used": 0.05892,
+  "A_in_source": "paper (hard-coded)",
+  "A_in_paper": 0.05892,
+  "mu_in": 7.6374745417515335,
+  "I_target": 0.04500000000000004,
+  "normalization": {
+    "p_low": -1.3337499999999998,
+    "p_high": 2.9375
+  },
+  "reservoir_id": "11a5e6834947",
+  "structure": {
+    "n_recurrent_synapses": 163,
+    "mean_recurrent_in_degree": 0.4752186588921283,
+    "neurons_without_recurrent_input": 210,
+    "n_input_synapses": 7943,
+    "mean_input_in_degree": 23.157434402332363,
+    "mean_nonzero_input_weight": 7.6374735832214355,
+    "threshold": 1.0,
+    "n_excitatory": 274,
+    "EE_synapses": 112,
+    "EE_mean_abs_weight": 37.99669647216797,
+    "EI_synapses": 22,
+    "EI_mean_abs_weight": 36.93527603149414,
+    "IE_synapses": 27,
+    "IE_mean_abs_weight": 15.081657409667969,
+    "II_synapses": 2,
+    "II_mean_abs_weight": 19.167896270751953
+  },
+  "DS1_simulation": {
+    "liquid_firing_prob_per_step": 0.7694666148515162,
+    "excitatory_firing_prob": 0.7806352954591327,
+    "inhibitory_firing_prob": 0.7251156222937347,
+    "silent_neurons": 0,
+    "silent_fraction": 0.0,
+    "liquid_spikes_per_beat_mean": 168913.296875,
+    "input_spikes_per_step": 4.222223322996379,
+    "mean_input_current_per_neuron_step": 3.3651785619844476,
+    "input_current_over_target": 74.78174582187654,
+    "mean_abs_recurrent_current": 12.601413964944962,
+    "n_beats": 50557,
+    "encode_seconds": 1.6314737796783447,
+    "simulate_seconds": 14.8992600440979,
+    "liquid_spikes_per_beat_N": 170305.09375,
+    "liquid_spikes_per_beat_SVEB": 151431.671875,
+    "liquid_spikes_per_beat_VEB": 156424.109375
+  },
+  "DS2_simulation": null
+}

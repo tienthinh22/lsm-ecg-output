@@ -1,0 +1,5 @@
+lsm__published_s420_morph-robust-rate_svm_rrliq_meanrr__cv-r1f4__04f53c4f
+macro_f1=0.6956309076973444
+accuracy=0.9541679724224381
+confusion_matrix=[[11155, 11, 119], [367, 51, 5], [78, 5, 973]]
+timing={'shared_seconds': 24.599840879440308, 'simulation_seconds': 24.01523447036743, 'beats_simulated': 50557, 'readout_seconds': 89.13845872879028, 'total_seconds': 113.73829960823059, 'readout_threads': 4, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

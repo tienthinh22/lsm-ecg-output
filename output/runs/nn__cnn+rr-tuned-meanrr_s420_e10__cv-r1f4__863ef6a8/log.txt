@@ -1,0 +1,5 @@
+nn__cnn+rr-tuned-meanrr_s420_e10__cv-r1f4__863ef6a8
+macro_f1=0.7080884729735705
+accuracy=0.9608273268567847
+confusion_matrix=[[11243, 1, 41], [369, 50, 4], [79, 6, 971]]
+timing={'total_seconds': 11.75598430633545, 'epochs': 10}

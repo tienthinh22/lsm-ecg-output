@@ -1,0 +1,5 @@
+nn__cnn_s420__cv-r2f2__4bbe313c
+macro_f1=0.48165592622318515
+accuracy=0.8392920668801138
+confusion_matrix=[[8579, 247, 737], [98, 0, 1], [719, 5, 858]]
+timing={'total_seconds': 33.66177487373352, 'epochs': 15}

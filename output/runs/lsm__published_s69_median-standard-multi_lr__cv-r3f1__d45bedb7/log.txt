@@ -1,0 +1,5 @@
+lsm__published_s69_median-standard-multi_lr__cv-r3f1__d45bedb7
+macro_f1=0.6775313800438133
+accuracy=0.9854121079504011
+confusion_matrix=[[10239, 0, 40], [84, 6, 13], [15, 8, 563]]
+timing={'shared_seconds': 16.84235644340515, 'simulation_seconds': 16.415644884109497, 'beats_simulated': 50557, 'readout_seconds': 81.07347679138184, 'total_seconds': 97.91583323478699, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

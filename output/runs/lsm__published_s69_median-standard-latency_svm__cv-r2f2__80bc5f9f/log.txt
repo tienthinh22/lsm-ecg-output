@@ -1,0 +1,5 @@
+lsm__published_s69_median-standard-latency_svm__cv-r2f2__80bc5f9f
+macro_f1=0.6513223915756778
+accuracy=0.9491284240483814
+confusion_matrix=[[9465, 64, 34], [78, 19, 2], [286, 108, 1188]]
+timing={'shared_seconds': 19.667846202850342, 'simulation_seconds': 19.2415292263031, 'beats_simulated': 50557, 'readout_seconds': 103.60300540924072, 'total_seconds': 123.27085161209106, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

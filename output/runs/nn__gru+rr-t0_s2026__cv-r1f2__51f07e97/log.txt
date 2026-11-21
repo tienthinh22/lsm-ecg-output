@@ -1,0 +1,5 @@
+nn__gru+rr-t0_s2026__cv-r1f2__51f07e97
+macro_f1=0.8567501536738842
+accuracy=0.9923981260496774
+confusion_matrix=[[10975, 1, 2], [20, 136, 49], [12, 2, 116]]
+timing={'total_seconds': 24.222355127334595, 'epochs': 30}
