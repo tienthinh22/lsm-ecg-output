@@ -1,0 +1,5 @@
+lsm__fixed_s420_median-robust-latency_lr__final__adb94e20
+macro_f1=0.6121892246771169
+accuracy=0.9286613086540023
+confusion_matrix=[[42831, 523, 862], [1751, 66, 20], [327, 32, 2860]]
+timing={'shared_seconds': 45.33598756790161, 'simulation_seconds': 44.1580753326416, 'beats_simulated': 99829, 'readout_seconds': 111.45343232154846, 'total_seconds': 156.78941988945007, 'readout_threads': 5, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

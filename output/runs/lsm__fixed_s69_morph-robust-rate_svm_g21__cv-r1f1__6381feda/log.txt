@@ -1,0 +1,5 @@
+lsm__fixed_s69_morph-robust-rate_svm_g21__cv-r1f1__6381feda
+macro_f1=0.45822679681288014
+accuracy=0.8287115470352207
+confusion_matrix=[[8482, 14, 1374], [90, 0, 89], [350, 4, 812]]
+timing={'shared_seconds': 23.808393001556396, 'simulation_seconds': 22.202500820159912, 'beats_simulated': 50557, 'readout_seconds': 90.61493039131165, 'total_seconds': 114.42332339286804, 'readout_threads': 4, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

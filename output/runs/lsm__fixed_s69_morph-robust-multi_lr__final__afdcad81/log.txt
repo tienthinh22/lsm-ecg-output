@@ -1,0 +1,5 @@
+lsm__fixed_s69_morph-robust-multi_lr__final__afdcad81
+macro_f1=0.6236166944141371
+accuracy=0.9171131677220328
+confusion_matrix=[[42016, 1086, 1114], [1633, 159, 45], [124, 82, 3013]]
+timing={'shared_seconds': 38.98218393325806, 'simulation_seconds': 37.27859878540039, 'beats_simulated': 99829, 'readout_seconds': 110.74542260169983, 'total_seconds': 149.72760653495789, 'readout_threads': 4, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

@@ -1,0 +1,11 @@
+{
+  "shared_seconds": 20.322266340255737,
+  "simulation_seconds": 19.279595136642456,
+  "beats_simulated": 50557,
+  "readout_seconds": 94.15984010696411,
+  "total_seconds": 114.48210644721985,
+  "readout_threads": 10,
+  "readout_cores_per_fit": 1,
+  "prescaled": true,
+  "runner": "pipeline"
+}

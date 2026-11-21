@@ -1,0 +1,5 @@
+lsm__published_s2026_median-standard-rate_svm__cv-r2f1__500b9092
+macro_f1=0.41256513556675384
+accuracy=0.8652552256212434
+confusion_matrix=[[9384, 86, 959], [75, 3, 3], [369, 10, 258]]
+timing={'shared_seconds': 24.057886362075806, 'simulation_seconds': 23.584436416625977, 'beats_simulated': 50557, 'readout_seconds': 99.47812390327454, 'total_seconds': 123.53601026535034, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

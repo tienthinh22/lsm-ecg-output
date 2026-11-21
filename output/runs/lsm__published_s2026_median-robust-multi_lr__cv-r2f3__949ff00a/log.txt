@@ -1,0 +1,5 @@
+lsm__published_s2026_median-robust-multi_lr__cv-r2f3__949ff00a
+macro_f1=0.5052689995640813
+accuracy=0.9248621158942769
+confusion_matrix=[[12621, 24, 315], [393, 30, 112], [185, 20, 261]]
+timing={'shared_seconds': 17.025495529174805, 'simulation_seconds': 16.496718883514404, 'beats_simulated': 50557, 'readout_seconds': 91.24507427215576, 'total_seconds': 108.27056980133057, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

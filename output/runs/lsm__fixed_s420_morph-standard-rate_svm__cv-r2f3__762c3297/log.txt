@@ -1,0 +1,5 @@
+lsm__fixed_s420_morph-standard-rate_svm__cv-r2f3__762c3297
+macro_f1=0.3592042445569484
+accuracy=0.7806747367667073
+confusion_matrix=[[10660, 179, 2121], [445, 17, 73], [244, 0, 222]]
+timing={'shared_seconds': 24.259912729263306, 'simulation_seconds': 22.78032612800598, 'beats_simulated': 50557, 'readout_seconds': 91.8918468952179, 'total_seconds': 116.1517596244812, 'readout_threads': 7, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

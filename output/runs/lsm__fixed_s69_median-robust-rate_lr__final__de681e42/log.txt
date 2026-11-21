@@ -1,0 +1,5 @@
+lsm__fixed_s69_median-robust-rate_lr__final__de681e42
+macro_f1=0.5362889236866605
+accuracy=0.8965132326676408
+confusion_matrix=[[41440, 325, 2451], [1774, 25, 38], [471, 40, 2708]]
+timing={'shared_seconds': 53.79901480674744, 'simulation_seconds': 52.00482749938965, 'beats_simulated': 99829, 'readout_seconds': 115.87240552902222, 'total_seconds': 169.67142033576965, 'readout_threads': 5, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}
