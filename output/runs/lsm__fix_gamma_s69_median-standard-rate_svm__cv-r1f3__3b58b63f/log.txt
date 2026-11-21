@@ -1,0 +1,5 @@
+lsm__fix_gamma_s69_median-standard-rate_svm__cv-r1f3__3b58b63f
+macro_f1=0.4801094235872599
+accuracy=0.8593514575827055
+confusion_matrix=[[12563, 874, 257], [94, 23, 19], [823, 80, 532]]
+timing={'shared_seconds': 23.838792085647583, 'simulation_seconds': 23.39876365661621, 'beats_simulated': 50557, 'readout_seconds': 93.13357472419739, 'total_seconds': 116.97236680984497, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

@@ -1,0 +1,5 @@
+lsm__fix_gamma_s420_morph-standard-latency_lr__final__d42fbaae
+macro_f1=0.5831180073688417
+accuracy=0.9187571034258808
+confusion_matrix=[[42810, 734, 672], [1779, 38, 20], [766, 32, 2421]]
+timing={'shared_seconds': 46.5262496471405, 'simulation_seconds': 44.145671129226685, 'beats_simulated': 99829, 'readout_seconds': 111.39292287826538, 'total_seconds': 157.91917252540588, 'readout_threads': 5, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

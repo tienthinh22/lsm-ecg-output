@@ -1,0 +1,5 @@
+lsm__fixed_s2026_median-robust-latency_svm__cv-r2f2__a2627e7c
+macro_f1=0.7439891265700412
+accuracy=0.9572216293134116
+confusion_matrix=[[9394, 60, 109], [53, 46, 0], [220, 39, 1323]]
+timing={'shared_seconds': 20.61672282218933, 'simulation_seconds': 19.62099599838257, 'beats_simulated': 50557, 'readout_seconds': 92.75858879089355, 'total_seconds': 113.37531161308289, 'readout_threads': 9, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

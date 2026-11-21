@@ -1,0 +1,5 @@
+lsm__fix_ain_s69_median-standard-latency_svm__cv-r2f1__134aa950
+macro_f1=0.43456072656929856
+accuracy=0.9055351215573697
+confusion_matrix=[[9892, 120, 417], [77, 4, 0], [431, 8, 198]]
+timing={'shared_seconds': 20.22092318534851, 'simulation_seconds': 19.301684141159058, 'beats_simulated': 50557, 'readout_seconds': 93.09419655799866, 'total_seconds': 113.31511974334717, 'readout_threads': 9, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

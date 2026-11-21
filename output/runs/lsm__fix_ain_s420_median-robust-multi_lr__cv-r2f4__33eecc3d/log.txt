@@ -1,0 +1,5 @@
+lsm__fix_ain_s420_median-robust-multi_lr__cv-r2f4__33eecc3d
+macro_f1=0.6276198830792836
+accuracy=0.9167898627243928
+confusion_matrix=[[11923, 267, 685], [90, 60, 78], [47, 15, 1040]]
+timing={'shared_seconds': 18.073293924331665, 'simulation_seconds': 16.46824073791504, 'beats_simulated': 50557, 'readout_seconds': 91.96448969841003, 'total_seconds': 110.0377836227417, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

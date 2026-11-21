@@ -1,0 +1,5 @@
+lsm__fix_gamma_s420_morph-robust-rate_svm__cv-r2f3__9269c5ca
+macro_f1=0.37935408393768616
+accuracy=0.8723587135592006
+confusion_matrix=[[12045, 127, 788], [495, 10, 30], [337, 5, 124]]
+timing={'shared_seconds': 24.771621227264404, 'simulation_seconds': 24.170524835586548, 'beats_simulated': 50557, 'readout_seconds': 91.65954780578613, 'total_seconds': 116.43116903305054, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

@@ -1,0 +1,5 @@
+lsm__fix_gamma_s2026_median-robust-rate_svm__cv-r3f3__fab8212f
+macro_f1=0.48624437007507487
+accuracy=0.8865956665442527
+confusion_matrix=[[11641, 137, 539], [572, 6, 22], [269, 5, 424]]
+timing={'shared_seconds': 24.442871570587158, 'simulation_seconds': 23.825700044631958, 'beats_simulated': 50557, 'readout_seconds': 92.22046184539795, 'total_seconds': 116.66333341598511, 'readout_threads': 10, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

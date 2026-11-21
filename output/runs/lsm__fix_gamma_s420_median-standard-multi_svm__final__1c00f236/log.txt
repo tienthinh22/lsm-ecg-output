@@ -1,0 +1,5 @@
+lsm__fix_gamma_s420_median-standard-multi_svm__final__1c00f236
+macro_f1=0.6434061645119699
+accuracy=0.9401688585809385
+confusion_matrix=[[43522, 532, 162], [1683, 107, 47], [327, 197, 2695]]
+timing={'shared_seconds': 39.8038535118103, 'simulation_seconds': 37.42646360397339, 'beats_simulated': 99829, 'readout_seconds': 110.59282493591309, 'total_seconds': 150.3966784477234, 'readout_threads': 5, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

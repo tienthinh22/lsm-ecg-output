@@ -1,0 +1,5 @@
+lsm__fix_ain_s420_median-robust-latency_lr__cv-r1f3__52d99bc2
+macro_f1=0.5246932143625905
+accuracy=0.846315099901736
+confusion_matrix=[[11985, 1149, 560], [91, 26, 19], [354, 173, 908]]
+timing={'shared_seconds': 20.07957625389099, 'simulation_seconds': 19.024627208709717, 'beats_simulated': 50557, 'readout_seconds': 90.69585990905762, 'total_seconds': 110.77543616294861, 'readout_threads': 9, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

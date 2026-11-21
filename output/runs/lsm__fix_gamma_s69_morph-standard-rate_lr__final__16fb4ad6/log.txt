@@ -1,0 +1,5 @@
+lsm__fix_gamma_s69_morph-standard-rate_lr__final__16fb4ad6
+macro_f1=0.43143849771953685
+accuracy=0.8650349082643286
+confusion_matrix=[[41340, 251, 2625], [1754, 16, 67], [1934, 19, 1266]]
+timing={'shared_seconds': 54.36751914024353, 'simulation_seconds': 51.99185848236084, 'beats_simulated': 99829, 'readout_seconds': 113.77334237098694, 'total_seconds': 168.14086151123047, 'readout_threads': 5, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

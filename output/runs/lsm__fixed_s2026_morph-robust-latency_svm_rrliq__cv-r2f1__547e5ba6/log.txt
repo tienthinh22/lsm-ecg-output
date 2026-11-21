@@ -1,0 +1,5 @@
+lsm__fixed_s2026_morph-robust-latency_svm_rrliq__cv-r2f1__547e5ba6
+macro_f1=0.6472293938933741
+accuracy=0.9605274961873149
+confusion_matrix=[[10363, 21, 45], [40, 25, 16], [295, 23, 319]]
+timing={'shared_seconds': 20.964872121810913, 'simulation_seconds': 19.797298431396484, 'beats_simulated': 50557, 'readout_seconds': 87.8853063583374, 'total_seconds': 108.85017848014832, 'readout_threads': 2, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

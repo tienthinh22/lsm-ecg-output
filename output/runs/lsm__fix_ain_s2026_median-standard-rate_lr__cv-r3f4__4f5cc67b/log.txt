@@ -1,0 +1,5 @@
+lsm__fix_ain_s2026_median-standard-rate_lr__cv-r3f4__4f5cc67b
+macro_f1=0.5990445479636972
+accuracy=0.942962962962963
+confusion_matrix=[[13173, 119, 34], [91, 15, 27], [565, 11, 815]]
+timing={'shared_seconds': 24.5245144367218, 'simulation_seconds': 23.042967081069946, 'beats_simulated': 50557, 'readout_seconds': 93.82763624191284, 'total_seconds': 118.35215067863464, 'readout_threads': 8, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}
