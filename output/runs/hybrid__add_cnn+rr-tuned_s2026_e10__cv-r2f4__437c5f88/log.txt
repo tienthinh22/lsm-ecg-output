@@ -1,0 +1,5 @@
+hybrid__add_cnn+rr-tuned_s2026_e10__cv-r2f4__437c5f88
+macro_f1=0.5361002452515066
+accuracy=0.8666666666666667
+confusion_matrix=[[11290, 659, 926], [2, 28, 198], [109, 0, 993]]
+timing={'total_seconds': 0.0033724308013916016}

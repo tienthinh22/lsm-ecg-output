@@ -1,0 +1,6 @@
+{
+  "base_run": "lsm__published_s2026_morph-robust-multi_svm__cv-r1f1__3d6af0c7",
+  "base_label": "LSM published, config 11",
+  "rule": "replace",
+  "threshold": 0.8
+}

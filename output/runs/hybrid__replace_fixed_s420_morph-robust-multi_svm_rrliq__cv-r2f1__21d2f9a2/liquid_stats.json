@@ -1,0 +1,6 @@
+{
+  "base_run": "lsm__fixed_s420_morph-robust-multi_svm_rrliq__cv-r2f1__4d4b8a06",
+  "base_label": "LSM fixed, Multi + RR in liquid",
+  "rule": "replace",
+  "threshold": 0.8
+}

@@ -1,0 +1,5 @@
+hybrid__add_cnn+rr-tuned_s69_e10__cv-r3f4__1805485c
+macro_f1=0.546293075560743
+accuracy=0.8855892255892256
+confusion_matrix=[[12276, 690, 360], [2, 34, 97], [449, 101, 841]]
+timing={'total_seconds': 0.003241300582885742}

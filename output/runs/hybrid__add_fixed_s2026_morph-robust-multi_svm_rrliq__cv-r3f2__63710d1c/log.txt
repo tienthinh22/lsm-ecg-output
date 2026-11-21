@@ -1,0 +1,5 @@
+hybrid__add_fixed_s2026_morph-robust-multi_svm_rrliq__cv-r3f2__63710d1c
+macro_f1=0.688487547529338
+accuracy=0.9600862998921251
+confusion_matrix=[[9856, 49, 0], [53, 53, 1], [141, 200, 771]]
+timing={'total_seconds': 0.0030739307403564453}

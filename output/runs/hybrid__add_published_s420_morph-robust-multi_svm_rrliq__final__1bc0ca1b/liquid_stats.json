@@ -1,0 +1,6 @@
+{
+  "base_run": "lsm__published_s420_morph-robust-multi_svm_rrliq__final__30aab4bd",
+  "base_label": "LSM published, Multi + RR in liquid",
+  "rule": "add",
+  "threshold": 0.8
+}

@@ -1,0 +1,7 @@
+{
+  "normalization": {
+    "p_low": -1.3974999999999997,
+    "p_high": 2.85125
+  },
+  "feature_model": "raw_beat"
+}

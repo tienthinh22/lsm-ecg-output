@@ -1,0 +1,5 @@
+hybrid__replace_cnn+rr-tuned_s420_e10__cv-r3f4__58f1c22c
+macro_f1=0.42749445264989694
+accuracy=0.7505050505050505
+confusion_matrix=[[10259, 684, 2383], [4, 31, 98], [472, 64, 855]]
+timing={'total_seconds': 0.0033578872680664062}

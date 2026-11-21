@@ -1,0 +1,6 @@
+{
+  "base_run": "lsm__published_s69_morph-robust-multi_svm__cv-r3f4__6914ea3f",
+  "base_label": "LSM published, config 11",
+  "rule": "add",
+  "threshold": 0.8
+}

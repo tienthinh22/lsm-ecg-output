@@ -1,0 +1,6 @@
+{
+  "base_run": "nn__cnn+rr-tuned_s420_e10__cv-r2f2__f79bf3af",
+  "base_label": "CNN tuned + RR",
+  "rule": "replace",
+  "threshold": 0.8
+}

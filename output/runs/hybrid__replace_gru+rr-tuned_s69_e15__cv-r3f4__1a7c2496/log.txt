@@ -1,0 +1,5 @@
+hybrid__replace_gru+rr-tuned_s69_e15__cv-r3f4__1a7c2496
+macro_f1=0.6340801177030551
+accuracy=0.9252525252525252
+confusion_matrix=[[12608, 694, 24], [4, 45, 84], [271, 33, 1087]]
+timing={'total_seconds': 0.0032129287719726562}

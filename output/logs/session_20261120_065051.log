@@ -1,0 +1,187 @@
+session 20261120_065051: everything printed is also written to /root/lsm_ecg/output-merge/logs/session_20261120_065051.log (and /root/lsm_ecg/output-merge/logs/latest.log)
+GPU: Tesla P40, compute capability 6.1: supported by PyTorch 2.14.1+cu126 (CUDA 12.6)
+              python: 3.13.13
+            platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+               torch: 2.14.1+cu126
+  torch_pinned_2_4_0: False
+            snntorch: 0.9.4
+             sklearn: 1.7.2
+               numpy: 2.1.3
+               scipy: 1.14.1
+              pandas: 2.2.3
+                wfdb: 4.3.1
+              device: cuda
+           cpu_count: 38
+              ram_gb: 113.3
+           on_kaggle: False
+             machine: local
+          smoke_test: False
+            pipeline: True
+           cpu_model: Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+                 gpu: Tesla P40
+        gpu_sm_count: 30
+      gpu_capability: 6.1
+          gpu_mem_gb: 24.0
+                cuda: 12.6
+              brian2: 2.10.1
+NOTE: torch 2.4.0 is not active; the exact-replication comparison will still run but cannot match.
+authors' code at 02e45c4f32; 24 configurations loaded
+cache: 6843 done, 0 failed
+speeds carried over from an earlier session: ['encode_beats_per_s:latency', 'encode_beats_per_s:multi', 'encode_beats_per_s:rate', 'fit_s_per_Gcell:pipe', 'lsm_job_overhead_s', 'sim_beats_per_s:latency', 'sim_beats_per_s:multi', 'sim_beats_per_s:rate']
+MIT-BIH at: /root/lsm_ecg/mitdb-1.0.0/mit-bih-arrhythmia-database-1.0.0
+checksums: 704 files checked, 0 mismatches, 0 missing
+datasets built in 102s
+DS1 order identical to authors' file: True | counts: {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+authors' fold indices regenerate exactly: True
+plan: 6878 unique runs in 4228 jobs
+checks               1
+brian2               1
+main_final         288
+ablation_final      50
+rr_final            39
+baseline_final      13
+gain_final          63
+main_cv           3456
+gain_cv            756
+ablation_cv        600
+rr_cv              468
+baseline_cv        156
+nn_tune            636
+retune             143
+kstale_final        16
+kstale_cv          192
+pipeline: 10 parallel fits (CPU cores: 38, FIT_WORKERS='10', RAM allows 39 with 103.7 GB available after the 4.0 GB reserve)
+
+===== SELF-TEST (runs at the start of every session) =====
+  [PASS] packages                     python 3.13.13, torch 2.14.1+cu126, numpy 2.1.3, sklearn 1.7.2, snntorch 0.9.4, wfdb 4.3.1, brian2 2.10.1
+  [NOTE] torch 2.4.0 (authors')       2.14.1+cu126 (fine; only matters for the exact-replication attempt)
+  [PASS] brian2                       2.10.1
+  [PASS] GPU                          Tesla P40, 24.0 GB, CUDA 12.6; 650 liquid-sized steps in 0.14 s
+  [PASS] cuDNN                        convolution forward + backward ok
+  [PASS] authors' code                commit 02e45c4f3232886aed16a40d77de1f851ef4fcdd
+  [PASS] MIT-BIH checksums            704 files checked, 0 mismatches, missing (unused) 0
+  [PASS] DS1 = authors' order         class counts {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+  [PASS] authors' folds               fold indices regenerate exactly
+  [PASS] liquid + readout (published) 64 beats: firing 0.4849/step, drive/target 23.86
+  [PASS] liquid + readout (fixed)     64 beats: firing 0.0268/step, drive/target 1.00
+  [PASS] disk                         785 GB free at /root/lsm_ecg/output-merge (all outputs together grow to ~12 GB)
+  [PASS] RAM / cores                  113.3 GB RAM, 38 cores -> 10 parallel fits
+  [PASS] log file                     /root/lsm_ecg/output-merge/logs/session_20261120_065051.log (tail -f /root/lsm_ecg/output-merge/logs/latest.log)
+===== SELF-TEST: all checks passed (2 s) =====
+
+[  0.03 h] session start: 6878 planned runs, 6843 already done, 35 pending; budget 240.0 h, disk 5.38 GB; pipeline with 10 fit workers, RAM budget 103.7 GB
+[  0.03 h] job 1: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__final__d7c74a35 | main 0.5 min, 1 fit(s)
+[  0.04 h]   liquid: A_in=2.4541 (measured on training rows) mu_in=0.1834 firing=0.0257 drive/target=1.01 silent=0 sim=38s
+[  0.04 h] job 2: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f1__27fc8ab4 | main 0.3 min, 1 fit(s)
+[  0.05 h]   liquid: A_in=2.7084 (measured on training rows) mu_in=0.1662 firing=0.0249 drive/target=1.00 silent=0 sim=17s
+[  0.05 h] job 3: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f2__555f31e8 | main 0.3 min, 1 fit(s)
+[  0.05 h]   liquid: A_in=2.4715 (measured on training rows) mu_in=0.1821 firing=0.0246 drive/target=0.98 silent=0 sim=17s
+[  0.05 h] job 4: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f3__edbba735 | main 0.3 min, 1 fit(s)
+[  0.06 h]   liquid: A_in=2.4071 (measured on training rows) mu_in=0.1870 firing=0.0252 drive/target=1.00 silent=0 sim=17s
+[  0.06 h] job 5: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f4__2d123c0f | main 0.3 min, 1 fit(s)
+[  0.06 h]   liquid: A_in=2.4885 (measured on training rows) mu_in=0.1808 firing=0.0254 drive/target=1.01 silent=0 sim=17s
+[  0.06 h] job 6: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f1__de410448 | main 0.3 min, 1 fit(s)
+[  0.07 h]   liquid: A_in=2.8074 (measured on training rows) mu_in=0.1603 firing=0.0249 drive/target=1.00 silent=0 sim=18s
+[  0.07 h] job 7: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f2__ccbcd893 | main 0.3 min, 1 fit(s)
+[  0.07 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__final__d7c74a35                        mF1=0.6305 acc=0.9215 Se S/V=0.078/0.928
+[  0.07 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f1__27fc8ab4                      mF1=0.5677 acc=0.9115 Se S/V=0.395/0.768
+[  0.08 h]   liquid: A_in=2.4386 (measured on training rows) mu_in=0.1845 firing=0.0251 drive/target=0.99 silent=0 sim=18s
+[  0.08 h] job 8: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f3__c5e3858b | main 0.3 min, 1 fit(s)
+[  0.08 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f2__555f31e8                      mF1=0.8543 acc=0.9847 Se S/V=0.758/0.944
+[  0.08 h]   liquid: A_in=2.4844 (measured on training rows) mu_in=0.1811 firing=0.0247 drive/target=0.98 silent=0 sim=18s
+[  0.08 h] job 9: retune | lsm | 1 run(s) | e.g. lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f4__525b8816 | main 0.3 min, 1 fit(s)
+[  0.08 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f3__edbba735                      mF1=0.5882 acc=0.9040 Se S/V=0.404/0.571
+[  0.09 h]   liquid: A_in=2.3369 (measured on training rows) mu_in=0.1926 firing=0.0261 drive/target=1.02 silent=0 sim=17s
+[  0.09 h] job 10: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__final__8974fab4 | main 0.6 min, 1 fit(s)
+[  0.09 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r2f4__2d123c0f                      mF1=0.6099 acc=0.9067 Se S/V=0.268/0.942
+[  0.10 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f1__de410448                      mF1=0.5466 acc=0.9065 Se S/V=0.126/0.966
+[  0.10 h]   liquid: A_in=2.4541 (measured on training rows) mu_in=0.1834 firing=0.0248 drive/target=0.99 silent=0 sim=40s
+[  0.10 h] job 11: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f1__69a387e4 | main 0.4 min, 1 fit(s)
+[  0.10 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f2__ccbcd893                      mF1=0.6435 acc=0.9599 Se S/V=0.131/0.688
+[  0.11 h]   liquid: A_in=2.4178 (measured on training rows) mu_in=0.1861 firing=0.0249 drive/target=0.99 silent=0 sim=17s
+[  0.11 h] job 12: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f2__ece0ebfc | main 0.4 min, 1 fit(s)
+[  0.11 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f3__c5e3858b                      mF1=0.4964 acc=0.8694 Se S/V=0.053/0.871
+[  0.11 h]   liquid: A_in=2.4866 (measured on training rows) mu_in=0.1810 firing=0.0239 drive/target=0.96 silent=0 sim=17s
+[  0.11 h]   done lsm__fixed_s2026_morph-robust-multiK400_svm_lam2.5__cv-r3f4__525b8816                      mF1=0.6030 acc=0.9281 Se S/V=0.128/0.838
+[  0.11 h] job 13: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f3__a31b5c80 | main 0.4 min, 1 fit(s)
+[  0.12 h]   liquid: A_in=2.5971 (measured on training rows) mu_in=0.1733 firing=0.0257 drive/target=1.02 silent=0 sim=17s
+[  0.12 h] job 14: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f4__23800a1b | main 0.4 min, 1 fit(s)
+[  0.12 h]   liquid: A_in=2.4741 (measured on training rows) mu_in=0.1819 firing=0.0235 drive/target=0.95 silent=0 sim=18s
+[  0.12 h] job 15: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f1__147b94ba | main 0.4 min, 1 fit(s)
+[  0.13 h]   liquid: A_in=2.7084 (measured on training rows) mu_in=0.1662 firing=0.0251 drive/target=1.01 silent=0 sim=18s
+[  0.13 h] job 16: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f2__81c6df52 | main 0.4 min, 1 fit(s)
+[  0.13 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__final__8974fab4                          mF1=0.6342 acc=0.9228 Se S/V=0.084/0.933
+[  0.13 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f1__69a387e4                        mF1=0.6350 acc=0.9009 Se S/V=0.196/0.857
+[  0.13 h]   liquid: A_in=2.4715 (measured on training rows) mu_in=0.1821 firing=0.0237 drive/target=0.95 silent=0 sim=17s
+[  0.13 h] job 17: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f3__a066c210 | main 0.3 min, 1 fit(s)
+[  0.14 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f2__ece0ebfc                        mF1=0.7583 acc=0.9848 Se S/V=0.405/0.662
+[  0.14 h]   liquid: A_in=2.4071 (measured on training rows) mu_in=0.1870 firing=0.0244 drive/target=0.97 silent=0 sim=17s
+[  0.14 h] job 18: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f4__b242d21b | main 0.3 min, 1 fit(s)
+[  0.14 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f3__a31b5c80                        mF1=0.5769 acc=0.8825 Se S/V=0.257/0.768
+[  0.15 h]   liquid: A_in=2.4885 (measured on training rows) mu_in=0.1808 firing=0.0254 drive/target=1.01 silent=0 sim=17s
+[  0.15 h] job 19: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f1__920be791 | main 0.3 min, 1 fit(s)
+[  0.15 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r1f4__23800a1b                        mF1=0.7178 acc=0.9256 Se S/V=0.357/0.974
+[  0.15 h]   liquid: A_in=2.8074 (measured on training rows) mu_in=0.1603 firing=0.0249 drive/target=1.00 silent=0 sim=17s
+[  0.15 h] job 20: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f2__a23ca877 | main 0.3 min, 1 fit(s)
+[  0.15 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f1__147b94ba                        mF1=0.5806 acc=0.9169 Se S/V=0.432/0.761
+[  0.16 h]   liquid: A_in=2.4386 (measured on training rows) mu_in=0.1845 firing=0.0242 drive/target=0.97 silent=0 sim=17s
+[  0.16 h] job 21: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f3__d144de4c | main 0.3 min, 1 fit(s)
+[  0.16 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f2__81c6df52                        mF1=0.8581 acc=0.9848 Se S/V=0.747/0.944
+[  0.16 h]   liquid: A_in=2.4844 (measured on training rows) mu_in=0.1811 firing=0.0240 drive/target=0.96 silent=0 sim=17s
+[  0.16 h] job 22: retune | lsm | 1 run(s) | e.g. lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f4__6c505e2e | main 0.3 min, 1 fit(s)
+[  0.16 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f3__a066c210                        mF1=0.5528 acc=0.9006 Se S/V=0.280/0.543
+[  0.17 h]   liquid: A_in=2.3369 (measured on training rows) mu_in=0.1926 firing=0.0252 drive/target=1.00 silent=0 sim=17s
+[  0.17 h] job 23: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__final__76bafad6 | main 0.6 min, 1 fit(s)
+[  0.17 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r2f4__b242d21b                        mF1=0.6118 acc=0.9088 Se S/V=0.268/0.932
+[  0.18 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f1__920be791                        mF1=0.5789 acc=0.9233 Se S/V=0.184/0.966
+[  0.18 h]   liquid: A_in=2.4541 (measured on training rows) mu_in=0.1834 firing=0.0250 drive/target=1.00 silent=0 sim=39s
+[  0.18 h] job 24: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f1__68e4391c | main 0.4 min, 1 fit(s)
+[  0.18 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f2__a23ca877                        mF1=0.6672 acc=0.9655 Se S/V=0.140/0.741
+[  0.19 h]   liquid: A_in=2.4178 (measured on training rows) mu_in=0.1861 firing=0.0251 drive/target=1.00 silent=0 sim=17s
+[  0.19 h] job 25: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f2__1925db6c | main 0.4 min, 1 fit(s)
+[  0.19 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f3__d144de4c                        mF1=0.5119 acc=0.8832 Se S/V=0.053/0.872
+[  0.19 h]   liquid: A_in=2.4866 (measured on training rows) mu_in=0.1810 firing=0.0243 drive/target=0.97 silent=0 sim=17s
+[  0.19 h] job 26: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f3__1534cd66 | main 0.3 min, 1 fit(s)
+[  0.19 h]   done lsm__fixed_s69_morph-robust-multiK400_svm_lam2.5__cv-r3f4__6c505e2e                        mF1=0.5942 acc=0.9138 Se S/V=0.128/0.841
+[  0.20 h]   liquid: A_in=2.5971 (measured on training rows) mu_in=0.1733 firing=0.0261 drive/target=1.03 silent=0 sim=17s
+[  0.20 h]   status: fits waiting 0, running 4, done 22, failed 0; RAM reserved 18.96 GB, available 96.83 GB, process peak 19.4 GB
+[  0.20 h] job 27: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f4__f3d3bfa8 | main 0.3 min, 1 fit(s)
+[  0.20 h]   liquid: A_in=2.4741 (measured on training rows) mu_in=0.1819 firing=0.0237 drive/target=0.95 silent=0 sim=17s
+[  0.20 h] job 28: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f1__d6068d93 | main 0.3 min, 1 fit(s)
+[  0.21 h]   liquid: A_in=2.7084 (measured on training rows) mu_in=0.1662 firing=0.0258 drive/target=1.02 silent=0 sim=17s
+[  0.21 h] job 29: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f2__f767abbb | main 0.3 min, 1 fit(s)
+[  0.21 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__final__76bafad6                         mF1=0.6316 acc=0.9213 Se S/V=0.087/0.929
+[  0.21 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f1__68e4391c                       mF1=0.6190 acc=0.8996 Se S/V=0.168/0.845
+[  0.21 h]   liquid: A_in=2.4715 (measured on training rows) mu_in=0.1821 firing=0.0239 drive/target=0.96 silent=0 sim=17s
+[  0.22 h] job 30: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f3__8bc45b77 | main 0.3 min, 1 fit(s)
+[  0.22 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f2__1925db6c                       mF1=0.7165 acc=0.9836 Se S/V=0.322/0.654
+[  0.22 h]   liquid: A_in=2.4071 (measured on training rows) mu_in=0.1870 firing=0.0247 drive/target=0.98 silent=0 sim=17s
+[  0.22 h] job 31: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f4__46522eb2 | main 0.3 min, 1 fit(s)
+[  0.22 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f3__1534cd66                       mF1=0.5771 acc=0.8890 Se S/V=0.191/0.783
+[  0.23 h]   liquid: A_in=2.4885 (measured on training rows) mu_in=0.1808 firing=0.0256 drive/target=1.01 silent=0 sim=17s
+[  0.23 h] job 32: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f1__c1d14168 | main 0.3 min, 1 fit(s)
+[  0.23 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r1f4__f3d3bfa8                       mF1=0.7036 acc=0.9257 Se S/V=0.298/0.973
+[  0.23 h]   liquid: A_in=2.8074 (measured on training rows) mu_in=0.1603 firing=0.0255 drive/target=1.02 silent=0 sim=17s
+[  0.23 h] job 33: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f2__2d762a5a | main 0.3 min, 1 fit(s)
+[  0.23 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f1__d6068d93                       mF1=0.5829 acc=0.9213 Se S/V=0.395/0.755
+[  0.24 h]   liquid: A_in=2.4386 (measured on training rows) mu_in=0.1845 firing=0.0245 drive/target=0.98 silent=0 sim=17s
+[  0.24 h] job 34: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f3__fc55d63e | main 0.3 min, 1 fit(s)
+[  0.24 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f2__f767abbb                       mF1=0.8517 acc=0.9844 Se S/V=0.747/0.943
+[  0.24 h]   liquid: A_in=2.4844 (measured on training rows) mu_in=0.1811 firing=0.0244 drive/target=0.97 silent=0 sim=17s
+[  0.24 h] job 35: retune | lsm | 1 run(s) | e.g. lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f4__78e8abfa | main 0.3 min, 1 fit(s)
+[  0.25 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f3__8bc45b77                       mF1=0.5321 acc=0.8816 Se S/V=0.275/0.594
+[  0.25 h]   liquid: A_in=2.3369 (measured on training rows) mu_in=0.1926 firing=0.0254 drive/target=1.00 silent=0 sim=17s
+[  0.25 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r2f4__46522eb2                       mF1=0.6072 acc=0.9057 Se S/V=0.259/0.933
+[  0.26 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f1__c1d14168                       mF1=0.5650 acc=0.9219 Se S/V=0.126/0.968
+[  0.26 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f2__2d762a5a                       mF1=0.6404 acc=0.9597 Se S/V=0.131/0.683
+[  0.27 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f3__fc55d63e                       mF1=0.4928 acc=0.8651 Se S/V=0.055/0.858
+[  0.27 h]   done lsm__fixed_s420_morph-robust-multiK400_svm_lam2.5__cv-r3f4__78e8abfa                       mF1=0.5986 acc=0.9251 Se S/V=0.113/0.855
+[  0.27 h] no more jobs will start (all planned runs are done); waiting for 0 classifier fit(s) to finish
+[  0.27 h] fit pool: 35 fits done, 0 failed, 0 cancelled
+[  0.27 h] runner stopped: all planned runs are done. jobs this session: 35; done 6878, failed 0, pending 0; speeds {"sim_beats_per_s": {"multi": 2921.673878624454, "rate": 2135.507193268648, "latency": 2617.518856054708}, "encode_beats_per_s": {"multi": 55402.39274265112, "rate": 5878.193824895439, "latency": 11292.444602448668}, "fit_s_per_Gcell": {"1": 400.0, "2": 220.0, "3": 160.0, "pipe": 221.5333507871407}, "fit_threads": 4.0, "nn_s_per_epoch_kbeat": {"cnn": 0.04, "gru": 0.025}, "nn_unit_s_per_epoch_kbeat": {"cnn": 0.03, "gru": 0.04}, "lsm_job_overhead_s": 3.377025719176716}
+Projected time for everything that is left: nothing left to run.
+results_master.csv: 6876 runs
+summary.md, tables/ and figures/ written: ['ablations_rr_baselines.csv', 'ain_measured.csv', 'corrected_ttests.csv', 'encoders_morph_robust_svm.csv', 'exact_attempt_cv.csv', 'friedman_main_cv.csv', 'friedman_ranks_fix_ain_s2026.0.csv', 'friedman_ranks_fix_ain_s420.0.csv', 'friedman_ranks_fix_ain_s69.0.csv', 'friedman_ranks_fix_gamma_s2026.0.csv', 'friedman_ranks_fix_gamma_s420.0.csv', 'friedman_ranks_fix_gamma_s69.0.csv', 'friedman_ranks_fixed_s2026.0.csv', 'friedman_ranks_fixed_s420.0.csv', 'friedman_ranks_fixed_s69.0.csv', 'friedman_ranks_published_s2026.0.csv', 'friedman_ranks_published_s420.0.csv', 'friedman_ranks_published_s69.0.csv', 'gain_sweep.csv', 'kstale_diagnostic.csv', 'liquid_structure.csv', 'main_cv_summary.csv', 'main_final_all_seeds.csv', 'main_final_by_config.csv', 'nn_tuning_choice.csv', 'nn_tuning_stage1.csv', 'retune_stage1.csv', 'state_vectors_summary.csv', 'time_projection.csv', 'time_projection.txt', 'wilcoxon_holm_fix_ain_s2026.0.csv', 'wilcoxon_holm_fix_ain_s420.0.csv', 'wilcoxon_holm_fix_ain_s69.0.csv', 'wilcoxon_holm_fix_gamma_s2026.0.csv', 'wilcoxon_holm_fix_gamma_s420.0.csv', 'wilcoxon_holm_fix_gamma_s69.0.csv', 'wilcoxon_holm_fixed_s2026.0.csv', 'wilcoxon_holm_fixed_s420.0.csv', 'wilcoxon_holm_fixed_s69.0.csv', 'wilcoxon_holm_published_s2026.0.csv', 'wilcoxon_holm_published_s420.0.csv', 'wilcoxon_holm_published_s69.0.csv'] ['ablations_rr_baselines.png', 'config11_confusion_matrices.png', 'encoders_published_vs_fixed.png', 'exact_attempt_per_fold.png', 'gain_sweep.png', 'state_vectors_pca.png']
+session time: 0.35 h | output size: 5.41 GB | done 6878 | failed 0 | pending 0
+stopped because: all planned runs are done
+Everything in the plan is done.

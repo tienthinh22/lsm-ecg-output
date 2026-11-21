@@ -1,0 +1,5 @@
+hybrid__replace_published_s420_morph-robust-multi_svm_rrliq__cv-r3f3__6018def3
+macro_f1=0.6590756182937123
+accuracy=0.8929122291590158
+confusion_matrix=[[11245, 431, 641], [85, 351, 164], [73, 64, 561]]
+timing={'total_seconds': 0.0032367706298828125}

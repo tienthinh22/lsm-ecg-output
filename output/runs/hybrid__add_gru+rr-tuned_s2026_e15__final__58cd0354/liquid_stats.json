@@ -1,0 +1,6 @@
+{
+  "base_run": "nn__gru+rr-tuned_s2026_e15__final__97b54b3a",
+  "base_label": "GRU tuned + RR",
+  "rule": "add",
+  "threshold": 0.8
+}

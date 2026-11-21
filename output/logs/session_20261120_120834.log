@@ -1,0 +1,81 @@
+session 20261120_120834: everything printed is also written to /root/lsm_ecg/output/logs/session_20261120_120834.log (and /root/lsm_ecg/output/logs/latest.log)
+GPU: Tesla P40, compute capability 6.1: supported by PyTorch 2.14.1+cu126 (CUDA 12.6)
+              python: 3.13.13
+            platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+               torch: 2.14.1+cu126
+  torch_pinned_2_4_0: False
+            snntorch: 0.9.4
+             sklearn: 1.7.2
+               numpy: 2.1.3
+               scipy: 1.14.1
+              pandas: 2.2.3
+                wfdb: 4.3.1
+              device: cuda
+           cpu_count: 38
+              ram_gb: 113.3
+           on_kaggle: False
+             machine: local
+          smoke_test: False
+            pipeline: True
+           cpu_model: Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+                 gpu: Tesla P40
+        gpu_sm_count: 30
+      gpu_capability: 6.1
+          gpu_mem_gb: 24.0
+                cuda: 12.6
+              brian2: 2.10.1
+NOTE: torch 2.4.0 is not active; the exact-replication comparison will still run but cannot match.
+authors' code at 02e45c4f32; 24 configurations loaded
+cache: 6878 done, 0 failed
+speeds carried over from an earlier session: ['encode_beats_per_s:latency', 'encode_beats_per_s:multi', 'encode_beats_per_s:rate', 'fit_s_per_Gcell:pipe', 'lsm_job_overhead_s', 'sim_beats_per_s:latency', 'sim_beats_per_s:multi', 'sim_beats_per_s:rate']
+MIT-BIH at: /root/lsm_ecg/mitdb-1.0.0/mit-bih-arrhythmia-database-1.0.0
+checksums: 704 files checked, 0 mismatches, 0 missing
+datasets built in 102s
+DS1 order identical to authors' file: True | counts: {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+authors' fold indices regenerate exactly: True
+plan: 6878 unique runs in 4228 jobs
+checks               1
+brian2               1
+main_final         288
+ablation_final      50
+rr_final            39
+baseline_final      13
+gain_final          63
+main_cv           3456
+gain_cv            756
+ablation_cv        600
+rr_cv              468
+baseline_cv        156
+nn_tune            636
+retune             143
+kstale_final        16
+kstale_cv          192
+pipeline: 10 parallel fits (CPU cores: 38, FIT_WORKERS='10', RAM allows 39 with 103.7 GB available after the 4.0 GB reserve)
+
+===== SELF-TEST (runs at the start of every session) =====
+  [PASS] packages                     python 3.13.13, torch 2.14.1+cu126, numpy 2.1.3, sklearn 1.7.2, snntorch 0.9.4, wfdb 4.3.1, brian2 2.10.1
+  [NOTE] torch 2.4.0 (authors')       2.14.1+cu126 (fine; only matters for the exact-replication attempt)
+  [PASS] brian2                       2.10.1
+  [PASS] GPU                          Tesla P40, 24.0 GB, CUDA 12.6; 650 liquid-sized steps in 0.14 s
+  [PASS] cuDNN                        convolution forward + backward ok
+  [PASS] authors' code                commit 02e45c4f3232886aed16a40d77de1f851ef4fcdd
+  [PASS] MIT-BIH checksums            704 files checked, 0 mismatches, missing (unused) 0
+  [PASS] DS1 = authors' order         class counts {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+  [PASS] authors' folds               fold indices regenerate exactly
+  [PASS] liquid + readout (published) 64 beats: firing 0.4849/step, drive/target 23.86
+  [PASS] liquid + readout (fixed)     64 beats: firing 0.0268/step, drive/target 1.00
+  [PASS] disk                         785 GB free at /root/lsm_ecg/output (all outputs together grow to ~12 GB)
+  [PASS] RAM / cores                  113.3 GB RAM, 38 cores -> 10 parallel fits
+  [PASS] log file                     /root/lsm_ecg/output/logs/session_20261120_120834.log (tail -f /root/lsm_ecg/output/logs/latest.log)
+===== SELF-TEST: all checks passed (2 s) =====
+
+[  0.03 h] session start: 6878 planned runs, 6878 already done, 0 pending; budget 240.0 h, disk 5.41 GB; pipeline with 10 fit workers, RAM budget 103.7 GB
+[  0.03 h] no more jobs will start (all planned runs are done); waiting for 0 classifier fit(s) to finish
+[  0.03 h] fit pool: 0 fits done, 0 failed, 0 cancelled
+[  0.03 h] runner stopped: all planned runs are done. jobs this session: 0; done 6878, failed 0, pending 0; speeds {"sim_beats_per_s": {"multi": 2921.673878624454, "rate": 2135.507193268648, "latency": 2617.518856054708}, "encode_beats_per_s": {"multi": 55402.39274265112, "rate": 5878.193824895439, "latency": 11292.444602448668}, "fit_s_per_Gcell": {"1": 400.0, "2": 220.0, "3": 160.0, "pipe": 221.5333507871407}, "fit_threads": 4.0, "nn_s_per_epoch_kbeat": {"cnn": 0.04, "gru": 0.025}, "nn_unit_s_per_epoch_kbeat": {"cnn": 0.03, "gru": 0.04}, "lsm_job_overhead_s": 3.377025719176716}
+Projected time for everything that is left: nothing left to run.
+results_master.csv: 6876 runs
+summary.md, tables/ and figures/ written: ['ablations_rr_baselines.csv', 'ain_measured.csv', 'corrected_ttests.csv', 'encoders_morph_robust_svm.csv', 'exact_attempt_cv.csv', 'friedman_main_cv.csv', 'friedman_ranks_fix_ain_s2026.0.csv', 'friedman_ranks_fix_ain_s420.0.csv', 'friedman_ranks_fix_ain_s69.0.csv', 'friedman_ranks_fix_gamma_s2026.0.csv', 'friedman_ranks_fix_gamma_s420.0.csv', 'friedman_ranks_fix_gamma_s69.0.csv', 'friedman_ranks_fixed_s2026.0.csv', 'friedman_ranks_fixed_s420.0.csv', 'friedman_ranks_fixed_s69.0.csv', 'friedman_ranks_published_s2026.0.csv', 'friedman_ranks_published_s420.0.csv', 'friedman_ranks_published_s69.0.csv', 'gain_sweep.csv', 'kstale_diagnostic.csv', 'liquid_structure.csv', 'main_cv_summary.csv', 'main_final_all_seeds.csv', 'main_final_by_config.csv', 'nn_tuning_choice.csv', 'nn_tuning_stage1.csv', 'retune_stage1.csv', 'state_vectors_summary.csv', 'time_projection.csv', 'time_projection.txt', 'wilcoxon_holm_fix_ain_s2026.0.csv', 'wilcoxon_holm_fix_ain_s420.0.csv', 'wilcoxon_holm_fix_ain_s69.0.csv', 'wilcoxon_holm_fix_gamma_s2026.0.csv', 'wilcoxon_holm_fix_gamma_s420.0.csv', 'wilcoxon_holm_fix_gamma_s69.0.csv', 'wilcoxon_holm_fixed_s2026.0.csv', 'wilcoxon_holm_fixed_s420.0.csv', 'wilcoxon_holm_fixed_s69.0.csv', 'wilcoxon_holm_published_s2026.0.csv', 'wilcoxon_holm_published_s420.0.csv', 'wilcoxon_holm_published_s69.0.csv'] ['ablations_rr_baselines.png', 'config11_confusion_matrices.png', 'encoders_published_vs_fixed.png', 'exact_attempt_per_fold.png', 'gain_sweep.png', 'state_vectors_pca.png']
+session time: 0.10 h | output size: 5.41 GB | done 6878 | failed 0 | pending 0
+stopped because: all planned runs are done
+Everything in the plan is done.

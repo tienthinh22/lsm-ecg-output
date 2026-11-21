@@ -1,0 +1,107 @@
+session 20261119_090457: everything printed is also written to /root/lsm_ecg/output/logs/session_20261119_090457.log (and /root/lsm_ecg/output/logs/latest.log)
+GPU: Tesla P40, compute capability 6.1: supported by PyTorch 2.14.1+cu126 (CUDA 12.6)
+              python: 3.13.13
+            platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+               torch: 2.14.1+cu126
+  torch_pinned_2_4_0: False
+            snntorch: 0.9.4
+             sklearn: 1.7.2
+               numpy: 2.1.3
+               scipy: 1.14.1
+              pandas: 2.2.3
+                wfdb: 4.3.1
+              device: cuda
+           cpu_count: 38
+              ram_gb: 113.3
+           on_kaggle: False
+             machine: local
+          smoke_test: False
+            pipeline: True
+           cpu_model: Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+                 gpu: Tesla P40
+        gpu_sm_count: 30
+      gpu_capability: 6.1
+          gpu_mem_gb: 24.0
+                cuda: 12.6
+              brian2: 2.10.1
+NOTE: torch 2.4.0 is not active; the exact-replication comparison will still run but cannot match.
+authors' code at 02e45c4f32; 24 configurations loaded
+cache: 76 done, 0 failed
+speeds carried over from an earlier session: ['encode_beats_per_s:latency', 'encode_beats_per_s:multi', 'encode_beats_per_s:rate', 'lsm_job_overhead_s', 'sim_beats_per_s:latency', 'sim_beats_per_s:multi', 'sim_beats_per_s:rate']
+MIT-BIH at: /root/lsm_ecg/mitdb-1.0.0/mit-bih-arrhythmia-database-1.0.0
+checksums: 704 files checked, 0 mismatches, 0 missing
+datasets built in 101s
+DS1 order identical to authors' file: True | counts: {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+authors' fold indices regenerate exactly: True
+plan: 3954 unique runs in 1538 jobs
+checks               1
+brian2               1
+main_final         288
+ablation_final       0
+rr_final             0
+baseline_final       0
+gain_final           0
+main_cv           3456
+gain_cv              0
+ablation_cv          0
+rr_cv                0
+baseline_cv          0
+nn_tune              0
+retune               0
+kstale_final        16
+kstale_cv          192
+SHARE = 'A': this machine runs the groups checks, brian2, main_final, main_cv, kstale_final, kstale_cv
+pipeline: 6 parallel fits (CPU cores: 38, FIT_WORKERS='6', RAM allows 39 with 103.7 GB available after the 4.0 GB reserve)
+
+===== SELF-TEST (runs at the start of every session) =====
+  [PASS] packages                     python 3.13.13, torch 2.14.1+cu126, numpy 2.1.3, sklearn 1.7.2, snntorch 0.9.4, wfdb 4.3.1, brian2 2.10.1
+  [NOTE] torch 2.4.0 (authors')       2.14.1+cu126 (fine; only matters for the exact-replication attempt)
+  [PASS] brian2                       2.10.1
+  [PASS] GPU                          Tesla P40, 24.0 GB, CUDA 12.6; 650 liquid-sized steps in 0.14 s
+  [PASS] cuDNN                        convolution forward + backward ok
+  [PASS] authors' code                commit 02e45c4f3232886aed16a40d77de1f851ef4fcdd
+  [PASS] MIT-BIH checksums            704 files checked, 0 mismatches, missing (unused) 0
+  [PASS] DS1 = authors' order         class counts {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+  [PASS] authors' folds               fold indices regenerate exactly
+  [PASS] liquid + readout (published) 64 beats: firing 0.4849/step, drive/target 23.86
+  [PASS] liquid + readout (fixed)     64 beats: firing 0.0268/step, drive/target 1.00
+  [PASS] disk                         801 GB free at /root/lsm_ecg/output (all outputs together grow to ~12 GB)
+  [PASS] RAM / cores                  113.3 GB RAM, 38 cores -> 6 parallel fits
+  [PASS] log file                     /root/lsm_ecg/output/logs/session_20261119_090457.log (tail -f /root/lsm_ecg/output/logs/latest.log)
+===== SELF-TEST: all checks passed (2 s) =====
+
+[  0.03 h] session start: 3954 planned runs, 76 already done, 3878 pending; budget 0.6 h, disk 0.66 GB; pipeline with 6 fit workers, RAM budget 103.7 GB
+[  0.03 h] job 1: main_final | lsm | 2 run(s) | e.g. lsm__fixed_s69_morph-standard-latency_svm__final__1a841bdc | main 0.8 min, 2 fit(s)
+[  0.04 h]   liquid: A_in=0.9001 (measured on training rows) mu_in=0.5000 firing=0.0263 drive/target=0.94 silent=129 sim=41s
+[  0.04 h] job 2: main_final | lsm | 2 run(s) | e.g. lsm__fixed_s69_morph-standard-multi_svm__final__1e8176d1 | main 0.7 min, 2 fit(s)
+[  0.05 h]   liquid: A_in=2.4670 (measured on training rows) mu_in=0.1824 firing=0.0251 drive/target=0.99 silent=0 sim=36s
+[  0.05 h] no more jobs will start (time budget: next job needs ~8.3 min (incl. queued fits), 7.8 min left); waiting for 4 classifier fit(s) to finish
+[  0.07 h]   done lsm__fixed_s69_morph-standard-latency_svm__final__1a841bdc                                 mF1=0.5769 acc=0.9110 Se S/V=0.021/0.768
+[  0.07 h]   done lsm__fixed_s69_morph-standard-latency_lr__final__746d8620                                  mF1=0.5753 acc=0.9094 Se S/V=0.020/0.766
+[  0.08 h]   done lsm__fixed_s69_morph-standard-multi_svm__final__1e8176d1                                   mF1=0.6553 acc=0.9428 Se S/V=0.072/0.887
+[  0.08 h]   done lsm__fixed_s69_morph-standard-multi_lr__final__f7044715                                    mF1=0.6540 acc=0.9421 Se S/V=0.073/0.882
+[  0.08 h] fit pool: 4 fits done, 0 failed, 0 cancelled
+[  0.08 h] runner stopped: time budget: next job needs ~8.3 min (incl. queued fits), 7.8 min left. jobs this session: 2; done 80, failed 0, pending 3874; speeds {"sim_beats_per_s": {"multi": 2669.1332497757203, "rate": 1920.9244209076248, "latency": 2293.787234663187}, "encode_beats_per_s": {"multi": 73720.50910484305, "rate": 6350.845335027767, "latency": 12607.319252082958}, "fit_s_per_Gcell": {"1": 400.0, "2": 220.0, "3": 160.0, "pipe": 400.0}, "fit_threads": 4.0, "nn_s_per_epoch_kbeat": {"cnn": 0.04, "gru": 0.025}, "nn_unit_s_per_epoch_kbeat": {"cnn": 0.03, "gru": 0.04}, "lsm_job_overhead_s": 3.4153503410493067}
+
+===== Projected time for everything that is left =====
+       group  runs  jobs  hours
+  main_final   210   105   2.58
+     main_cv  3456  1332  26.33
+kstale_final    16     8   0.20
+   kstale_cv   192    52   1.37
+TOTAL remaining: 30.5 h  ->  one continuous run (safety stop at 0.6 h)
+runner: pipeline: 6 parallel fits (CPU cores 38, RAM allows 39), 400 s per Gcell per fit under load
+machine: local; device: Tesla P40; CPU: Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+measured speeds: ['encode_beats_per_s:latency', 'encode_beats_per_s:multi', 'encode_beats_per_s:rate', 'lsm_job_overhead_s', 'sim_beats_per_s:latency', 'sim_beats_per_s:multi', 'sim_beats_per_s:rate']
+still default guesses (less reliable): nn_s_per_epoch_kbeat:cnn, nn_s_per_epoch_kbeat:gru, nn_unit_s_per_epoch_kbeat:cnn, nn_unit_s_per_epoch_kbeat:gru, fit_s_per_Gcell:pipe
+results_master.csv: 78 runs
+summary.md, tables/ and figures/ written: ['ablations_rr_baselines.csv', 'ain_measured.csv', 'encoders_morph_robust_svm.csv', 'gain_sweep.csv', 'liquid_structure.csv', 'main_final_all_seeds.csv', 'main_final_by_config.csv', 'state_vectors_summary.csv', 'time_projection.csv', 'time_projection.txt'] ['ablations_rr_baselines.png', 'config11_confusion_matrices.png', 'encoders_published_vs_fixed.png', 'gain_sweep.png', 'state_vectors_pca.png']
+session time: 0.16 h | output size: 0.67 GB | done 80 | failed 0 | pending 3874
+stopped because: time budget: next job needs ~8.3 min (incl. queued fits), 7.8 min left
+pending by group:
+main_final       210
+main_cv         3456
+kstale_final      16
+kstale_cv        192
+
+To continue: run the notebook again with the same WORK_DIR. It reads /root/lsm_ecg/output/cache.txt and skips everything finished.

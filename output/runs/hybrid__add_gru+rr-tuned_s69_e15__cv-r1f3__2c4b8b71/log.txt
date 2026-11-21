@@ -1,0 +1,5 @@
+hybrid__add_gru+rr-tuned_s69_e15__cv-r1f3__2c4b8b71
+macro_f1=0.5502581729000743
+accuracy=0.8479528332787423
+confusion_matrix=[[11814, 979, 901], [0, 87, 49], [168, 224, 1043]]
+timing={'total_seconds': 0.003255128860473633}

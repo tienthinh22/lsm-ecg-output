@@ -1,0 +1,5 @@
+feat__raw_beat__cv-r2f3__b6fb8dac
+macro_f1=0.3928019140741164
+accuracy=0.8112599383998281
+confusion_matrix=[[11178, 1526, 256], [480, 52, 3], [320, 50, 96]]
+timing={'shared_seconds': 0.5118265151977539, 'readout_seconds': 5.114514112472534, 'total_seconds': 5.626340627670288, 'readout_threads': 2, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

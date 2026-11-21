@@ -1,0 +1,4 @@
+{
+  "feature": "200 raw samples z-scored @ pinv(A) (50) + pre-RR (s)",
+  "sveb_rule": "pre-RR / record mean RR"
+}

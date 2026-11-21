@@ -1,0 +1,31 @@
+{
+  "session": "20261120_200941",
+  "device": "cuda",
+  "gpu": "Tesla P40",
+  "beats_DS2": [
+    0,
+    1,
+    2,
+    3,
+    44216,
+    44217,
+    44218,
+    46053,
+    46054,
+    46055
+  ],
+  "liquids": {
+    "fixed": {
+      "window_count_cells": 109760,
+      "mismatches": 0,
+      "spikes_reference": 59639,
+      "spikes_simulate": 59639
+    },
+    "published": {
+      "window_count_cells": 109760,
+      "mismatches": 0,
+      "spikes_reference": 1069685,
+      "spikes_simulate": 1069685
+    }
+  }
+}

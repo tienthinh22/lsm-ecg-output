@@ -1,0 +1,6 @@
+elapsed_h,event,rss_gb,peak_rss_gb,available_gb,reserved_gb,fits_waiting,fits_running,jobs_holding_ram,gpu_mem_gb
+0.03,start,2.36,3.02,53.12,0.0,0,0,0,0.09
+0.1459,job 10,14.33,16.16,40.67,22.32,0,4,4,2.16
+0.2028,status,9.99,16.16,45.27,16.74,0,3,3,2.16
+0.2451,job 20,9.91,16.42,45.14,16.74,0,3,3,2.2
+0.3416,end,2.56,16.42,52.88,0.0,0,0,0,2.21

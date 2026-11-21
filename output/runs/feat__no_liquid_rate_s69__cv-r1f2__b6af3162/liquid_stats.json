@@ -1,0 +1,7 @@
+{
+  "normalization": {
+    "p_low": -1.3475000000000001,
+    "p_high": 2.91
+  },
+  "feature_model": "no_liquid"
+}

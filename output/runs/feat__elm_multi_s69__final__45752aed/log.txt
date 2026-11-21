@@ -1,0 +1,5 @@
+feat__elm_multi_s69__final__45752aed
+macro_f1=0.5937034872803945
+accuracy=0.903028088975483
+confusion_matrix=[[41384, 1088, 1744], [1634, 145, 58], [151, 103, 2965]]
+timing={'shared_seconds': 58.450544357299805, 'readout_seconds': 172.71213507652283, 'total_seconds': 231.16267943382263, 'readout_threads': 1, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

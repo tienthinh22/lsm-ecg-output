@@ -1,0 +1,6 @@
+{
+  "base_run": "nn__gru+rr-tuned_s420_e15__cv-r3f3__22cda452",
+  "base_label": "GRU tuned + RR",
+  "rule": "replace",
+  "threshold": 0.8
+}

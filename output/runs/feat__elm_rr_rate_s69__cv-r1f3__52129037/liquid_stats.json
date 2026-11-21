@@ -1,0 +1,10 @@
+{
+  "normalization": {
+    "p_low": -1.345,
+    "p_high": 2.4699999999999998
+  },
+  "feature_model": "elm_rr",
+  "A_in_measured": 26.09664090121317,
+  "mu_in": 0.017243598580500872,
+  "elm": "window input counts @ fixed-liquid W_in, centered on train mean, ReLU"
+}

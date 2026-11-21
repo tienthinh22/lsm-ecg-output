@@ -1,0 +1,5 @@
+feat__lda__cv-r1f2__affac6dd
+macro_f1=0.5137293147963783
+accuracy=0.9744541677715902
+confusion_matrix=[[10972, 4, 2], [185, 17, 3], [81, 14, 35]]
+timing={'shared_seconds': 0.4790308475494385, 'total_seconds': 0.9448196887969971}

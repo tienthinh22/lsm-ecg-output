@@ -1,0 +1,5 @@
+hybrid__add_gru+rr-tuned_s2026_e15__final__58cd0354
+macro_f1=0.7302733503851245
+accuracy=0.9026018834226336
+confusion_matrix=[[39970, 2376, 1870], [50, 1556, 231], [179, 93, 2947]]
+timing={'total_seconds': 0.005216836929321289}

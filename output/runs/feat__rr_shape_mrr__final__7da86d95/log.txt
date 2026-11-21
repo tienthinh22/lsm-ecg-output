@@ -1,0 +1,5 @@
+feat__rr_shape_mrr__final__7da86d95
+macro_f1=0.6408066031404537
+accuracy=0.9412648157168372
+confusion_matrix=[[43726, 424, 66], [1344, 191, 302], [333, 425, 2461]]
+timing={'shared_seconds': 0.8310666084289551, 'readout_seconds': 2.010453701019287, 'total_seconds': 2.841520309448242, 'readout_threads': 4, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

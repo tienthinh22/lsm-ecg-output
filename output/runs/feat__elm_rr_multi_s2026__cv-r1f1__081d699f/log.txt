@@ -1,0 +1,5 @@
+feat__elm_rr_multi_s2026__cv-r1f1__081d699f
+macro_f1=0.7370972099678949
+accuracy=0.9396344181899242
+confusion_matrix=[[9544, 37, 289], [37, 73, 69], [235, 10, 921]]
+timing={'shared_seconds': 42.492520809173584, 'readout_seconds': 174.88153743743896, 'total_seconds': 217.37405824661255, 'readout_threads': 4, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

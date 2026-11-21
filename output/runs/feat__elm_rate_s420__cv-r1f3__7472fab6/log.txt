@@ -1,0 +1,5 @@
+feat__elm_rate_s420__cv-r1f3__7472fab6
+macro_f1=0.4668864565478846
+accuracy=0.7927284638060924
+confusion_matrix=[[11376, 1621, 697], [93, 24, 19], [559, 175, 701]]
+timing={'shared_seconds': 21.06787133216858, 'readout_seconds': 105.51103925704956, 'total_seconds': 126.57891058921814, 'readout_threads': 2, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

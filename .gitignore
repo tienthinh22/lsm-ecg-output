@@ -1,0 +1,5 @@
+venv/*
+output-benchmark/*
+output-merge/*
+output-smoke/*
+mitdb-1.0.0/*

@@ -1,0 +1,9 @@
+{
+  "shared_seconds": 24.067769765853882,
+  "readout_seconds": 119.11957931518555,
+  "total_seconds": 143.18734908103943,
+  "readout_threads": 4,
+  "readout_cores_per_fit": 1,
+  "prescaled": true,
+  "runner": "pipeline"
+}

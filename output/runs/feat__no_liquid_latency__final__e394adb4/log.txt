@@ -1,0 +1,5 @@
+feat__no_liquid_latency__final__e394adb4
+macro_f1=0.5385744094185102
+accuracy=0.9036775450560156
+confusion_matrix=[[42464, 765, 987], [1801, 21, 15], [1050, 128, 2041]]
+timing={'shared_seconds': 11.791735887527466, 'readout_seconds': 4.778660535812378, 'total_seconds': 16.570396423339844, 'readout_threads': 4, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

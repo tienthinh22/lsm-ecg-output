@@ -1,0 +1,5 @@
+huang__g1.3_s2026__final__c43eeabf
+macro_f1=0.788068396402295
+accuracy=0.9286613086540023
+confusion_matrix=[[41067, 2091, 1058], [94, 1680, 63], [62, 147, 3010]]
+timing={'total_seconds': 571.3811771869659, 'fit_seconds': 285.68762254714966}

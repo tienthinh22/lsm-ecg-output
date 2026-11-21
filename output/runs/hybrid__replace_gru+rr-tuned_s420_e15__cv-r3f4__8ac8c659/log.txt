@@ -1,0 +1,5 @@
+hybrid__replace_gru+rr-tuned_s420_e15__cv-r3f4__8ac8c659
+macro_f1=0.643562973380118
+accuracy=0.9156902356902357
+confusion_matrix=[[12603, 697, 26], [4, 101, 28], [474, 23, 894]]
+timing={'total_seconds': 0.007147312164306641}

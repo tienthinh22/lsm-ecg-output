@@ -1,0 +1,5 @@
+feat__elm_latency_s420__cv-r1f2__47dd7e65
+macro_f1=0.4171557651407242
+accuracy=0.8434544329532396
+confusion_matrix=[[9417, 10, 1551], [87, 28, 90], [32, 1, 97]]
+timing={'shared_seconds': 7.96457576751709, 'readout_seconds': 88.69948720932007, 'total_seconds': 96.66406297683716, 'readout_threads': 2, 'readout_cores_per_fit': 1, 'prescaled': True, 'runner': 'pipeline'}

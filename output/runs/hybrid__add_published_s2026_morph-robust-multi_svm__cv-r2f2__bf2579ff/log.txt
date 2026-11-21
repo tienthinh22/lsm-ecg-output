@@ -1,0 +1,5 @@
+hybrid__add_published_s2026_morph-robust-multi_svm__cv-r2f2__bf2579ff
+macro_f1=0.8208366873595426
+accuracy=0.9809676271789399
+confusion_matrix=[[9406, 138, 19], [9, 90, 0], [10, 38, 1534]]
+timing={'total_seconds': 0.0036454200744628906}

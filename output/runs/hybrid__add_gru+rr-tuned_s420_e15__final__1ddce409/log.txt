@@ -1,0 +1,5 @@
+hybrid__add_gru+rr-tuned_s420_e15__final__1ddce409
+macro_f1=0.7322395381313053
+accuracy=0.9065798019158955
+confusion_matrix=[[40170, 2276, 1770], [50, 1467, 320], [120, 67, 3032]]
+timing={'total_seconds': 0.005557060241699219}

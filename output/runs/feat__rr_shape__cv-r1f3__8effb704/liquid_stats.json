@@ -1,0 +1,7 @@
+{
+  "normalization": {
+    "p_low": -1.345,
+    "p_high": 2.4699999999999998
+  },
+  "feature_model": "rr_shape"
+}

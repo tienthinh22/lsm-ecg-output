@@ -1,0 +1,5 @@
+huang__g0.2959_s420__cv-r2f2__01dfdedf
+macro_f1=0.7997348000704391
+accuracy=0.9801672002845963
+confusion_matrix=[[9501, 59, 3], [9, 90, 0], [4, 148, 1430]]
+timing={'total_seconds': 530.7009618282318, 'fit_seconds': 193.47537183761597}
