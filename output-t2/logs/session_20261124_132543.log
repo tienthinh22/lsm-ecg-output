@@ -1,0 +1,127 @@
+session 20261124_132543: everything printed is also written to /root/lsm_ecg/output-t2/logs/session_20261124_132543.log (and /root/lsm_ecg/output-t2/logs/latest.log)
+GPU: Tesla P40, compute capability 6.1: supported by PyTorch 2.14.1+cu126 (CUDA 12.6)
+              python: 3.13.13
+            platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+               torch: 2.14.1+cu126
+  torch_pinned_2_4_0: False
+            snntorch: 0.9.4
+             sklearn: 1.7.2
+               numpy: 2.1.3
+               scipy: 1.14.1
+              pandas: 2.2.3
+                wfdb: 4.3.1
+              device: cuda
+           cpu_count: 38
+              ram_gb: 113.3
+           on_kaggle: False
+             machine: local
+          smoke_test: False
+            pipeline: True
+           cpu_model: Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+                 gpu: Tesla P40
+        gpu_sm_count: 30
+      gpu_capability: 6.1
+          gpu_mem_gb: 24.0
+                cuda: 12.6
+              brian2: 2.10.1
+authors' code at 02e45c4f32; 24 configurations loaded
+lsm2: 4 files at /root/lsm_ecg/output-t2/scratch/lsm2
+cache: 0 done, 0 failed
+MIT-BIH at: /root/lsm_ecg/mitdb-1.0.0/mit-bih-arrhythmia-database-1.0.0
+checksums: 704 files checked, 0 mismatches, 0 missing
+datasets built in 103s
+DS1 order identical to authors' file: True | counts: {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+authors' fold indices regenerate exactly: True
+[  0.03 h] t2_svebcurve: 16 DS1 patients have SVEB beats (943 beats): 101 (3), 108 (4), 112 (2), 114 (12), 116 (1), 118 (96), 124 (31), 201 (128), 203 (2), 205 (3), 207 (106), 208 (2), 209 (383), 215 (3), 220 (94), 223 (73)
+[  0.03 h]   fraction 0.25 draw 1: 4 SVEB patients, 114 SVEB beats in training
+[  0.03 h]   fraction 0.25 draw 2: 4 SVEB patients, 40 SVEB beats in training
+[  0.03 h]   fraction 0.25 draw 3: 4 SVEB patients, 391 SVEB beats in training
+[  0.03 h]   fraction 0.25 draw 4: 4 SVEB patients, 298 SVEB beats in training
+[  0.03 h]   fraction 0.25 draw 5: 4 SVEB patients, 471 SVEB beats in training
+[  0.03 h]   fraction 0.50 draw 1: 8 SVEB patients, 446 SVEB beats in training
+[  0.03 h]   fraction 0.50 draw 2: 8 SVEB patients, 635 SVEB beats in training
+[  0.03 h]   fraction 0.50 draw 3: 8 SVEB patients, 626 SVEB beats in training
+[  0.03 h]   fraction 0.50 draw 4: 8 SVEB patients, 328 SVEB beats in training
+[  0.03 h]   fraction 0.50 draw 5: 8 SVEB patients, 151 SVEB beats in training
+[  0.03 h]   fraction 0.75 draw 1: 12 SVEB patients, 455 SVEB beats in training
+[  0.03 h]   fraction 0.75 draw 2: 12 SVEB patients, 830 SVEB beats in training
+[  0.03 h]   fraction 0.75 draw 3: 12 SVEB patients, 830 SVEB beats in training
+[  0.03 h]   fraction 0.75 draw 4: 12 SVEB patients, 323 SVEB beats in training
+[  0.03 h]   fraction 0.75 draw 5: 12 SVEB patients, 841 SVEB beats in training
+[  0.03 h]   fraction 1.00 draw 1: 16 SVEB patients, 943 SVEB beats in training
+[  0.03 h] t2_svebcurve: start
+[  0.06 h] t2_svebcurve check: liquid: match (same predictions 100.00%, Macro-F1 0.585729 vs stored 0.585729)
+[  0.10 h] t2_svebcurve check: elm: match (same predictions 100.00%, Macro-F1 0.652799 vs stored 0.652799)
+[  0.12 h] t2_svebcurve check: no_liquid: match (same predictions 100.00%, Macro-F1 0.569778 vs stored 0.569778)
+[  0.12 h] t2_svebcurve check: all match
+[  0.14 h]     simulated liquid seed 2026: A_in 1.2240, firing 10.76 Hz, 21 s
+[  0.15 h]     model no_liquid, seed None, fraction 0.25, draw 2: Macro-F1 0.5830, SVEB recall 0.002, SVEB F1 0.003, VEB recall 0.950 (81 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.5, draw 4: Macro-F1 0.5866, SVEB recall 0.004, SVEB F1 0.007, VEB recall 0.936 (82 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.25, draw 4: Macro-F1 0.5984, SVEB recall 0.018, SVEB F1 0.030, VEB recall 0.936 (83 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.5, draw 2: Macro-F1 0.5888, SVEB recall 0.021, SVEB F1 0.036, VEB recall 0.935 (84 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.25, draw 1: Macro-F1 0.5786, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.948 (84 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.75, draw 5: Macro-F1 0.6169, SVEB recall 0.089, SVEB F1 0.119, VEB recall 0.912 (84 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.5, draw 1: Macro-F1 0.6122, SVEB recall 0.034, SVEB F1 0.060, VEB recall 0.934 (84 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.25, draw 3: Macro-F1 0.5869, SVEB recall 0.008, SVEB F1 0.016, VEB recall 0.947 (85 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.5, draw 5: Macro-F1 0.5807, SVEB recall 0.001, SVEB F1 0.001, VEB recall 0.943 (85 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.75, draw 1: Macro-F1 0.6072, SVEB recall 0.036, SVEB F1 0.063, VEB recall 0.934 (85 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.75, draw 2: Macro-F1 0.6096, SVEB recall 0.083, SVEB F1 0.106, VEB recall 0.923 (85 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.25, draw 5: Macro-F1 0.5961, SVEB recall 0.026, SVEB F1 0.044, VEB recall 0.943 (85 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.75, draw 3: Macro-F1 0.6032, SVEB recall 0.060, SVEB F1 0.080, VEB recall 0.925 (85 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.75, draw 4: Macro-F1 0.5868, SVEB recall 0.015, SVEB F1 0.022, VEB recall 0.938 (85 s)
+[  0.15 h]     model no_liquid, seed None, fraction 1.0, draw 1: Macro-F1 0.6092, SVEB recall 0.085, SVEB F1 0.107, VEB recall 0.912 (86 s)
+[  0.15 h]     model no_liquid, seed None, fraction 0.5, draw 3: Macro-F1 0.6112, SVEB recall 0.078, SVEB F1 0.111, VEB recall 0.928 (86 s)
+[  0.16 h]     simulated liquid seed 69: A_in 1.2240, firing 10.68 Hz, 21 s
+[  0.19 h]     model liquid, seed 2026, fraction 0.25, draw 1: Macro-F1 0.6127, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.960 (137 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.25, draw 2: Macro-F1 0.6097, SVEB recall 0.003, SVEB F1 0.005, VEB recall 0.962 (137 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.25, draw 3: Macro-F1 0.6146, SVEB recall 0.010, SVEB F1 0.020, VEB recall 0.962 (139 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.5, draw 1: Macro-F1 0.6231, SVEB recall 0.036, SVEB F1 0.055, VEB recall 0.942 (140 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.5, draw 5: Macro-F1 0.5994, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.959 (140 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.25, draw 5: Macro-F1 0.6256, SVEB recall 0.035, SVEB F1 0.060, VEB recall 0.959 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.75, draw 1: Macro-F1 0.6248, SVEB recall 0.041, SVEB F1 0.058, VEB recall 0.937 (141 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.25, draw 4: Macro-F1 0.6125, SVEB recall 0.019, SVEB F1 0.031, VEB recall 0.955 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.5, draw 3: Macro-F1 0.6267, SVEB recall 0.069, SVEB F1 0.100, VEB recall 0.946 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.5, draw 4: Macro-F1 0.6007, SVEB recall 0.009, SVEB F1 0.015, VEB recall 0.957 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.5, draw 2: Macro-F1 0.6125, SVEB recall 0.029, SVEB F1 0.046, VEB recall 0.952 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.75, draw 3: Macro-F1 0.6174, SVEB recall 0.056, SVEB F1 0.068, VEB recall 0.934 (141 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.75, draw 4: Macro-F1 0.6088, SVEB recall 0.023, SVEB F1 0.027, VEB recall 0.949 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.75, draw 2: Macro-F1 0.6242, SVEB recall 0.081, SVEB F1 0.089, VEB recall 0.938 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 0.75, draw 5: Macro-F1 0.6236, SVEB recall 0.078, SVEB F1 0.096, VEB recall 0.926 (142 s)
+[  0.19 h]     model liquid, seed 2026, fraction 1.0, draw 1: Macro-F1 0.6158, SVEB recall 0.079, SVEB F1 0.090, VEB recall 0.929 (142 s)
+[  0.20 h]     simulated liquid seed 420: A_in 1.2240, firing 10.65 Hz, 21 s
+[  0.22 h]     model liquid, seed 69, fraction 0.25, draw 2: Macro-F1 0.6048, SVEB recall 0.002, SVEB F1 0.004, VEB recall 0.959 (138 s)
+[  0.22 h]     model liquid, seed 69, fraction 0.25, draw 1: Macro-F1 0.6077, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.960 (139 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.25, draw 3: Macro-F1 0.6147, SVEB recall 0.015, SVEB F1 0.028, VEB recall 0.963 (139 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.25, draw 4: Macro-F1 0.6138, SVEB recall 0.019, SVEB F1 0.031, VEB recall 0.953 (139 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.5, draw 4: Macro-F1 0.6083, SVEB recall 0.012, SVEB F1 0.020, VEB recall 0.956 (139 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.25, draw 5: Macro-F1 0.6226, SVEB recall 0.035, SVEB F1 0.059, VEB recall 0.960 (141 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.5, draw 2: Macro-F1 0.6085, SVEB recall 0.037, SVEB F1 0.056, VEB recall 0.951 (141 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.5, draw 5: Macro-F1 0.6009, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.957 (141 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.5, draw 1: Macro-F1 0.6210, SVEB recall 0.038, SVEB F1 0.056, VEB recall 0.940 (142 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.75, draw 1: Macro-F1 0.6206, SVEB recall 0.041, SVEB F1 0.059, VEB recall 0.940 (141 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.5, draw 3: Macro-F1 0.6232, SVEB recall 0.074, SVEB F1 0.108, VEB recall 0.946 (143 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.75, draw 4: Macro-F1 0.6076, SVEB recall 0.026, SVEB F1 0.031, VEB recall 0.952 (142 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.75, draw 2: Macro-F1 0.6240, SVEB recall 0.087, SVEB F1 0.098, VEB recall 0.936 (144 s)
+[  0.23 h]     model liquid, seed 69, fraction 1.0, draw 1: Macro-F1 0.6182, SVEB recall 0.085, SVEB F1 0.099, VEB recall 0.931 (143 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.75, draw 5: Macro-F1 0.6246, SVEB recall 0.085, SVEB F1 0.109, VEB recall 0.937 (143 s)
+[  0.23 h]     model liquid, seed 69, fraction 0.75, draw 3: Macro-F1 0.6148, SVEB recall 0.064, SVEB F1 0.080, VEB recall 0.941 (144 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.25, draw 1: Macro-F1 0.6026, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.959 (135 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.25, draw 2: Macro-F1 0.5961, SVEB recall 0.001, SVEB F1 0.002, VEB recall 0.959 (134 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.25, draw 3: Macro-F1 0.6067, SVEB recall 0.011, SVEB F1 0.022, VEB recall 0.958 (137 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.25, draw 4: Macro-F1 0.6041, SVEB recall 0.013, SVEB F1 0.022, VEB recall 0.946 (137 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.5, draw 1: Macro-F1 0.6115, SVEB recall 0.031, SVEB F1 0.050, VEB recall 0.938 (135 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.5, draw 5: Macro-F1 0.5941, SVEB recall 0.001, SVEB F1 0.001, VEB recall 0.957 (134 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.5, draw 4: Macro-F1 0.5969, SVEB recall 0.008, SVEB F1 0.014, VEB recall 0.953 (136 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.25, draw 5: Macro-F1 0.6155, SVEB recall 0.029, SVEB F1 0.052, VEB recall 0.954 (138 s)
+[  0.26 h]     model liquid, seed 420, fraction 0.5, draw 3: Macro-F1 0.6201, SVEB recall 0.066, SVEB F1 0.100, VEB recall 0.943 (137 s)
+[  0.27 h]     model liquid, seed 420, fraction 0.75, draw 1: Macro-F1 0.6176, SVEB recall 0.034, SVEB F1 0.052, VEB recall 0.938 (136 s)
+[  0.27 h]     model liquid, seed 420, fraction 0.75, draw 2: Macro-F1 0.6197, SVEB recall 0.081, SVEB F1 0.094, VEB recall 0.938 (136 s)
+[  0.27 h]     model liquid, seed 420, fraction 0.75, draw 4: Macro-F1 0.6028, SVEB recall 0.020, SVEB F1 0.025, VEB recall 0.949 (134 s)
+[  0.27 h]     model liquid, seed 420, fraction 0.75, draw 3: Macro-F1 0.6132, SVEB recall 0.062, SVEB F1 0.081, VEB recall 0.933 (135 s)
+[  0.27 h]     model liquid, seed 420, fraction 0.75, draw 5: Macro-F1 0.6174, SVEB recall 0.082, SVEB F1 0.109, VEB recall 0.931 (135 s)
+[  0.27 h]     model liquid, seed 420, fraction 1.0, draw 1: Macro-F1 0.6171, SVEB recall 0.083, SVEB F1 0.098, VEB recall 0.936 (134 s)
+[  0.27 h]     model liquid, seed 420, fraction 0.5, draw 2: Macro-F1 0.6066, SVEB recall 0.029, SVEB F1 0.049, VEB recall 0.949 (140 s)
+[  0.27 h] t2_svebcurve: summary at /root/lsm_ecg/output-t2/t2_svebcurve/summary.md
+results: /root/lsm_ecg/output-t2/t2_svebcurve
+summary: /root/lsm_ecg/output-t2/t2_svebcurve/summary.md
+session time: 0.27 h
