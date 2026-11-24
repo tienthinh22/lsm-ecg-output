@@ -1,0 +1,498 @@
+session 20261124_115428: everything printed is also written to /root/lsm_ecg/output-t4/logs/session_20261124_115428.log (and /root/lsm_ecg/output-t4/logs/latest.log)
+GPU: Tesla P40, compute capability 6.1: supported by PyTorch 2.14.1+cu126 (CUDA 12.6)
+              python: 3.13.13
+            platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+               torch: 2.14.1+cu126
+  torch_pinned_2_4_0: False
+            snntorch: 0.9.4
+             sklearn: 1.7.2
+               numpy: 2.1.3
+               scipy: 1.14.1
+              pandas: 2.2.3
+                wfdb: 4.3.1
+              device: cuda
+           cpu_count: 25
+              ram_gb: 56.5
+           on_kaggle: False
+             machine: local
+          smoke_test: False
+            pipeline: True
+           cpu_model: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+                 gpu: Tesla P40
+        gpu_sm_count: 30
+      gpu_capability: 6.1
+          gpu_mem_gb: 25.6
+                cuda: 12.6
+              brian2: 2.10.1
+authors' code at 02e45c4f32; 24 configurations loaded
+lsm2: 4 files at /root/lsm_ecg/output-t4/scratch/lsm2
+cache: 0 done, 0 failed
+MIT-BIH at: /root/lsm_ecg/mitdb-1.0.0/mit-bih-arrhythmia-database-1.0.0
+checksums: 704 files checked, 0 mismatches, 0 missing
+datasets built in 99s
+DS1 order identical to authors' file: True | counts: {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+authors' fold indices regenerate exactly: True
+[  0.03 h] t4_window: start
+[  0.06 h] t4_window check: liquid: match (same predictions 100.00%, Macro-F1 0.585729 vs stored 0.585729)
+[  0.10 h] t4_window check: elm: match (same predictions 100.00%, Macro-F1 0.652799 vs stored 0.652799)
+[  0.11 h] t4_window check: no_liquid: match (same predictions 100.00%, Macro-F1 0.569778 vs stored 0.569778)
+[  0.11 h] t4_window check: all match
+[  0.12 h] t4_window: windows +-0.8 s (577 samples, 32 windows), +-1.6 s (1153 samples, 61 windows); common beats DS1 50510 of 50557 (dropped by class: [42, 3, 2]), DS2 49231 of 49272 (dropped: [39, 0, 2])
+[  0.12 h]   t4_window: final, +-0.8 s (32 windows, 650 steps)
+[  0.14 h]     model no_liquid, seed None, split final, half_s 0.8: Macro-F1 0.6110, SVEB recall 0.083, SVEB F1 0.108, VEB recall 0.907 (61 s)
+[  0.14 h]     simulated liquid seed 2026 final +-0.8 s: A_in 1.2268, firing 10.74 Hz, 18 s
+[  0.15 h]     simulated liquid_norec seed 2026 final +-0.8 s: A_in 1.2268, firing 10.71 Hz, 18 s
+[  0.17 h]     simulated liquid seed 69 final +-0.8 s: A_in 1.2268, firing 10.65 Hz, 18 s
+[  0.17 h]     model liquid, seed 2026, split final, half_s 0.8: Macro-F1 0.6209, SVEB recall 0.079, SVEB F1 0.088, VEB recall 0.933 (106 s)
+[  0.18 h]     simulated liquid_norec seed 69 final +-0.8 s: A_in 1.2268, firing 10.64 Hz, 18 s
+[  0.18 h]     model random_features, seed 2026, split final, half_s 0.8: Macro-F1 0.5973, SVEB recall 0.084, SVEB F1 0.091, VEB recall 0.918 (175 s)
+[  0.18 h]     model liquid_norec, seed 2026, split final, half_s 0.8: Macro-F1 0.6220, SVEB recall 0.083, SVEB F1 0.091, VEB recall 0.926 (107 s)
+[  0.20 h]     simulated liquid seed 420 final +-0.8 s: A_in 1.2268, firing 10.63 Hz, 18 s
+[  0.20 h]     model liquid, seed 69, split final, half_s 0.8: Macro-F1 0.6234, SVEB recall 0.085, SVEB F1 0.097, VEB recall 0.938 (108 s)
+[  0.20 h]     simulated liquid_norec seed 420 final +-0.8 s: A_in 1.2268, firing 10.61 Hz, 18 s
+[  0.21 h]   t4_window: final, +-1.6 s (61 windows, 1230 steps)
+[  0.21 h]     model random_features, seed 69, split final, half_s 0.8: Macro-F1 0.5970, SVEB recall 0.085, SVEB F1 0.096, VEB recall 0.918 (177 s)
+[  0.21 h]     model liquid_norec, seed 69, split final, half_s 0.8: Macro-F1 0.6221, SVEB recall 0.086, SVEB F1 0.099, VEB recall 0.936 (108 s)
+[  0.23 h]     model liquid, seed 420, split final, half_s 0.8: Macro-F1 0.6162, SVEB recall 0.079, SVEB F1 0.093, VEB recall 0.933 (108 s)
+[  0.23 h]     model random_features, seed 420, split final, half_s 0.8: Macro-F1 0.5970, SVEB recall 0.078, SVEB F1 0.092, VEB recall 0.919 (178 s)
+[  0.23 h]     model liquid_norec, seed 420, split final, half_s 0.8: Macro-F1 0.6191, SVEB recall 0.079, SVEB F1 0.095, VEB recall 0.934 (108 s)
+[  0.25 h]     model no_liquid, seed None, split final, half_s 1.6: Macro-F1 0.5907, SVEB recall 0.042, SVEB F1 0.056, VEB recall 0.891 (117 s)
+[  0.26 h]     simulated liquid seed 2026 final +-1.6 s: A_in 1.2396, firing 11.28 Hz, 34 s
+[  0.27 h]     simulated liquid_norec seed 2026 final +-1.6 s: A_in 1.2396, firing 11.24 Hz, 34 s
+[  0.31 h]     simulated liquid seed 69 final +-1.6 s: A_in 1.2396, firing 11.16 Hz, 34 s
+[  0.31 h]     model liquid, seed 2026, split final, half_s 1.6: Macro-F1 0.6206, SVEB recall 0.052, SVEB F1 0.063, VEB recall 0.917 (202 s)
+[  0.32 h]     simulated liquid_norec seed 69 final +-1.6 s: A_in 1.2396, firing 11.14 Hz, 34 s
+[  0.33 h]     model random_features, seed 2026, split final, half_s 1.6: Macro-F1 0.5879, SVEB recall 0.058, SVEB F1 0.068, VEB recall 0.901 (334 s)
+[  0.33 h]     model liquid_norec, seed 2026, split final, half_s 1.6: Macro-F1 0.6165, SVEB recall 0.048, SVEB F1 0.054, VEB recall 0.919 (206 s)
+[  0.36 h]     simulated liquid seed 420 final +-1.6 s: A_in 1.2396, firing 11.21 Hz, 34 s
+[  0.36 h]     model liquid, seed 69, split final, half_s 1.6: Macro-F1 0.6234, SVEB recall 0.057, SVEB F1 0.065, VEB recall 0.921 (208 s)
+[  0.38 h]     simulated liquid_norec seed 420 final +-1.6 s: A_in 1.2396, firing 11.19 Hz, 34 s
+[  0.38 h]   t4_window: cv-r1f1, +-0.8 s (32 windows, 650 steps)
+[  0.38 h]     model random_features, seed 69, split final, half_s 1.6: Macro-F1 0.5917, SVEB recall 0.061, SVEB F1 0.070, VEB recall 0.900 (338 s)
+[  0.38 h]     model liquid_norec, seed 69, split final, half_s 1.6: Macro-F1 0.6235, SVEB recall 0.053, SVEB F1 0.062, VEB recall 0.921 (205 s)
+[  0.39 h]     simulated liquid seed 2026 cv-r1f1 +-0.8 s: A_in 1.2178, firing 10.67 Hz, 18 s
+[  0.39 h]     model no_liquid, seed None, split cv-r1f1, half_s 0.8: Macro-F1 0.6166, SVEB recall 0.559, SVEB F1 0.651, VEB recall 0.412 (48 s)
+[  0.40 h]     simulated liquid_norec seed 2026 cv-r1f1 +-0.8 s: A_in 1.2178, firing 10.64 Hz, 18 s
+[  0.41 h]     simulated liquid seed 69 cv-r1f1 +-0.8 s: A_in 1.2178, firing 10.59 Hz, 18 s
+[  0.41 h]     simulated liquid_norec seed 69 cv-r1f1 +-0.8 s: A_in 1.2178, firing 10.58 Hz, 18 s
+[  0.42 h]     model liquid, seed 2026, split cv-r1f1, half_s 0.8: Macro-F1 0.6092, SVEB recall 0.260, SVEB F1 0.354, VEB recall 0.825 (85 s)
+[  0.42 h]     model liquid, seed 420, split final, half_s 1.6: Macro-F1 0.6155, SVEB recall 0.051, SVEB F1 0.058, VEB recall 0.915 (212 s)
+[  0.42 h]     model liquid_norec, seed 2026, split cv-r1f1, half_s 0.8: Macro-F1 0.6180, SVEB recall 0.282, SVEB F1 0.385, VEB recall 0.831 (86 s)
+[  0.42 h]     model random_features, seed 2026, split cv-r1f1, half_s 0.8: Macro-F1 0.6373, SVEB recall 0.153, SVEB F1 0.235, VEB recall 0.830 (128 s)
+[  0.42 h]     simulated liquid seed 420 cv-r1f1 +-0.8 s: A_in 1.2178, firing 10.56 Hz, 18 s
+[  0.43 h]     simulated liquid_norec seed 420 cv-r1f1 +-0.8 s: A_in 1.2178, firing 10.55 Hz, 18 s
+[  0.43 h]   t4_window: cv-r1f1, +-1.6 s (61 windows, 1230 steps)
+[  0.43 h]     model liquid, seed 69, split cv-r1f1, half_s 0.8: Macro-F1 0.6184, SVEB recall 0.282, SVEB F1 0.379, VEB recall 0.837 (88 s)
+[  0.44 h]     model random_features, seed 420, split final, half_s 1.6: Macro-F1 0.5913, SVEB recall 0.052, SVEB F1 0.065, VEB recall 0.901 (347 s)
+[  0.44 h]     model liquid_norec, seed 420, split final, half_s 1.6: Macro-F1 0.6219, SVEB recall 0.054, SVEB F1 0.065, VEB recall 0.916 (219 s)
+[  0.44 h]     model liquid_norec, seed 69, split cv-r1f1, half_s 0.8: Macro-F1 0.5955, SVEB recall 0.215, SVEB F1 0.296, VEB recall 0.841 (89 s)
+[  0.44 h]     model random_features, seed 69, split cv-r1f1, half_s 0.8: Macro-F1 0.6480, SVEB recall 0.164, SVEB F1 0.251, VEB recall 0.835 (129 s)
+[  0.45 h]     model liquid, seed 420, split cv-r1f1, half_s 0.8: Macro-F1 0.6078, SVEB recall 0.226, SVEB F1 0.324, VEB recall 0.844 (85 s)
+[  0.45 h]     model liquid_norec, seed 420, split cv-r1f1, half_s 0.8: Macro-F1 0.5981, SVEB recall 0.215, SVEB F1 0.310, VEB recall 0.844 (84 s)
+[  0.45 h]     model random_features, seed 420, split cv-r1f1, half_s 0.8: Macro-F1 0.6452, SVEB recall 0.158, SVEB F1 0.237, VEB recall 0.820 (123 s)
+[  0.46 h]     simulated liquid seed 2026 cv-r1f1 +-1.6 s: A_in 1.2512, firing 11.13 Hz, 34 s
+[  0.46 h]     model no_liquid, seed None, split cv-r1f1, half_s 1.6: Macro-F1 0.5498, SVEB recall 0.153, SVEB F1 0.235, VEB recall 0.759 (86 s)
+[  0.47 h]     simulated liquid_norec seed 2026 cv-r1f1 +-1.6 s: A_in 1.2512, firing 11.10 Hz, 34 s
+[  0.49 h]     simulated liquid seed 69 cv-r1f1 +-1.6 s: A_in 1.2512, firing 10.98 Hz, 33 s
+[  0.50 h]     simulated liquid_norec seed 69 cv-r1f1 +-1.6 s: A_in 1.2512, firing 10.97 Hz, 33 s
+[  0.50 h]     model liquid, seed 2026, split cv-r1f1, half_s 1.6: Macro-F1 0.5372, SVEB recall 0.056, SVEB F1 0.081, VEB recall 0.838 (150 s)
+[  0.51 h]     model liquid_norec, seed 2026, split cv-r1f1, half_s 1.6: Macro-F1 0.5417, SVEB recall 0.062, SVEB F1 0.087, VEB recall 0.838 (151 s)
+[  0.51 h]     model random_features, seed 2026, split cv-r1f1, half_s 1.6: Macro-F1 0.5449, SVEB recall 0.045, SVEB F1 0.071, VEB recall 0.845 (230 s)
+[  0.52 h]     simulated liquid seed 420 cv-r1f1 +-1.6 s: A_in 1.2512, firing 11.19 Hz, 33 s
+[  0.53 h]     simulated liquid_norec seed 420 cv-r1f1 +-1.6 s: A_in 1.2512, firing 11.17 Hz, 33 s
+[  0.53 h]   t4_window: cv-r1f2, +-0.8 s (32 windows, 650 steps)
+[  0.53 h]     model liquid, seed 69, split cv-r1f1, half_s 1.6: Macro-F1 0.5592, SVEB recall 0.085, SVEB F1 0.133, VEB recall 0.839 (152 s)
+[  0.54 h]     model liquid_norec, seed 69, split cv-r1f1, half_s 1.6: Macro-F1 0.5755, SVEB recall 0.136, SVEB F1 0.187, VEB recall 0.832 (153 s)
+[  0.54 h]     model random_features, seed 69, split cv-r1f1, half_s 1.6: Macro-F1 0.5824, SVEB recall 0.079, SVEB F1 0.127, VEB recall 0.846 (232 s)
+[  0.54 h]     simulated liquid seed 2026 cv-r1f2 +-0.8 s: A_in 1.2249, firing 10.70 Hz, 18 s
+[  0.55 h]     model no_liquid, seed None, split cv-r1f2, half_s 0.8: Macro-F1 0.6547, SVEB recall 0.314, SVEB F1 0.462, VEB recall 0.700 (49 s)
+[  0.55 h]     simulated liquid_norec seed 2026 cv-r1f2 +-0.8 s: A_in 1.2249, firing 10.67 Hz, 18 s
+[  0.56 h]     simulated liquid seed 69 cv-r1f2 +-0.8 s: A_in 1.2249, firing 10.42 Hz, 18 s
+[  0.56 h]     model liquid, seed 420, split cv-r1f1, half_s 1.6: Macro-F1 0.5353, SVEB recall 0.045, SVEB F1 0.068, VEB recall 0.837 (156 s)
+[  0.57 h]     simulated liquid_norec seed 69 cv-r1f2 +-0.8 s: A_in 1.2249, firing 10.41 Hz, 18 s
+[  0.57 h]     model liquid, seed 2026, split cv-r1f2, half_s 0.8: Macro-F1 0.7687, SVEB recall 0.377, SVEB F1 0.535, VEB recall 0.715 (82 s)
+[  0.57 h]     model liquid_norec, seed 2026, split cv-r1f2, half_s 0.8: Macro-F1 0.7721, SVEB recall 0.382, SVEB F1 0.542, VEB recall 0.715 (83 s)
+[  0.57 h]     model liquid_norec, seed 420, split cv-r1f1, half_s 1.6: Macro-F1 0.5450, SVEB recall 0.068, SVEB F1 0.100, VEB recall 0.838 (158 s)
+[  0.57 h]     model random_features, seed 2026, split cv-r1f2, half_s 0.8: Macro-F1 0.7119, SVEB recall 0.314, SVEB F1 0.464, VEB recall 0.700 (125 s)
+[  0.58 h]     model random_features, seed 420, split cv-r1f1, half_s 1.6: Macro-F1 0.5512, SVEB recall 0.040, SVEB F1 0.065, VEB recall 0.838 (237 s)
+[  0.58 h]     simulated liquid seed 420 cv-r1f2 +-0.8 s: A_in 1.2249, firing 10.41 Hz, 18 s
+[  0.58 h]     simulated liquid_norec seed 420 cv-r1f2 +-0.8 s: A_in 1.2249, firing 10.39 Hz, 18 s
+[  0.58 h]   t4_window: cv-r1f2, +-1.6 s (61 windows, 1230 steps)
+[  0.58 h]     model liquid, seed 69, split cv-r1f2, half_s 0.8: Macro-F1 0.7523, SVEB recall 0.333, SVEB F1 0.489, VEB recall 0.715 (85 s)
+[  0.59 h]     model liquid_norec, seed 69, split cv-r1f2, half_s 0.8: Macro-F1 0.7548, SVEB recall 0.348, SVEB F1 0.502, VEB recall 0.708 (83 s)
+[  0.59 h]     model random_features, seed 69, split cv-r1f2, half_s 0.8: Macro-F1 0.6861, SVEB recall 0.324, SVEB F1 0.473, VEB recall 0.646 (126 s)
+[  0.60 h]     model liquid, seed 420, split cv-r1f2, half_s 0.8: Macro-F1 0.7416, SVEB recall 0.299, SVEB F1 0.450, VEB recall 0.731 (80 s)
+[  0.60 h]     model liquid_norec, seed 420, split cv-r1f2, half_s 0.8: Macro-F1 0.7524, SVEB recall 0.319, SVEB F1 0.471, VEB recall 0.738 (80 s)
+[  0.60 h]     model random_features, seed 420, split cv-r1f2, half_s 0.8: Macro-F1 0.7173, SVEB recall 0.328, SVEB F1 0.482, VEB recall 0.685 (121 s)
+[  0.61 h]     simulated liquid seed 2026 cv-r1f2 +-1.6 s: A_in 1.2398, firing 11.16 Hz, 33 s
+[  0.61 h]     model no_liquid, seed None, split cv-r1f2, half_s 1.6: Macro-F1 0.6347, SVEB recall 0.118, SVEB F1 0.203, VEB recall 0.669 (86 s)
+[  0.62 h]     simulated liquid_norec seed 2026 cv-r1f2 +-1.6 s: A_in 1.2398, firing 11.13 Hz, 33 s
+[  0.64 h]     simulated liquid seed 69 cv-r1f2 +-1.6 s: A_in 1.2398, firing 10.91 Hz, 34 s
+[  0.65 h]     simulated liquid_norec seed 69 cv-r1f2 +-1.6 s: A_in 1.2398, firing 10.89 Hz, 34 s
+[  0.65 h]     model liquid, seed 2026, split cv-r1f2, half_s 1.6: Macro-F1 0.6379, SVEB recall 0.201, SVEB F1 0.329, VEB recall 0.700 (149 s)
+[  0.66 h]     model liquid_norec, seed 2026, split cv-r1f2, half_s 1.6: Macro-F1 0.6543, SVEB recall 0.230, SVEB F1 0.370, VEB recall 0.708 (149 s)
+[  0.66 h]     model random_features, seed 2026, split cv-r1f2, half_s 1.6: Macro-F1 0.5266, SVEB recall 0.137, SVEB F1 0.232, VEB recall 0.723 (228 s)
+[  0.67 h]     simulated liquid seed 420 cv-r1f2 +-1.6 s: A_in 1.2398, firing 10.91 Hz, 34 s
+[  0.68 h]     simulated liquid_norec seed 420 cv-r1f2 +-1.6 s: A_in 1.2398, firing 10.89 Hz, 34 s
+[  0.68 h]   t4_window: cv-r1f3, +-0.8 s (32 windows, 650 steps)
+[  0.68 h]     model liquid, seed 69, split cv-r1f2, half_s 1.6: Macro-F1 0.6056, SVEB recall 0.196, SVEB F1 0.323, VEB recall 0.708 (152 s)
+[  0.69 h]     model liquid_norec, seed 69, split cv-r1f2, half_s 1.6: Macro-F1 0.6034, SVEB recall 0.172, SVEB F1 0.290, VEB recall 0.731 (153 s)
+[  0.70 h]     simulated liquid seed 2026 cv-r1f3 +-0.8 s: A_in 1.2788, firing 10.93 Hz, 18 s
+[  0.70 h]     model random_features, seed 69, split cv-r1f2, half_s 1.6: Macro-F1 0.5147, SVEB recall 0.162, SVEB F1 0.272, VEB recall 0.685 (233 s)
+[  0.70 h]     model no_liquid, seed None, split cv-r1f3, half_s 0.8: Macro-F1 0.5675, SVEB recall 0.301, SVEB F1 0.061, VEB recall 0.674 (44 s)
+[  0.70 h]     simulated liquid_norec seed 2026 cv-r1f3 +-0.8 s: A_in 1.2788, firing 10.90 Hz, 18 s
+[  0.71 h]     simulated liquid seed 69 cv-r1f3 +-0.8 s: A_in 1.2788, firing 11.07 Hz, 18 s
+[  0.71 h]     model liquid, seed 420, split cv-r1f2, half_s 1.6: Macro-F1 0.6331, SVEB recall 0.201, SVEB F1 0.332, VEB recall 0.723 (155 s)
+[  0.72 h]     simulated liquid_norec seed 69 cv-r1f3 +-0.8 s: A_in 1.2788, firing 11.06 Hz, 18 s
+[  0.72 h]     model liquid, seed 2026, split cv-r1f3, half_s 0.8: Macro-F1 0.5853, SVEB recall 0.272, SVEB F1 0.057, VEB recall 0.792 (76 s)
+[  0.72 h]     model liquid_norec, seed 2026, split cv-r1f3, half_s 0.8: Macro-F1 0.5811, SVEB recall 0.235, SVEB F1 0.047, VEB recall 0.791 (76 s)
+[  0.72 h]     model random_features, seed 2026, split cv-r1f3, half_s 0.8: Macro-F1 0.5749, SVEB recall 0.390, SVEB F1 0.070, VEB recall 0.836 (116 s)
+[  0.72 h]     model liquid_norec, seed 420, split cv-r1f2, half_s 1.6: Macro-F1 0.6543, SVEB recall 0.245, SVEB F1 0.389, VEB recall 0.715 (158 s)
+[  0.73 h]     simulated liquid seed 420 cv-r1f3 +-0.8 s: A_in 1.2788, firing 11.24 Hz, 18 s
+[  0.73 h]     model random_features, seed 420, split cv-r1f2, half_s 1.6: Macro-F1 0.5215, SVEB recall 0.108, SVEB F1 0.190, VEB recall 0.715 (236 s)
+[  0.73 h]     simulated liquid_norec seed 420 cv-r1f3 +-0.8 s: A_in 1.2788, firing 11.22 Hz, 18 s
+[  0.73 h]   t4_window: cv-r1f3, +-1.6 s (61 windows, 1230 steps)
+[  0.73 h]     model liquid, seed 69, split cv-r1f3, half_s 0.8: Macro-F1 0.5814, SVEB recall 0.250, SVEB F1 0.049, VEB recall 0.808 (77 s)
+[  0.74 h]     model liquid_norec, seed 69, split cv-r1f3, half_s 0.8: Macro-F1 0.5871, SVEB recall 0.309, SVEB F1 0.059, VEB recall 0.799 (75 s)
+[  0.74 h]     model random_features, seed 69, split cv-r1f3, half_s 0.8: Macro-F1 0.5786, SVEB recall 0.419, SVEB F1 0.075, VEB recall 0.852 (116 s)
+[  0.75 h]     model liquid, seed 420, split cv-r1f3, half_s 0.8: Macro-F1 0.5813, SVEB recall 0.250, SVEB F1 0.048, VEB recall 0.781 (73 s)
+[  0.75 h]     model liquid_norec, seed 420, split cv-r1f3, half_s 0.8: Macro-F1 0.5826, SVEB recall 0.235, SVEB F1 0.048, VEB recall 0.801 (73 s)
+[  0.75 h]     model random_features, seed 420, split cv-r1f3, half_s 0.8: Macro-F1 0.5739, SVEB recall 0.338, SVEB F1 0.063, VEB recall 0.822 (113 s)
+[  0.76 h]     simulated liquid seed 2026 cv-r1f3 +-1.6 s: A_in 1.3028, firing 11.30 Hz, 33 s
+[  0.76 h]     model no_liquid, seed None, split cv-r1f3, half_s 1.6: Macro-F1 0.5578, SVEB recall 0.243, SVEB F1 0.049, VEB recall 0.720 (78 s)
+[  0.77 h]     simulated liquid_norec seed 2026 cv-r1f3 +-1.6 s: A_in 1.3028, firing 11.26 Hz, 33 s
+[  0.79 h]     simulated liquid seed 69 cv-r1f3 +-1.6 s: A_in 1.3028, firing 11.38 Hz, 33 s
+[  0.80 h]     model liquid, seed 2026, split cv-r1f3, half_s 1.6: Macro-F1 0.5575, SVEB recall 0.206, SVEB F1 0.032, VEB recall 0.764 (136 s)
+[  0.80 h]     simulated liquid_norec seed 69 cv-r1f3 +-1.6 s: A_in 1.3028, firing 11.36 Hz, 33 s
+[  0.81 h]     model liquid_norec, seed 2026, split cv-r1f3, half_s 1.6: Macro-F1 0.5589, SVEB recall 0.206, SVEB F1 0.034, VEB recall 0.772 (136 s)
+[  0.81 h]     model random_features, seed 2026, split cv-r1f3, half_s 1.6: Macro-F1 0.5568, SVEB recall 0.243, SVEB F1 0.038, VEB recall 0.822 (213 s)
+[  0.82 h]     simulated liquid seed 420 cv-r1f3 +-1.6 s: A_in 1.3028, firing 11.57 Hz, 33 s
+[  0.83 h]     model liquid, seed 69, split cv-r1f3, half_s 1.6: Macro-F1 0.5560, SVEB recall 0.199, SVEB F1 0.034, VEB recall 0.780 (137 s)
+[  0.83 h]     simulated liquid_norec seed 420 cv-r1f3 +-1.6 s: A_in 1.3028, firing 11.55 Hz, 33 s
+[  0.83 h]   t4_window: cv-r1f4, +-0.8 s (32 windows, 650 steps)
+[  0.84 h]     model liquid_norec, seed 69, split cv-r1f3, half_s 1.6: Macro-F1 0.5616, SVEB recall 0.206, SVEB F1 0.035, VEB recall 0.790 (138 s)
+[  0.84 h]     model random_features, seed 69, split cv-r1f3, half_s 1.6: Macro-F1 0.5574, SVEB recall 0.221, SVEB F1 0.039, VEB recall 0.831 (215 s)
+[  0.84 h]     simulated liquid seed 2026 cv-r1f4 +-0.8 s: A_in 1.2210, firing 10.36 Hz, 18 s
+[  0.85 h]     model no_liquid, seed None, split cv-r1f4, half_s 0.8: Macro-F1 0.6087, SVEB recall 0.033, SVEB F1 0.031, VEB recall 0.906 (47 s)
+[  0.85 h]     simulated liquid_norec seed 2026 cv-r1f4 +-0.8 s: A_in 1.2210, firing 10.33 Hz, 18 s
+[  0.86 h]     model liquid, seed 420, split cv-r1f3, half_s 1.6: Macro-F1 0.5468, SVEB recall 0.199, SVEB F1 0.031, VEB recall 0.741 (140 s)
+[  0.86 h]     simulated liquid seed 69 cv-r1f4 +-0.8 s: A_in 1.2210, firing 10.29 Hz, 18 s
+[  0.86 h]     simulated liquid_norec seed 69 cv-r1f4 +-0.8 s: A_in 1.2210, firing 10.27 Hz, 18 s
+[  0.87 h]     model liquid, seed 2026, split cv-r1f4, half_s 0.8: Macro-F1 0.6924, SVEB recall 0.300, SVEB F1 0.309, VEB recall 0.971 (80 s)
+[  0.87 h]     model liquid_norec, seed 420, split cv-r1f3, half_s 1.6: Macro-F1 0.5482, SVEB recall 0.206, SVEB F1 0.033, VEB recall 0.738 (144 s)
+[  0.87 h]     model random_features, seed 420, split cv-r1f3, half_s 1.6: Macro-F1 0.5566, SVEB recall 0.235, SVEB F1 0.036, VEB recall 0.803 (216 s)
+[  0.87 h]     model liquid_norec, seed 2026, split cv-r1f4, half_s 0.8: Macro-F1 0.7155, SVEB recall 0.378, SVEB F1 0.361, VEB recall 0.966 (80 s)
+[  0.87 h]     model random_features, seed 2026, split cv-r1f4, half_s 0.8: Macro-F1 0.6842, SVEB recall 0.298, SVEB F1 0.356, VEB recall 0.966 (121 s)
+[  0.87 h]     simulated liquid seed 420 cv-r1f4 +-0.8 s: A_in 1.2210, firing 10.25 Hz, 18 s
+[  0.88 h]     simulated liquid_norec seed 420 cv-r1f4 +-0.8 s: A_in 1.2210, firing 10.23 Hz, 18 s
+[  0.88 h]   t4_window: cv-r1f4, +-1.6 s (61 windows, 1230 steps)
+[  0.88 h]     model liquid, seed 69, split cv-r1f4, half_s 0.8: Macro-F1 0.7080, SVEB recall 0.343, SVEB F1 0.329, VEB recall 0.966 (80 s)
+[  0.89 h]     model liquid_norec, seed 69, split cv-r1f4, half_s 0.8: Macro-F1 0.6996, SVEB recall 0.340, SVEB F1 0.313, VEB recall 0.970 (80 s)
+[  0.89 h]     model random_features, seed 69, split cv-r1f4, half_s 0.8: Macro-F1 0.6815, SVEB recall 0.281, SVEB F1 0.331, VEB recall 0.962 (121 s)
+[  0.90 h]     model liquid, seed 420, split cv-r1f4, half_s 0.8: Macro-F1 0.6866, SVEB recall 0.288, SVEB F1 0.292, VEB recall 0.972 (77 s)
+[  0.90 h]     model liquid_norec, seed 420, split cv-r1f4, half_s 0.8: Macro-F1 0.6828, SVEB recall 0.293, SVEB F1 0.289, VEB recall 0.966 (77 s)
+[  0.90 h]     model random_features, seed 420, split cv-r1f4, half_s 0.8: Macro-F1 0.6777, SVEB recall 0.291, SVEB F1 0.337, VEB recall 0.972 (118 s)
+[  0.91 h]     simulated liquid seed 2026 cv-r1f4 +-1.6 s: A_in 1.2055, firing 11.19 Hz, 33 s
+[  0.91 h]     model no_liquid, seed None, split cv-r1f4, half_s 1.6: Macro-F1 0.5893, SVEB recall 0.026, SVEB F1 0.041, VEB recall 0.951 (83 s)
+[  0.92 h]     simulated liquid_norec seed 2026 cv-r1f4 +-1.6 s: A_in 1.2055, firing 11.16 Hz, 33 s
+[  0.94 h]     simulated liquid seed 69 cv-r1f4 +-1.6 s: A_in 1.2055, firing 11.09 Hz, 33 s
+[  0.95 h]     simulated liquid_norec seed 69 cv-r1f4 +-1.6 s: A_in 1.2055, firing 11.08 Hz, 33 s
+[  0.95 h]     model liquid, seed 2026, split cv-r1f4, half_s 1.6: Macro-F1 0.6393, SVEB recall 0.106, SVEB F1 0.157, VEB recall 0.967 (144 s)
+[  0.96 h]     model liquid_norec, seed 2026, split cv-r1f4, half_s 1.6: Macro-F1 0.6371, SVEB recall 0.116, SVEB F1 0.167, VEB recall 0.962 (146 s)
+[  0.96 h]     model random_features, seed 2026, split cv-r1f4, half_s 1.6: Macro-F1 0.6213, SVEB recall 0.076, SVEB F1 0.102, VEB recall 0.965 (222 s)
+[  0.97 h]     simulated liquid seed 420 cv-r1f4 +-1.6 s: A_in 1.2055, firing 11.08 Hz, 33 s
+[  0.98 h]     simulated liquid_norec seed 420 cv-r1f4 +-1.6 s: A_in 1.2055, firing 11.06 Hz, 33 s
+[  0.98 h]   t4_window: cv-r2f1, +-0.8 s (32 windows, 650 steps)
+[  0.98 h]     model liquid, seed 69, split cv-r1f4, half_s 1.6: Macro-F1 0.6313, SVEB recall 0.087, SVEB F1 0.121, VEB recall 0.966 (146 s)
+[  0.99 h]     model liquid_norec, seed 69, split cv-r1f4, half_s 1.6: Macro-F1 0.6406, SVEB recall 0.111, SVEB F1 0.155, VEB recall 0.972 (148 s)
+[  0.99 h]     model random_features, seed 69, split cv-r1f4, half_s 1.6: Macro-F1 0.6234, SVEB recall 0.083, SVEB F1 0.106, VEB recall 0.958 (226 s)
+[  0.99 h]     simulated liquid seed 2026 cv-r2f1 +-0.8 s: A_in 1.3486, firing 10.56 Hz, 18 s
+[  1.00 h]     model no_liquid, seed None, split cv-r2f1, half_s 0.8: Macro-F1 0.5375, SVEB recall 0.123, SVEB F1 0.043, VEB recall 0.771 (49 s)
+[  1.00 h]     simulated liquid_norec seed 2026 cv-r2f1 +-0.8 s: A_in 1.3486, firing 10.54 Hz, 18 s
+[  1.01 h]     simulated liquid seed 69 cv-r2f1 +-0.8 s: A_in 1.3486, firing 10.65 Hz, 18 s
+[  1.01 h]     model liquid, seed 420, split cv-r1f4, half_s 1.6: Macro-F1 0.6382, SVEB recall 0.104, SVEB F1 0.141, VEB recall 0.963 (148 s)
+[  1.01 h]     simulated liquid_norec seed 69 cv-r2f1 +-0.8 s: A_in 1.3486, firing 10.63 Hz, 18 s
+[  1.02 h]     model liquid, seed 2026, split cv-r2f1, half_s 0.8: Macro-F1 0.5735, SVEB recall 0.358, SVEB F1 0.143, VEB recall 0.805 (82 s)
+[  1.02 h]     model liquid_norec, seed 420, split cv-r1f4, half_s 1.6: Macro-F1 0.6304, SVEB recall 0.092, SVEB F1 0.124, VEB recall 0.959 (152 s)
+[  1.02 h]     model liquid_norec, seed 2026, split cv-r2f1, half_s 0.8: Macro-F1 0.5693, SVEB recall 0.309, SVEB F1 0.132, VEB recall 0.808 (83 s)
+[  1.02 h]     model random_features, seed 420, split cv-r1f4, half_s 1.6: Macro-F1 0.6239, SVEB recall 0.071, SVEB F1 0.094, VEB recall 0.961 (229 s)
+[  1.02 h]     model random_features, seed 2026, split cv-r2f1, half_s 0.8: Macro-F1 0.6067, SVEB recall 0.247, SVEB F1 0.188, VEB recall 0.868 (125 s)
+[  1.02 h]     simulated liquid seed 420 cv-r2f1 +-0.8 s: A_in 1.3486, firing 10.70 Hz, 18 s
+[  1.03 h]     simulated liquid_norec seed 420 cv-r2f1 +-0.8 s: A_in 1.3486, firing 10.68 Hz, 18 s
+[  1.03 h]   t4_window: cv-r2f1, +-1.6 s (61 windows, 1230 steps)
+[  1.03 h]     model liquid, seed 69, split cv-r2f1, half_s 0.8: Macro-F1 0.5802, SVEB recall 0.309, SVEB F1 0.142, VEB recall 0.824 (83 s)
+[  1.04 h]     model liquid_norec, seed 69, split cv-r2f1, half_s 0.8: Macro-F1 0.5787, SVEB recall 0.309, SVEB F1 0.138, VEB recall 0.812 (83 s)
+[  1.04 h]     model random_features, seed 69, split cv-r2f1, half_s 0.8: Macro-F1 0.6196, SVEB recall 0.284, SVEB F1 0.207, VEB recall 0.863 (124 s)
+[  1.05 h]     model liquid, seed 420, split cv-r2f1, half_s 0.8: Macro-F1 0.5816, SVEB recall 0.358, SVEB F1 0.153, VEB recall 0.791 (80 s)
+[  1.05 h]     model liquid_norec, seed 420, split cv-r2f1, half_s 0.8: Macro-F1 0.5759, SVEB recall 0.333, SVEB F1 0.152, VEB recall 0.799 (80 s)
+[  1.05 h]     model random_features, seed 420, split cv-r2f1, half_s 0.8: Macro-F1 0.6210, SVEB recall 0.321, SVEB F1 0.227, VEB recall 0.856 (121 s)
+[  1.06 h]     simulated liquid seed 2026 cv-r2f1 +-1.6 s: A_in 1.3572, firing 10.94 Hz, 33 s
+[  1.06 h]     model no_liquid, seed None, split cv-r2f1, half_s 1.6: Macro-F1 0.5334, SVEB recall 0.049, SVEB F1 0.052, VEB recall 0.658 (86 s)
+[  1.07 h]     simulated liquid_norec seed 2026 cv-r2f1 +-1.6 s: A_in 1.3572, firing 10.91 Hz, 33 s
+[  1.09 h]     simulated liquid seed 69 cv-r2f1 +-1.6 s: A_in 1.3572, firing 11.10 Hz, 33 s
+[  1.10 h]     simulated liquid_norec seed 69 cv-r2f1 +-1.6 s: A_in 1.3572, firing 11.09 Hz, 33 s
+[  1.10 h]     model liquid, seed 2026, split cv-r2f1, half_s 1.6: Macro-F1 0.5741, SVEB recall 0.099, SVEB F1 0.094, VEB recall 0.730 (149 s)
+[  1.11 h]     model liquid_norec, seed 2026, split cv-r2f1, half_s 1.6: Macro-F1 0.5731, SVEB recall 0.111, SVEB F1 0.118, VEB recall 0.722 (149 s)
+[  1.11 h]     model random_features, seed 2026, split cv-r2f1, half_s 1.6: Macro-F1 0.6082, SVEB recall 0.123, SVEB F1 0.105, VEB recall 0.782 (230 s)
+[  1.12 h]     simulated liquid seed 420 cv-r2f1 +-1.6 s: A_in 1.3572, firing 11.11 Hz, 33 s
+[  1.13 h]     simulated liquid_norec seed 420 cv-r2f1 +-1.6 s: A_in 1.3572, firing 11.09 Hz, 33 s
+[  1.13 h]   t4_window: cv-r2f2, +-0.8 s (32 windows, 650 steps)
+[  1.13 h]     model liquid, seed 69, split cv-r2f1, half_s 1.6: Macro-F1 0.5896, SVEB recall 0.111, SVEB F1 0.118, VEB recall 0.746 (152 s)
+[  1.14 h]     model liquid_norec, seed 69, split cv-r2f1, half_s 1.6: Macro-F1 0.5891, SVEB recall 0.099, SVEB F1 0.125, VEB recall 0.741 (154 s)
+[  1.14 h]     simulated liquid seed 2026 cv-r2f2 +-0.8 s: A_in 1.2291, firing 10.32 Hz, 18 s
+[  1.14 h]     model random_features, seed 69, split cv-r2f1, half_s 1.6: Macro-F1 0.5979, SVEB recall 0.086, SVEB F1 0.068, VEB recall 0.779 (234 s)
+[  1.15 h]     model no_liquid, seed None, split cv-r2f2, half_s 0.8: Macro-F1 0.7462, SVEB recall 0.545, SVEB F1 0.374, VEB recall 0.810 (49 s)
+[  1.15 h]     simulated liquid_norec seed 2026 cv-r2f2 +-0.8 s: A_in 1.2291, firing 10.29 Hz, 18 s
+[  1.16 h]     simulated liquid seed 69 cv-r2f2 +-0.8 s: A_in 1.2291, firing 10.24 Hz, 18 s
+[  1.16 h]     model liquid, seed 420, split cv-r2f1, half_s 1.6: Macro-F1 0.5908, SVEB recall 0.111, SVEB F1 0.106, VEB recall 0.725 (157 s)
+[  1.17 h]     simulated liquid_norec seed 69 cv-r2f2 +-0.8 s: A_in 1.2291, firing 10.22 Hz, 18 s
+[  1.17 h]     model liquid, seed 2026, split cv-r2f2, half_s 0.8: Macro-F1 0.8311, SVEB recall 0.788, SVEB F1 0.536, VEB recall 0.943 (84 s)
+[  1.17 h]     model liquid_norec, seed 2026, split cv-r2f2, half_s 0.8: Macro-F1 0.8431, SVEB recall 0.788, SVEB F1 0.571, VEB recall 0.944 (84 s)
+[  1.17 h]     model liquid_norec, seed 420, split cv-r2f1, half_s 1.6: Macro-F1 0.6078, SVEB recall 0.160, SVEB F1 0.174, VEB recall 0.733 (159 s)
+[  1.17 h]     model random_features, seed 2026, split cv-r2f2, half_s 0.8: Macro-F1 0.8266, SVEB recall 0.778, SVEB F1 0.529, VEB recall 0.948 (125 s)
+[  1.18 h]     model random_features, seed 420, split cv-r2f1, half_s 1.6: Macro-F1 0.6164, SVEB recall 0.148, SVEB F1 0.119, VEB recall 0.772 (236 s)
+[  1.18 h]     simulated liquid seed 420 cv-r2f2 +-0.8 s: A_in 1.2291, firing 10.21 Hz, 18 s
+[  1.18 h]     simulated liquid_norec seed 420 cv-r2f2 +-0.8 s: A_in 1.2291, firing 10.19 Hz, 18 s
+[  1.18 h]   t4_window: cv-r2f2, +-1.6 s (61 windows, 1230 steps)
+[  1.18 h]     model liquid, seed 69, split cv-r2f2, half_s 0.8: Macro-F1 0.8416, SVEB recall 0.768, SVEB F1 0.565, VEB recall 0.945 (84 s)
+[  1.19 h]     model liquid_norec, seed 69, split cv-r2f2, half_s 0.8: Macro-F1 0.8325, SVEB recall 0.788, SVEB F1 0.544, VEB recall 0.936 (83 s)
+[  1.19 h]     model random_features, seed 69, split cv-r2f2, half_s 0.8: Macro-F1 0.8320, SVEB recall 0.747, SVEB F1 0.550, VEB recall 0.942 (126 s)
+[  1.20 h]     model liquid, seed 420, split cv-r2f2, half_s 0.8: Macro-F1 0.8302, SVEB recall 0.778, SVEB F1 0.531, VEB recall 0.946 (80 s)
+[  1.20 h]     model liquid_norec, seed 420, split cv-r2f2, half_s 0.8: Macro-F1 0.8331, SVEB recall 0.778, SVEB F1 0.537, VEB recall 0.950 (81 s)
+[  1.20 h]     model random_features, seed 420, split cv-r2f2, half_s 0.8: Macro-F1 0.8247, SVEB recall 0.747, SVEB F1 0.525, VEB recall 0.951 (122 s)
+[  1.21 h]     simulated liquid seed 2026 cv-r2f2 +-1.6 s: A_in 1.2240, firing 11.07 Hz, 34 s
+[  1.21 h]     model no_liquid, seed None, split cv-r2f2, half_s 1.6: Macro-F1 0.7236, SVEB recall 0.364, SVEB F1 0.243, VEB recall 0.912 (87 s)
+[  1.22 h]     simulated liquid_norec seed 2026 cv-r2f2 +-1.6 s: A_in 1.2240, firing 11.04 Hz, 34 s
+[  1.24 h]     simulated liquid seed 69 cv-r2f2 +-1.6 s: A_in 1.2240, firing 10.98 Hz, 34 s
+[  1.25 h]     simulated liquid_norec seed 69 cv-r2f2 +-1.6 s: A_in 1.2240, firing 10.97 Hz, 34 s
+[  1.25 h]     model liquid, seed 2026, split cv-r2f2, half_s 1.6: Macro-F1 0.8279, SVEB recall 0.667, SVEB F1 0.522, VEB recall 0.949 (148 s)
+[  1.26 h]     model liquid_norec, seed 2026, split cv-r2f2, half_s 1.6: Macro-F1 0.8293, SVEB recall 0.636, SVEB F1 0.523, VEB recall 0.955 (150 s)
+[  1.26 h]     model random_features, seed 2026, split cv-r2f2, half_s 1.6: Macro-F1 0.8072, SVEB recall 0.576, SVEB F1 0.462, VEB recall 0.960 (229 s)
+[  1.27 h]     simulated liquid seed 420 cv-r2f2 +-1.6 s: A_in 1.2240, firing 10.96 Hz, 33 s
+[  1.28 h]     simulated liquid_norec seed 420 cv-r2f2 +-1.6 s: A_in 1.2240, firing 10.94 Hz, 33 s
+[  1.28 h]   t4_window: cv-r2f3, +-0.8 s (32 windows, 650 steps)
+[  1.28 h]     model liquid, seed 69, split cv-r2f2, half_s 1.6: Macro-F1 0.8480, SVEB recall 0.657, SVEB F1 0.578, VEB recall 0.958 (151 s)
+[  1.29 h]     model liquid_norec, seed 69, split cv-r2f2, half_s 1.6: Macro-F1 0.8429, SVEB recall 0.646, SVEB F1 0.564, VEB recall 0.956 (153 s)
+[  1.30 h]     simulated liquid seed 2026 cv-r2f3 +-0.8 s: A_in 1.1958, firing 10.59 Hz, 18 s
+[  1.30 h]     model random_features, seed 69, split cv-r2f2, half_s 1.6: Macro-F1 0.8166, SVEB recall 0.596, SVEB F1 0.494, VEB recall 0.966 (233 s)
+[  1.30 h]     model no_liquid, seed None, split cv-r2f3, half_s 0.8: Macro-F1 0.4599, SVEB recall 0.176, SVEB F1 0.247, VEB recall 0.458 (46 s)
+[  1.30 h]     simulated liquid_norec seed 2026 cv-r2f3 +-0.8 s: A_in 1.1958, firing 10.56 Hz, 18 s
+[  1.31 h]     simulated liquid seed 69 cv-r2f3 +-0.8 s: A_in 1.1958, firing 10.49 Hz, 18 s
+[  1.31 h]     model liquid, seed 420, split cv-r2f2, half_s 1.6: Macro-F1 0.8426, SVEB recall 0.636, SVEB F1 0.563, VEB recall 0.959 (156 s)
+[  1.32 h]     simulated liquid_norec seed 69 cv-r2f3 +-0.8 s: A_in 1.1958, firing 10.47 Hz, 18 s
+[  1.32 h]     model liquid, seed 2026, split cv-r2f3, half_s 0.8: Macro-F1 0.5330, SVEB recall 0.293, SVEB F1 0.356, VEB recall 0.557 (78 s)
+[  1.32 h]     model liquid_norec, seed 2026, split cv-r2f3, half_s 0.8: Macro-F1 0.5101, SVEB recall 0.240, SVEB F1 0.294, VEB recall 0.557 (78 s)
+[  1.32 h]     model random_features, seed 2026, split cv-r2f3, half_s 0.8: Macro-F1 0.5278, SVEB recall 0.171, SVEB F1 0.228, VEB recall 0.460 (120 s)
+[  1.32 h]     model liquid_norec, seed 420, split cv-r2f2, half_s 1.6: Macro-F1 0.8445, SVEB recall 0.636, SVEB F1 0.568, VEB recall 0.961 (158 s)
+[  1.33 h]     model random_features, seed 420, split cv-r2f2, half_s 1.6: Macro-F1 0.8023, SVEB recall 0.535, SVEB F1 0.447, VEB recall 0.964 (235 s)
+[  1.33 h]     simulated liquid seed 420 cv-r2f3 +-0.8 s: A_in 1.1958, firing 10.46 Hz, 18 s
+[  1.33 h]     simulated liquid_norec seed 420 cv-r2f3 +-0.8 s: A_in 1.1958, firing 10.44 Hz, 18 s
+[  1.33 h]   t4_window: cv-r2f3, +-1.6 s (61 windows, 1230 steps)
+[  1.33 h]     model liquid, seed 69, split cv-r2f3, half_s 0.8: Macro-F1 0.4664, SVEB recall 0.159, SVEB F1 0.202, VEB recall 0.563 (78 s)
+[  1.34 h]     model liquid_norec, seed 69, split cv-r2f3, half_s 0.8: Macro-F1 0.4907, SVEB recall 0.218, SVEB F1 0.259, VEB recall 0.574 (77 s)
+[  1.34 h]     model random_features, seed 69, split cv-r2f3, half_s 0.8: Macro-F1 0.4779, SVEB recall 0.167, SVEB F1 0.222, VEB recall 0.449 (119 s)
+[  1.35 h]     model liquid, seed 420, split cv-r2f3, half_s 0.8: Macro-F1 0.4924, SVEB recall 0.189, SVEB F1 0.243, VEB recall 0.578 (76 s)
+[  1.35 h]     model liquid_norec, seed 420, split cv-r2f3, half_s 0.8: Macro-F1 0.4793, SVEB recall 0.148, SVEB F1 0.216, VEB recall 0.572 (75 s)
+[  1.35 h]     model random_features, seed 420, split cv-r2f3, half_s 0.8: Macro-F1 0.4814, SVEB recall 0.159, SVEB F1 0.180, VEB recall 0.462 (116 s)
+[  1.36 h]     simulated liquid seed 2026 cv-r2f3 +-1.6 s: A_in 1.2023, firing 11.19 Hz, 33 s
+[  1.36 h]     model no_liquid, seed None, split cv-r2f3, half_s 1.6: Macro-F1 0.4530, SVEB recall 0.161, SVEB F1 0.245, VEB recall 0.460 (81 s)
+[  1.37 h]     simulated liquid_norec seed 2026 cv-r2f3 +-1.6 s: A_in 1.2023, firing 11.16 Hz, 33 s
+[  1.39 h]     simulated liquid seed 69 cv-r2f3 +-1.6 s: A_in 1.2023, firing 11.09 Hz, 33 s
+[  1.40 h]     simulated liquid_norec seed 69 cv-r2f3 +-1.6 s: A_in 1.2023, firing 11.08 Hz, 33 s
+[  1.40 h]     model liquid, seed 2026, split cv-r2f3, half_s 1.6: Macro-F1 0.4309, SVEB recall 0.075, SVEB F1 0.111, VEB recall 0.583 (140 s)
+[  1.41 h]     model liquid_norec, seed 2026, split cv-r2f3, half_s 1.6: Macro-F1 0.4460, SVEB recall 0.101, SVEB F1 0.148, VEB recall 0.587 (140 s)
+[  1.41 h]     model random_features, seed 2026, split cv-r2f3, half_s 1.6: Macro-F1 0.4272, SVEB recall 0.051, SVEB F1 0.075, VEB recall 0.574 (218 s)
+[  1.42 h]     simulated liquid seed 420 cv-r2f3 +-1.6 s: A_in 1.2023, firing 11.08 Hz, 33 s
+[  1.43 h]     simulated liquid_norec seed 420 cv-r2f3 +-1.6 s: A_in 1.2023, firing 11.06 Hz, 33 s
+[  1.43 h]   t4_window: cv-r2f4, +-0.8 s (32 windows, 650 steps)
+[  1.43 h]     model liquid, seed 69, split cv-r2f3, half_s 1.6: Macro-F1 0.4263, SVEB recall 0.068, SVEB F1 0.104, VEB recall 0.557 (143 s)
+[  1.44 h]     model liquid_norec, seed 69, split cv-r2f3, half_s 1.6: Macro-F1 0.4251, SVEB recall 0.066, SVEB F1 0.102, VEB recall 0.557 (144 s)
+[  1.44 h]     model random_features, seed 69, split cv-r2f3, half_s 1.6: Macro-F1 0.4367, SVEB recall 0.073, SVEB F1 0.107, VEB recall 0.568 (221 s)
+[  1.44 h]     simulated liquid seed 2026 cv-r2f4 +-0.8 s: A_in 1.2369, firing 10.33 Hz, 18 s
+[  1.45 h]     model no_liquid, seed None, split cv-r2f4, half_s 0.8: Macro-F1 0.5323, SVEB recall 0.396, SVEB F1 0.218, VEB recall 0.442 (46 s)
+[  1.45 h]     simulated liquid_norec seed 2026 cv-r2f4 +-0.8 s: A_in 1.2369, firing 10.30 Hz, 18 s
+[  1.46 h]     simulated liquid seed 69 cv-r2f4 +-0.8 s: A_in 1.2369, firing 10.33 Hz, 18 s
+[  1.46 h]     model liquid, seed 420, split cv-r2f3, half_s 1.6: Macro-F1 0.4229, SVEB recall 0.062, SVEB F1 0.092, VEB recall 0.559 (145 s)
+[  1.46 h]     simulated liquid_norec seed 69 cv-r2f4 +-0.8 s: A_in 1.2369, firing 10.31 Hz, 18 s
+[  1.47 h]     model liquid, seed 2026, split cv-r2f4, half_s 0.8: Macro-F1 0.6351, SVEB recall 0.352, SVEB F1 0.270, VEB recall 0.939 (77 s)
+[  1.47 h]     model liquid_norec, seed 420, split cv-r2f3, half_s 1.6: Macro-F1 0.4181, SVEB recall 0.051, SVEB F1 0.074, VEB recall 0.566 (148 s)
+[  1.47 h]     model liquid_norec, seed 2026, split cv-r2f4, half_s 0.8: Macro-F1 0.6272, SVEB recall 0.344, SVEB F1 0.251, VEB recall 0.927 (78 s)
+[  1.47 h]     model random_features, seed 420, split cv-r2f3, half_s 1.6: Macro-F1 0.4324, SVEB recall 0.053, SVEB F1 0.074, VEB recall 0.568 (222 s)
+[  1.47 h]     model random_features, seed 2026, split cv-r2f4, half_s 0.8: Macro-F1 0.6042, SVEB recall 0.304, SVEB F1 0.223, VEB recall 0.949 (118 s)
+[  1.47 h]     simulated liquid seed 420 cv-r2f4 +-0.8 s: A_in 1.2369, firing 10.40 Hz, 18 s
+[  1.48 h]     simulated liquid_norec seed 420 cv-r2f4 +-0.8 s: A_in 1.2369, firing 10.38 Hz, 18 s
+[  1.48 h]   t4_window: cv-r2f4, +-1.6 s (61 windows, 1230 steps)
+[  1.48 h]     model liquid, seed 69, split cv-r2f4, half_s 0.8: Macro-F1 0.6291, SVEB recall 0.348, SVEB F1 0.252, VEB recall 0.933 (77 s)
+[  1.49 h]     model liquid_norec, seed 69, split cv-r2f4, half_s 0.8: Macro-F1 0.6367, SVEB recall 0.379, SVEB F1 0.277, VEB recall 0.929 (77 s)
+[  1.49 h]     model random_features, seed 69, split cv-r2f4, half_s 0.8: Macro-F1 0.6238, SVEB recall 0.379, SVEB F1 0.299, VEB recall 0.951 (118 s)
+[  1.50 h]     model liquid, seed 420, split cv-r2f4, half_s 0.8: Macro-F1 0.6210, SVEB recall 0.304, SVEB F1 0.235, VEB recall 0.940 (74 s)
+[  1.50 h]     model liquid_norec, seed 420, split cv-r2f4, half_s 0.8: Macro-F1 0.6249, SVEB recall 0.322, SVEB F1 0.250, VEB recall 0.935 (75 s)
+[  1.50 h]     model random_features, seed 420, split cv-r2f4, half_s 0.8: Macro-F1 0.6054, SVEB recall 0.339, SVEB F1 0.246, VEB recall 0.935 (115 s)
+[  1.51 h]     simulated liquid seed 2026 cv-r2f4 +-1.6 s: A_in 1.2632, firing 10.89 Hz, 33 s
+[  1.51 h]     model no_liquid, seed None, split cv-r2f4, half_s 1.6: Macro-F1 0.5989, SVEB recall 0.300, SVEB F1 0.190, VEB recall 0.830 (80 s)
+[  1.52 h]     simulated liquid_norec seed 2026 cv-r2f4 +-1.6 s: A_in 1.2632, firing 10.85 Hz, 33 s
+[  1.54 h]     simulated liquid seed 69 cv-r2f4 +-1.6 s: A_in 1.2632, firing 10.70 Hz, 33 s
+[  1.55 h]     model liquid, seed 2026, split cv-r2f4, half_s 1.6: Macro-F1 0.5391, SVEB recall 0.088, SVEB F1 0.065, VEB recall 0.876 (138 s)
+[  1.55 h]     simulated liquid_norec seed 69 cv-r2f4 +-1.6 s: A_in 1.2632, firing 10.68 Hz, 33 s
+[  1.56 h]     model liquid_norec, seed 2026, split cv-r2f4, half_s 1.6: Macro-F1 0.5363, SVEB recall 0.084, SVEB F1 0.060, VEB recall 0.876 (139 s)
+[  1.56 h]     model random_features, seed 2026, split cv-r2f4, half_s 1.6: Macro-F1 0.5140, SVEB recall 0.088, SVEB F1 0.071, VEB recall 0.942 (215 s)
+[  1.57 h]     simulated liquid seed 420 cv-r2f4 +-1.6 s: A_in 1.2632, firing 10.78 Hz, 33 s
+[  1.58 h]     simulated liquid_norec seed 420 cv-r2f4 +-1.6 s: A_in 1.2632, firing 10.76 Hz, 33 s
+[  1.58 h]   t4_window: cv-r3f1, +-0.8 s (32 windows, 650 steps)
+[  1.58 h]     model liquid, seed 69, split cv-r2f4, half_s 1.6: Macro-F1 0.5206, SVEB recall 0.119, SVEB F1 0.078, VEB recall 0.851 (141 s)
+[  1.59 h]     model liquid_norec, seed 69, split cv-r2f4, half_s 1.6: Macro-F1 0.5208, SVEB recall 0.110, SVEB F1 0.075, VEB recall 0.868 (142 s)
+[  1.59 h]     model random_features, seed 69, split cv-r2f4, half_s 1.6: Macro-F1 0.5040, SVEB recall 0.106, SVEB F1 0.078, VEB recall 0.932 (218 s)
+[  1.59 h]     simulated liquid seed 2026 cv-r3f1 +-0.8 s: A_in 1.4031, firing 10.34 Hz, 18 s
+[  1.59 h]     model no_liquid, seed None, split cv-r3f1, half_s 0.8: Macro-F1 0.4288, SVEB recall 0.324, SVEB F1 0.125, VEB recall 0.359 (49 s)
+[  1.60 h]     simulated liquid_norec seed 2026 cv-r3f1 +-0.8 s: A_in 1.4031, firing 10.31 Hz, 18 s
+[  1.61 h]     model liquid, seed 420, split cv-r2f4, half_s 1.6: Macro-F1 0.5500, SVEB recall 0.088, SVEB F1 0.066, VEB recall 0.904 (143 s)
+[  1.61 h]     simulated liquid seed 69 cv-r3f1 +-0.8 s: A_in 1.4031, firing 10.54 Hz, 18 s
+[  1.61 h]     simulated liquid_norec seed 69 cv-r3f1 +-0.8 s: A_in 1.4031, firing 10.53 Hz, 18 s
+[  1.61 h]     model liquid, seed 2026, split cv-r3f1, half_s 0.8: Macro-F1 0.5634, SVEB recall 0.304, SVEB F1 0.167, VEB recall 0.961 (83 s)
+[  1.62 h]     model liquid_norec, seed 420, split cv-r2f4, half_s 1.6: Macro-F1 0.5443, SVEB recall 0.093, SVEB F1 0.068, VEB recall 0.882 (146 s)
+[  1.62 h]     model random_features, seed 420, split cv-r2f4, half_s 1.6: Macro-F1 0.5052, SVEB recall 0.119, SVEB F1 0.083, VEB recall 0.927 (221 s)
+[  1.62 h]     model liquid_norec, seed 2026, split cv-r3f1, half_s 0.8: Macro-F1 0.5692, SVEB recall 0.245, SVEB F1 0.145, VEB recall 0.964 (83 s)
+[  1.62 h]     model random_features, seed 2026, split cv-r3f1, half_s 0.8: Macro-F1 0.5749, SVEB recall 0.245, SVEB F1 0.205, VEB recall 0.964 (125 s)
+[  1.62 h]     simulated liquid seed 420 cv-r3f1 +-0.8 s: A_in 1.4031, firing 10.54 Hz, 18 s
+[  1.63 h]     simulated liquid_norec seed 420 cv-r3f1 +-0.8 s: A_in 1.4031, firing 10.52 Hz, 18 s
+[  1.63 h]   t4_window: cv-r3f1, +-1.6 s (61 windows, 1230 steps)
+[  1.63 h]     model liquid, seed 69, split cv-r3f1, half_s 0.8: Macro-F1 0.5605, SVEB recall 0.196, SVEB F1 0.135, VEB recall 0.962 (83 s)
+[  1.64 h]     model liquid_norec, seed 69, split cv-r3f1, half_s 0.8: Macro-F1 0.5520, SVEB recall 0.235, SVEB F1 0.152, VEB recall 0.969 (83 s)
+[  1.64 h]     model random_features, seed 69, split cv-r3f1, half_s 0.8: Macro-F1 0.5780, SVEB recall 0.255, SVEB F1 0.212, VEB recall 0.966 (125 s)
+[  1.65 h]     model liquid, seed 420, split cv-r3f1, half_s 0.8: Macro-F1 0.5524, SVEB recall 0.206, SVEB F1 0.091, VEB recall 0.969 (81 s)
+[  1.65 h]     model liquid_norec, seed 420, split cv-r3f1, half_s 0.8: Macro-F1 0.5599, SVEB recall 0.245, SVEB F1 0.150, VEB recall 0.968 (81 s)
+[  1.65 h]     model random_features, seed 420, split cv-r3f1, half_s 0.8: Macro-F1 0.5787, SVEB recall 0.275, SVEB F1 0.216, VEB recall 0.966 (122 s)
+[  1.66 h]     simulated liquid seed 2026 cv-r3f1 +-1.6 s: A_in 1.4013, firing 10.78 Hz, 33 s
+[  1.66 h]     model no_liquid, seed None, split cv-r3f1, half_s 1.6: Macro-F1 0.6246, SVEB recall 0.167, SVEB F1 0.185, VEB recall 0.962 (87 s)
+[  1.67 h]     simulated liquid_norec seed 2026 cv-r3f1 +-1.6 s: A_in 1.4013, firing 10.75 Hz, 33 s
+[  1.69 h]     simulated liquid seed 69 cv-r3f1 +-1.6 s: A_in 1.4013, firing 11.06 Hz, 33 s
+[  1.70 h]     simulated liquid_norec seed 69 cv-r3f1 +-1.6 s: A_in 1.4013, firing 11.04 Hz, 33 s
+[  1.70 h]     model liquid, seed 2026, split cv-r3f1, half_s 1.6: Macro-F1 0.5553, SVEB recall 0.069, SVEB F1 0.096, VEB recall 0.971 (149 s)
+[  1.71 h]     model liquid_norec, seed 2026, split cv-r3f1, half_s 1.6: Macro-F1 0.5666, SVEB recall 0.088, SVEB F1 0.122, VEB recall 0.968 (150 s)
+[  1.71 h]     model random_features, seed 2026, split cv-r3f1, half_s 1.6: Macro-F1 0.5489, SVEB recall 0.157, SVEB F1 0.180, VEB recall 0.969 (229 s)
+[  1.72 h]     simulated liquid seed 420 cv-r3f1 +-1.6 s: A_in 1.4013, firing 11.13 Hz, 33 s
+[  1.73 h]     simulated liquid_norec seed 420 cv-r3f1 +-1.6 s: A_in 1.4013, firing 11.11 Hz, 33 s
+[  1.73 h]   t4_window: cv-r3f2, +-0.8 s (32 windows, 650 steps)
+[  1.73 h]     model liquid, seed 69, split cv-r3f1, half_s 1.6: Macro-F1 0.5257, SVEB recall 0.039, SVEB F1 0.054, VEB recall 0.973 (152 s)
+[  1.74 h]     model liquid_norec, seed 69, split cv-r3f1, half_s 1.6: Macro-F1 0.5432, SVEB recall 0.069, SVEB F1 0.090, VEB recall 0.971 (153 s)
+[  1.74 h]     simulated liquid seed 2026 cv-r3f2 +-0.8 s: A_in 1.2240, firing 10.39 Hz, 18 s
+[  1.74 h]     model random_features, seed 69, split cv-r3f1, half_s 1.6: Macro-F1 0.5476, SVEB recall 0.157, SVEB F1 0.189, VEB recall 0.969 (235 s)
+[  1.75 h]     model no_liquid, seed None, split cv-r3f2, half_s 0.8: Macro-F1 0.5529, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.518 (49 s)
+[  1.75 h]     simulated liquid_norec seed 2026 cv-r3f2 +-0.8 s: A_in 1.2240, firing 10.36 Hz, 18 s
+[  1.76 h]     simulated liquid seed 69 cv-r3f2 +-0.8 s: A_in 1.2240, firing 10.31 Hz, 18 s
+[  1.76 h]     model liquid, seed 420, split cv-r3f1, half_s 1.6: Macro-F1 0.5403, SVEB recall 0.078, SVEB F1 0.094, VEB recall 0.976 (157 s)
+[  1.76 h]     simulated liquid_norec seed 69 cv-r3f2 +-0.8 s: A_in 1.2240, firing 10.29 Hz, 18 s
+[  1.77 h]     model liquid, seed 2026, split cv-r3f2, half_s 0.8: Macro-F1 0.6347, SVEB recall 0.056, SVEB F1 0.071, VEB recall 0.740 (83 s)
+[  1.77 h]     model liquid_norec, seed 2026, split cv-r3f2, half_s 0.8: Macro-F1 0.6336, SVEB recall 0.047, SVEB F1 0.064, VEB recall 0.746 (84 s)
+[  1.77 h]     model liquid_norec, seed 420, split cv-r3f1, half_s 1.6: Macro-F1 0.5471, SVEB recall 0.088, SVEB F1 0.111, VEB recall 0.974 (159 s)
+[  1.77 h]     model random_features, seed 2026, split cv-r3f2, half_s 0.8: Macro-F1 0.6661, SVEB recall 0.131, SVEB F1 0.158, VEB recall 0.768 (126 s)
+[  1.77 h]     model random_features, seed 420, split cv-r3f1, half_s 1.6: Macro-F1 0.5462, SVEB recall 0.127, SVEB F1 0.152, VEB recall 0.971 (236 s)
+[  1.78 h]     simulated liquid seed 420 cv-r3f2 +-0.8 s: A_in 1.2240, firing 10.27 Hz, 18 s
+[  1.78 h]     simulated liquid_norec seed 420 cv-r3f2 +-0.8 s: A_in 1.2240, firing 10.25 Hz, 18 s
+[  1.78 h]   t4_window: cv-r3f2, +-1.6 s (61 windows, 1230 steps)
+[  1.78 h]     model liquid, seed 69, split cv-r3f2, half_s 0.8: Macro-F1 0.6451, SVEB recall 0.075, SVEB F1 0.093, VEB recall 0.754 (84 s)
+[  1.79 h]     model liquid_norec, seed 69, split cv-r3f2, half_s 0.8: Macro-F1 0.6396, SVEB recall 0.075, SVEB F1 0.090, VEB recall 0.734 (83 s)
+[  1.79 h]     model random_features, seed 69, split cv-r3f2, half_s 0.8: Macro-F1 0.6783, SVEB recall 0.131, SVEB F1 0.176, VEB recall 0.794 (125 s)
+[  1.80 h]     model liquid, seed 420, split cv-r3f2, half_s 0.8: Macro-F1 0.6340, SVEB recall 0.093, SVEB F1 0.096, VEB recall 0.701 (81 s)
+[  1.80 h]     model liquid_norec, seed 420, split cv-r3f2, half_s 0.8: Macro-F1 0.6254, SVEB recall 0.084, SVEB F1 0.078, VEB recall 0.689 (81 s)
+[  1.80 h]     model random_features, seed 420, split cv-r3f2, half_s 0.8: Macro-F1 0.6663, SVEB recall 0.131, SVEB F1 0.164, VEB recall 0.758 (123 s)
+[  1.81 h]     simulated liquid seed 2026 cv-r3f2 +-1.6 s: A_in 1.2370, firing 10.91 Hz, 33 s
+[  1.81 h]     model no_liquid, seed None, split cv-r3f2, half_s 1.6: Macro-F1 0.5846, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.635 (87 s)
+[  1.82 h]     simulated liquid_norec seed 2026 cv-r3f2 +-1.6 s: A_in 1.2370, firing 10.88 Hz, 33 s
+[  1.84 h]     simulated liquid seed 69 cv-r3f2 +-1.6 s: A_in 1.2370, firing 10.82 Hz, 33 s
+[  1.85 h]     simulated liquid_norec seed 69 cv-r3f2 +-1.6 s: A_in 1.2370, firing 10.80 Hz, 33 s
+[  1.85 h]     model liquid, seed 2026, split cv-r3f2, half_s 1.6: Macro-F1 0.6361, SVEB recall 0.065, SVEB F1 0.068, VEB recall 0.754 (148 s)
+[  1.86 h]     model liquid_norec, seed 2026, split cv-r3f2, half_s 1.6: Macro-F1 0.6296, SVEB recall 0.028, SVEB F1 0.033, VEB recall 0.780 (149 s)
+[  1.86 h]     model random_features, seed 2026, split cv-r3f2, half_s 1.6: Macro-F1 0.6373, SVEB recall 0.037, SVEB F1 0.045, VEB recall 0.817 (228 s)
+[  1.87 h]     simulated liquid seed 420 cv-r3f2 +-1.6 s: A_in 1.2370, firing 10.81 Hz, 33 s
+[  1.88 h]     simulated liquid_norec seed 420 cv-r3f2 +-1.6 s: A_in 1.2370, firing 10.79 Hz, 33 s
+[  1.88 h]   t4_window: cv-r3f3, +-0.8 s (32 windows, 650 steps)
+[  1.88 h]     model liquid, seed 69, split cv-r3f2, half_s 1.6: Macro-F1 0.6189, SVEB recall 0.037, SVEB F1 0.034, VEB recall 0.727 (151 s)
+[  1.89 h]     model liquid_norec, seed 69, split cv-r3f2, half_s 1.6: Macro-F1 0.6241, SVEB recall 0.028, SVEB F1 0.029, VEB recall 0.756 (154 s)
+[  1.89 h]     simulated liquid seed 2026 cv-r3f3 +-0.8 s: A_in 1.2497, firing 10.39 Hz, 18 s
+[  1.90 h]     model random_features, seed 69, split cv-r3f2, half_s 1.6: Macro-F1 0.6329, SVEB recall 0.019, SVEB F1 0.024, VEB recall 0.818 (233 s)
+[  1.90 h]     model no_liquid, seed None, split cv-r3f3, half_s 0.8: Macro-F1 0.4337, SVEB recall 0.037, SVEB F1 0.057, VEB recall 0.783 (46 s)
+[  1.90 h]     simulated liquid_norec seed 2026 cv-r3f3 +-0.8 s: A_in 1.2497, firing 10.36 Hz, 18 s
+[  1.91 h]     simulated liquid seed 69 cv-r3f3 +-0.8 s: A_in 1.2497, firing 10.06 Hz, 18 s
+[  1.91 h]     model liquid, seed 420, split cv-r3f2, half_s 1.6: Macro-F1 0.6209, SVEB recall 0.028, SVEB F1 0.026, VEB recall 0.748 (156 s)
+[  1.92 h]     simulated liquid_norec seed 69 cv-r3f3 +-0.8 s: A_in 1.2497, firing 10.04 Hz, 18 s
+[  1.92 h]     model liquid, seed 2026, split cv-r3f3, half_s 0.8: Macro-F1 0.4878, SVEB recall 0.060, SVEB F1 0.098, VEB recall 0.854 (78 s)
+[  1.92 h]     model liquid_norec, seed 2026, split cv-r3f3, half_s 0.8: Macro-F1 0.4843, SVEB recall 0.057, SVEB F1 0.095, VEB recall 0.877 (79 s)
+[  1.92 h]     model random_features, seed 2026, split cv-r3f3, half_s 0.8: Macro-F1 0.4827, SVEB recall 0.070, SVEB F1 0.114, VEB recall 0.836 (120 s)
+[  1.92 h]     model liquid_norec, seed 420, split cv-r3f2, half_s 1.6: Macro-F1 0.6301, SVEB recall 0.047, SVEB F1 0.047, VEB recall 0.759 (162 s)
+[  1.93 h]     model random_features, seed 420, split cv-r3f2, half_s 1.6: Macro-F1 0.6399, SVEB recall 0.037, SVEB F1 0.048, VEB recall 0.819 (234 s)
+[  1.93 h]     simulated liquid seed 420 cv-r3f3 +-0.8 s: A_in 1.2497, firing 10.02 Hz, 18 s
+[  1.93 h]     simulated liquid_norec seed 420 cv-r3f3 +-0.8 s: A_in 1.2497, firing 10.00 Hz, 18 s
+[  1.93 h]   t4_window: cv-r3f3, +-1.6 s (61 windows, 1230 steps)
+[  1.93 h]     model liquid, seed 69, split cv-r3f3, half_s 0.8: Macro-F1 0.4721, SVEB recall 0.052, SVEB F1 0.088, VEB recall 0.857 (80 s)
+[  1.94 h]     model liquid_norec, seed 69, split cv-r3f3, half_s 0.8: Macro-F1 0.4697, SVEB recall 0.050, SVEB F1 0.085, VEB recall 0.859 (78 s)
+[  1.94 h]     model random_features, seed 69, split cv-r3f3, half_s 0.8: Macro-F1 0.4767, SVEB recall 0.054, SVEB F1 0.087, VEB recall 0.826 (119 s)
+[  1.95 h]     model liquid, seed 420, split cv-r3f3, half_s 0.8: Macro-F1 0.4886, SVEB recall 0.062, SVEB F1 0.104, VEB recall 0.868 (76 s)
+[  1.95 h]     model liquid_norec, seed 420, split cv-r3f3, half_s 0.8: Macro-F1 0.4882, SVEB recall 0.060, SVEB F1 0.102, VEB recall 0.874 (76 s)
+[  1.95 h]     model random_features, seed 420, split cv-r3f3, half_s 0.8: Macro-F1 0.4866, SVEB recall 0.054, SVEB F1 0.088, VEB recall 0.818 (116 s)
+[  1.96 h]     simulated liquid seed 2026 cv-r3f3 +-1.6 s: A_in 1.2432, firing 11.08 Hz, 33 s
+[  1.96 h]     model no_liquid, seed None, split cv-r3f3, half_s 1.6: Macro-F1 0.4380, SVEB recall 0.052, SVEB F1 0.082, VEB recall 0.813 (82 s)
+[  1.97 h]     simulated liquid_norec seed 2026 cv-r3f3 +-1.6 s: A_in 1.2432, firing 11.04 Hz, 33 s
+[  1.99 h]     simulated liquid seed 69 cv-r3f3 +-1.6 s: A_in 1.2432, firing 10.77 Hz, 34 s
+[  2.00 h]     simulated liquid_norec seed 69 cv-r3f3 +-1.6 s: A_in 1.2432, firing 10.76 Hz, 34 s
+[  2.00 h]     model liquid, seed 2026, split cv-r3f3, half_s 1.6: Macro-F1 0.4598, SVEB recall 0.027, SVEB F1 0.046, VEB recall 0.871 (139 s)
+[  2.01 h]     model liquid_norec, seed 2026, split cv-r3f3, half_s 1.6: Macro-F1 0.4554, SVEB recall 0.027, SVEB F1 0.046, VEB recall 0.869 (141 s)
+[  2.01 h]     model random_features, seed 2026, split cv-r3f3, half_s 1.6: Macro-F1 0.4526, SVEB recall 0.040, SVEB F1 0.065, VEB recall 0.864 (218 s)
+[  2.02 h]     simulated liquid seed 420 cv-r3f3 +-1.6 s: A_in 1.2432, firing 10.77 Hz, 34 s
+[  2.03 h]     simulated liquid_norec seed 420 cv-r3f3 +-1.6 s: A_in 1.2432, firing 10.75 Hz, 34 s
+[  2.03 h]   t4_window: cv-r3f4, +-0.8 s (32 windows, 650 steps)
+[  2.03 h]     model liquid, seed 69, split cv-r3f3, half_s 1.6: Macro-F1 0.4467, SVEB recall 0.015, SVEB F1 0.026, VEB recall 0.832 (143 s)
+[  2.04 h]     model liquid_norec, seed 69, split cv-r3f3, half_s 1.6: Macro-F1 0.4604, SVEB recall 0.038, SVEB F1 0.064, VEB recall 0.869 (144 s)
+[  2.04 h]     model random_features, seed 69, split cv-r3f3, half_s 1.6: Macro-F1 0.4472, SVEB recall 0.030, SVEB F1 0.050, VEB recall 0.854 (222 s)
+[  2.04 h]     simulated liquid seed 2026 cv-r3f4 +-0.8 s: A_in 1.1642, firing 10.94 Hz, 18 s
+[  2.05 h]     model no_liquid, seed None, split cv-r3f4, half_s 0.8: Macro-F1 0.5969, SVEB recall 0.143, SVEB F1 0.071, VEB recall 0.843 (45 s)
+[  2.05 h]     simulated liquid_norec seed 2026 cv-r3f4 +-0.8 s: A_in 1.1642, firing 10.91 Hz, 18 s
+[  2.06 h]     simulated liquid seed 69 cv-r3f4 +-0.8 s: A_in 1.1642, firing 10.83 Hz, 18 s
+[  2.06 h]     model liquid, seed 420, split cv-r3f3, half_s 1.6: Macro-F1 0.4578, SVEB recall 0.020, SVEB F1 0.034, VEB recall 0.836 (146 s)
+[  2.06 h]     simulated liquid_norec seed 69 cv-r3f4 +-0.8 s: A_in 1.1642, firing 10.82 Hz, 18 s
+[  2.06 h]     model liquid, seed 2026, split cv-r3f4, half_s 0.8: Macro-F1 0.5830, SVEB recall 0.143, SVEB F1 0.054, VEB recall 0.845 (76 s)
+[  2.07 h]     model liquid_norec, seed 420, split cv-r3f3, half_s 1.6: Macro-F1 0.4649, SVEB recall 0.028, SVEB F1 0.048, VEB recall 0.857 (149 s)
+[  2.07 h]     model liquid_norec, seed 2026, split cv-r3f4, half_s 0.8: Macro-F1 0.5853, SVEB recall 0.150, SVEB F1 0.058, VEB recall 0.840 (77 s)
+[  2.07 h]     model random_features, seed 2026, split cv-r3f4, half_s 0.8: Macro-F1 0.5685, SVEB recall 0.263, SVEB F1 0.085, VEB recall 0.796 (117 s)
+[  2.07 h]     model random_features, seed 420, split cv-r3f3, half_s 1.6: Macro-F1 0.4468, SVEB recall 0.018, SVEB F1 0.030, VEB recall 0.858 (224 s)
+[  2.07 h]     simulated liquid seed 420 cv-r3f4 +-0.8 s: A_in 1.1642, firing 10.82 Hz, 18 s
+[  2.08 h]     simulated liquid_norec seed 420 cv-r3f4 +-0.8 s: A_in 1.1642, firing 10.81 Hz, 18 s
+[  2.08 h]   t4_window: cv-r3f4, +-1.6 s (61 windows, 1230 steps)
+[  2.08 h]     model liquid, seed 69, split cv-r3f4, half_s 0.8: Macro-F1 0.5890, SVEB recall 0.173, SVEB F1 0.061, VEB recall 0.853 (76 s)
+[  2.08 h]     model liquid_norec, seed 69, split cv-r3f4, half_s 0.8: Macro-F1 0.5833, SVEB recall 0.150, SVEB F1 0.048, VEB recall 0.857 (76 s)
+[  2.09 h]     model random_features, seed 69, split cv-r3f4, half_s 0.8: Macro-F1 0.5706, SVEB recall 0.301, SVEB F1 0.103, VEB recall 0.797 (116 s)
+[  2.09 h]     model liquid, seed 420, split cv-r3f4, half_s 0.8: Macro-F1 0.5886, SVEB recall 0.165, SVEB F1 0.058, VEB recall 0.857 (74 s)
+[  2.10 h]     model liquid_norec, seed 420, split cv-r3f4, half_s 0.8: Macro-F1 0.5910, SVEB recall 0.173, SVEB F1 0.060, VEB recall 0.852 (73 s)
+[  2.10 h]     model random_features, seed 420, split cv-r3f4, half_s 0.8: Macro-F1 0.5714, SVEB recall 0.323, SVEB F1 0.098, VEB recall 0.807 (113 s)
+[  2.11 h]     simulated liquid seed 2026 cv-r3f4 +-1.6 s: A_in 1.1820, firing 11.51 Hz, 34 s
+[  2.11 h]     model no_liquid, seed None, split cv-r3f4, half_s 1.6: Macro-F1 0.5953, SVEB recall 0.105, SVEB F1 0.021, VEB recall 0.799 (80 s)
+[  2.12 h]     simulated liquid_norec seed 2026 cv-r3f4 +-1.6 s: A_in 1.1820, firing 11.48 Hz, 34 s
+[  2.14 h]     simulated liquid seed 69 cv-r3f4 +-1.6 s: A_in 1.1820, firing 11.39 Hz, 34 s
+[  2.15 h]     model liquid, seed 2026, split cv-r3f4, half_s 1.6: Macro-F1 0.6073, SVEB recall 0.075, SVEB F1 0.016, VEB recall 0.860 (136 s)
+[  2.15 h]     simulated liquid_norec seed 69 cv-r3f4 +-1.6 s: A_in 1.1820, firing 11.37 Hz, 34 s
+[  2.16 h]     model liquid_norec, seed 2026, split cv-r3f4, half_s 1.6: Macro-F1 0.6061, SVEB recall 0.083, SVEB F1 0.018, VEB recall 0.850 (137 s)
+[  2.16 h]     model random_features, seed 2026, split cv-r3f4, half_s 1.6: Macro-F1 0.5925, SVEB recall 0.090, SVEB F1 0.017, VEB recall 0.816 (213 s)
+[  2.17 h]     simulated liquid seed 420 cv-r3f4 +-1.6 s: A_in 1.1820, firing 11.42 Hz, 34 s
+[  2.18 h]     simulated liquid_norec seed 420 cv-r3f4 +-1.6 s: A_in 1.1820, firing 11.40 Hz, 34 s
+[  2.18 h]     model liquid, seed 69, split cv-r3f4, half_s 1.6: Macro-F1 0.6035, SVEB recall 0.090, SVEB F1 0.016, VEB recall 0.858 (139 s)
+[  2.19 h]     model liquid_norec, seed 69, split cv-r3f4, half_s 1.6: Macro-F1 0.6053, SVEB recall 0.090, SVEB F1 0.018, VEB recall 0.855 (139 s)
+[  2.19 h]     model random_features, seed 69, split cv-r3f4, half_s 1.6: Macro-F1 0.5885, SVEB recall 0.113, SVEB F1 0.020, VEB recall 0.812 (217 s)
+[  2.20 h]     model liquid, seed 420, split cv-r3f4, half_s 1.6: Macro-F1 0.6065, SVEB recall 0.090, SVEB F1 0.018, VEB recall 0.855 (137 s)
+[  2.21 h]     model liquid_norec, seed 420, split cv-r3f4, half_s 1.6: Macro-F1 0.6079, SVEB recall 0.090, SVEB F1 0.018, VEB recall 0.861 (136 s)
+[  2.21 h]     model random_features, seed 420, split cv-r3f4, half_s 1.6: Macro-F1 0.5925, SVEB recall 0.113, SVEB F1 0.021, VEB recall 0.816 (211 s)
+[  2.21 h] t4_window: no liquid: +-1.6 s - +-0.8 s (does the longer window help?): CV +0.0123 [-0.0818, +0.1063], DS2 -0.0202: inconclusive
+[  2.21 h] t4_window: random features: +-1.6 s - +-0.8 s (does the longer window help?): CV -0.0512 [-0.1280, +0.0255], DS2 -0.0068: inconclusive
+[  2.21 h] t4_window: liquid, no internal connections: +-1.6 s - +-0.8 s (does the longer window help?): CV -0.0348 [-0.0986, +0.0290], DS2 -0.0004: inconclusive
+[  2.21 h] t4_window: liquid: +-1.6 s - +-0.8 s (does the longer window help?): CV -0.0397 [-0.1031, +0.0237], DS2 -0.0003: inconclusive
+[  2.21 h] t4_window: +-0.8 s: liquid - random features: CV -0.0005 [-0.0367, +0.0356], DS2 +0.0231: inconclusive
+[  2.21 h] t4_window: +-0.8 s: liquid - no internal connections: CV +0.0007 [-0.0049, +0.0063], DS2 -0.0009: comparable
+[  2.21 h] t4_window: +-0.8 s: random features - no liquid: CV +0.0600 [-0.0073, +0.1273], DS2 -0.0139: inconclusive
+[  2.21 h] t4_window: +-1.6 s: liquid - random features: CV +0.0110 [-0.0373, +0.0594], DS2 +0.0296: inconclusive
+[  2.21 h] t4_window: +-1.6 s: liquid - no internal connections: CV -0.0042 [-0.0111, +0.0028], DS2 -0.0008: comparable
+[  2.21 h] t4_window: +-1.6 s: random features - no liquid: CV -0.0035 [-0.0940, +0.0869], DS2 -0.0004: inconclusive
+[  2.21 h] t4_window: (liquid - no liquid) at +-1.6 s - the same at +-0.8 s (does the layer use the extra timing?): CV -0.0520 [-0.1578, +0.0539], DS2 +0.0199: inconclusive
+[  2.21 h] t4_window: (random features - no liquid) at +-1.6 s - the same at +-0.8 s (does the layer use the extra timing?): CV -0.0635 [-0.1769, +0.0498], DS2 +0.0135: inconclusive
+[  2.21 h] t4_window: summary at /root/lsm_ecg/output-t4/t4_window/summary.md
+results: /root/lsm_ecg/output-t4/t4_window
+summary: /root/lsm_ecg/output-t4/t4_window/summary.md
+session time: 2.21 h

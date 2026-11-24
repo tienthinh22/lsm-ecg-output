@@ -1,0 +1,31 @@
+{
+  "seed": 2026,
+  "split": "cv-r1f1",
+  "checks": [
+    {
+      "what": "liquid",
+      "status": "match",
+      "same_predictions": 1.0,
+      "largest_score_difference": 0.0,
+      "macro_f1": 0.585729348954463,
+      "stored_macro_f1": 0.585729348954463
+    },
+    {
+      "what": "elm",
+      "status": "match",
+      "same_predictions": 1.0,
+      "largest_score_difference": 0.0,
+      "macro_f1": 0.6527992045497154,
+      "stored_macro_f1": 0.6527992045497154
+    },
+    {
+      "what": "no_liquid",
+      "status": "match",
+      "same_predictions": 1.0,
+      "largest_score_difference": 0.0,
+      "macro_f1": 0.5697781170749759,
+      "stored_macro_f1": 0.5697781170749759
+    }
+  ],
+  "verdict": "all match"
+}
