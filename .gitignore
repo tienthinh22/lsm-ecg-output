@@ -5,4 +5,5 @@ output-smoke/*
 mitdb-1.0.0/*
 output/scratch/*
 output/states/*
-
+output-replica/*
+*smoke*
