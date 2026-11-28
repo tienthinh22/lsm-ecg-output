@@ -70,6 +70,14 @@ MAASS_RATIOS = {t: MAASS_PUSH[t] / MAASS_PUSH["EE"] for t in TYPES}
 MAASS_IN_PUSH = {k: _push(MAASS["in_nA"][k], MAASS["tau_in_ms"]) for k in ("E", "I")}   # 0.12 / 0.06 (factor 9)
 MAASS_EE_PUSH = MAASS_PUSH["EE"]   # 0.1 (factor 10)
 
+# ---------------------------------------------------------------- adaptive thresholds (Bellec et al. 2018, LSNN)
+# Bellec, Salaj, Subramoney, Legenstein & Maass 2018, "Long short-term memory and learning-to-learn in networks of
+# spiking neurons", Section 5 parameters: threshold B_j = b0 + beta b_j, b_j <- rho b_j + (1 - rho) z_j with
+# rho = exp(-dt / tau_a) and z_j = 1/dt (ms) at a spike; beta 1.6, b0 0.03, tau_a uniform on 1..1000 ms, 40% of the
+# neurons adaptive. Translation to Maass's neurons (rest 0.9, threshold 1): the threshold rise is taken relative to the
+# rest-to-threshold gap, theta_j = 1 + (1 - 0.9) beta b_j / b0, since that gap decides firing in both models.
+ADAPT = dict(beta=1.6, b0=0.03, tau_ms=(1.0, 1000.0), fraction=0.4)
+
 # ---------------------------------------------------------------- the 11 factors (plan table)
 FACTOR_NAMES = {
     1: "reach lambda", 2: "code-only normalisations", 3: "E/I balance", 4: "leak", 5: "operating point",
@@ -124,6 +132,6 @@ CODE = dict(
     calib_iters=40,          # factor 5: bisection cap
     search_split_seed=0,     # DS1 patients halved by a fixed random permutation of the 22 records
     sim_batch=500,           # beats per GPU batch (fixed on every machine: plan, determinism)
-    x_update="equations",    # X's reset: "equations" = (a)'s Eqs. 17-19 (the plan); "authors_code" = (a)'s snnTorch
-                             # Leaky, whose threshold test subtracts 1 more while the stored voltage is above 1
+    x_update="equations",    # X's reset follows (a)'s Eqs. 17-19 (the plan). "authors_code" (the snnTorch neuron of
+                             # (a)'s code) exists only so the tests can show the difference; the notebook never sets it
 )

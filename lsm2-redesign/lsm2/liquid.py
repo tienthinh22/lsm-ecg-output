@@ -69,6 +69,10 @@ class Liquid:
     g_maass: float = None       # g at Maass's own scale (factor 10)
     in_scale_fixed: float = None   # input size fixed by the design (factor 9, Maass versions)
     in_split: tuple = (1.0, 1.0)   # base input means onto E / I neurons (2:1 with factors 5 or 9)
+    adapt_c: object = None         # (N,) threshold rise per unit of b (0 = not adaptive); None = no adaptation
+    adapt_tau_ms: object = None    # (N,) adaptation time constants (ms)
+    thr_base: object = None        # (N,) fixed per-neuron threshold (the frozen-threshold controls); None = 1
+    reset_to_thr: bool = False     # subtract reset removes the current threshold (Salaj et al. 2021), not 1
     meta: dict = field(default_factory=dict)
 
     @property
@@ -130,9 +134,11 @@ def candidate_settings(factors):
     }
 
 
-def build_candidate(factors, seed, n_sub, n_channels, n_sub_input_step_ms=C.SAMPLE_MS):
+def build_candidate(factors, seed, n_sub, n_channels, n_sub_input_step_ms=C.SAMPLE_MS, in_fraction=None):
     """A ladder candidate: X ((a), bugs fixed) with the given factors switched on.
-    n_sub: sub-steps per sample (1 without factor 7 unless a grid check asks otherwise)."""
+    n_sub: sub-steps per sample (1 without factor 7 unless a grid check asks otherwise).
+    in_fraction (factor 6 only): share of neurons that receive the input; None = (c)'s 30%. 1.0 = every neuron, as
+    in (d)'s script. The input weights come from the same draw either way, so the 30% neurons keep their weights."""
     f = frozenset(factors)
     s = candidate_settings(f)
     N = int(np.prod(s["dims"]))
@@ -171,7 +177,7 @@ def build_candidate(factors, seed, n_sub, n_channels, n_sub_input_step_ms=C.SAMP
     Ubar = np.array([C.MAASS["U"][t] for t in C.TYPES])
     # input wiring and base weights
     if s["input30"]:
-        k = round_half_up(C.MAASS["in_fraction"] * N)
+        k = round_half_up((C.MAASS["in_fraction"] if in_fraction is None else in_fraction) * N)
         in_n = np.zeros(N, bool)
         in_n[r_inn.permutation(N)[:k]] = True
         mask = np.repeat(in_n[None, :], n_channels, 0)
@@ -218,6 +224,27 @@ def build_candidate(factors, seed, n_sub, n_channels, n_sub_input_step_ms=C.SAMP
     liq.g_maass = C.MAASS_EE_PUSH / float(np.abs(liq.w[m]).mean()) if m.any() else None
     if s["maass_input"]:
         liq.in_scale_fixed = C.MAASS_IN_PUSH["E"]           # base means 1 / 0.5 -> 0.12 / 0.06 per input spike
+    return liq
+
+
+def add_adaptation(liq, seed, beta=None, b0=None, tau_ms=None, fraction=None):
+    """Adaptive thresholds (config.ADAPT, Bellec et al. 2018 Section 5) on a random `fraction` of the neurons, each
+    with its own tau_a drawn uniformly from tau_ms. Own random streams, so the rest of the liquid is unchanged."""
+    a = C.ADAPT
+    beta = a["beta"] if beta is None else beta
+    b0 = a["b0"] if b0 is None else b0
+    lo, hi = a["tau_ms"] if tau_ms is None else tau_ms
+    frac = a["fraction"] if fraction is None else fraction
+    N = liq.N
+    k = round_half_up(frac * N)
+    chosen = np.zeros(N, bool)
+    chosen[np.random.default_rng([seed, 13]).permutation(N)[:k]] = True
+    tau = np.full(N, np.inf)
+    tau[chosen] = np.random.default_rng([seed, 14]).uniform(lo, hi, k)
+    gap = 1.0 - (liq.rest if liq.rest > 0 else 0.0)
+    liq.adapt_c = np.where(chosen, gap * beta / b0, 0.0)
+    liq.adapt_tau_ms = tau
+    liq.meta["adaptation"] = {"beta": beta, "b0": b0, "tau_ms": [lo, hi], "fraction": frac, "n_adaptive": int(k), "gap": gap}
     return liq
 
 

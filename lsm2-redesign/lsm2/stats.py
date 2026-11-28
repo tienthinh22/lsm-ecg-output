@@ -9,16 +9,16 @@ from scipy import stats as sstats
 NB_RATIO = 0.336          # plan: test/train ratio of the 3x4 patient-grouped CV (the replication used 0.25/0.75)
 
 
-def per_split_seed(d):
-    """Macro-F1 by (split, seed)."""
-    return d.groupby(["spec_split", "spec_seed"], dropna=False).macro_f1.mean()
+def per_split_seed(d, metric="macro_f1"):
+    """The metric (Macro-F1 by default) by (split, seed)."""
+    return d.groupby(["spec_split", "spec_seed"], dropna=False)[metric].mean()
 
-def compare(a, b, require_seed_sign=False):
-    """A vs B (Macro-F1): seeds averaged per CV split; paired Nadeau-Bengio corrected t-test over the 12 splits
-    with its 95% interval; the DS2 difference paired by seed."""
+def compare(a, b, require_seed_sign=False, metric="macro_f1"):
+    """A vs B on `metric` (Macro-F1 by default): seeds averaged per CV split; paired Nadeau-Bengio corrected t-test
+    over the 12 splits with its 95% interval; the DS2 difference paired by seed."""
     if a is None or b is None or a.empty or b.empty:
         return None
-    A, B = per_split_seed(a), per_split_seed(b)
+    A, B = per_split_seed(a, metric), per_split_seed(b, metric)
     if a["spec_seed"].isna().all() or b["spec_seed"].isna().all():      # a seed-free control pairs with every seed
         A = A.groupby(level=0).mean(); B = B.groupby(level=0).mean()
         Asp, Bsp = A, B
@@ -48,8 +48,8 @@ def compare(a, b, require_seed_sign=False):
     if require_seed_sign and not a["spec_seed"].isna().all():
         per_seed = []
         for sd in sorted(set(a.spec_seed.dropna()) & set(b.spec_seed.dropna())):
-            xa = a[(a.spec_seed == sd) & a.spec_split.astype(str).str.startswith("cv-")].groupby("spec_split").macro_f1.mean()
-            xb = b[(b.spec_seed == sd) & b.spec_split.astype(str).str.startswith("cv-")].groupby("spec_split").macro_f1.mean()
+            xa = a[(a.spec_seed == sd) & a.spec_split.astype(str).str.startswith("cv-")].groupby("spec_split")[metric].mean()
+            xb = b[(b.spec_seed == sd) & b.spec_split.astype(str).str.startswith("cv-")].groupby("spec_split")[metric].mean()
             j = xa.index.intersection(xb.index)
             per_seed.append(float((xa[j] - xb[j]).mean()))
         out["cv_diff_by_seed"] = per_seed
