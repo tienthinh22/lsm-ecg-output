@@ -1,0 +1,534 @@
+{
+  "mode": "BENCHMARK",
+  "seconds_per_record": 300,
+  "timings": {
+    "paper_seconds_per_step": {
+      "plain": 0.003189970922761331,
+      "stacked": 0.001959044935966716,
+      "chunked_one": 0.00028009103597515693,
+      "both": 0.0069568203748577705,
+      "second_plain": 0.0005273987115940826,
+      "second_stacked": 0.0002375819827370482,
+      "cv_stacked": 0.0013855420967263026,
+      "cv_plain_one": 0.00024886862913502735
+    },
+    "paper_liquids": 15,
+    "maass_calibration_seconds": 1269.1689341068268,
+    "maass_seconds_per_step": {
+      "plain": 0.01106859468076707,
+      "stacked": 0.007406713594976408,
+      "chunked": 0.015442080757696264,
+      "both": 0.011443320406179359,
+      "second": 0.0053196165929254545,
+      "M0_seconds_per_beat": 0.013039491534233094
+    }
+  },
+  "equality": {
+    "paper_stacked_vs_alone": {
+      "beats_differ": 0,
+      "per_liquid": {
+        "P1_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P2_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P3_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P4_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P5_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P1_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P2_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P3_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P4_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P5_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P1_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P2_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P3_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P4_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P5_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        }
+      }
+    },
+    "paper_chunked_vs_unbroken": {
+      "beats": 2863,
+      "beats_differ": 15,
+      "share_beats_differ": 0.005239259517988124,
+      "counts_differ": 19,
+      "share_counts_differ": 6.046278598261319e-07,
+      "differ_first_half": 0,
+      "differ_second_half": 15
+    },
+    "maass": {
+      "stacked_vs_plain": {
+        "M1_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "M3_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        }
+      },
+      "chunked_vs_plain": {
+        "M1_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "M3_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        }
+      },
+      "both_vs_stacked": {
+        "M1_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "M3_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        }
+      }
+    }
+  },
+  "device": "Tesla P40",
+  "maass_segment_task": {
+    "seeds": {
+      "2026": {
+        "g": 4.83286393763682,
+        "on": {
+          "accuracy": [
+            0.754,
+            0.998,
+            0.876,
+            1.0
+          ],
+          "rate_hz": 4.893422222222222
+        },
+        "off": {
+          "accuracy": [
+            0.498,
+            0.468,
+            0.498,
+            1.0
+          ],
+          "rate_hz": 2.4277333333333333
+        },
+        "older_on": 0.876,
+        "older_off": 0.488,
+        "on_beats_off": true
+      },
+      "69": {
+        "g": 4.852865690499893,
+        "on": {
+          "accuracy": [
+            0.786,
+            0.976,
+            0.62,
+            0.988
+          ],
+          "rate_hz": 4.609338271604939
+        },
+        "off": {
+          "accuracy": [
+            0.494,
+            0.884,
+            0.494,
+            0.982
+          ],
+          "rate_hz": 2.1703012345679014
+        },
+        "older_on": 0.794,
+        "older_off": 0.624,
+        "on_beats_off": true
+      },
+      "420": {
+        "g": 4.728350668578601,
+        "on": {
+          "accuracy": [
+            0.624,
+            0.746,
+            0.99,
+            0.994
+          ],
+          "rate_hz": 4.727896296296296
+        },
+        "off": {
+          "accuracy": [
+            0.5,
+            0.478,
+            0.674,
+            0.992
+          ],
+          "rate_hz": 2.229451851851852
+        },
+        "older_on": 0.7866666666666667,
+        "older_off": 0.5506666666666667,
+        "on_beats_off": true
+      }
+    },
+    "input_fraction": 0.3,
+    "train": 1000,
+    "test": 500,
+    "pass": true,
+    "seconds": 68.91644859313965
+  },
+  "projection_seconds": {
+    "P1-P5 final": 1274.632997137384,
+    "P3f final": 154.58034124803305,
+    "P1-P5 CV (12 splits)": 10817.869317768018,
+    "P3f CV (12 splits)": 1854.9640949763966,
+    "M1, M3 final": 5226.393295910237,
+    "M3f final": 2511.828222094741,
+    "M0 per beat": 3905.1582011128667,
+    "machinery check at FULL's start (one B1 seed, DS1 + DS2)": 38.978662967681885
+  },
+  "projected_gpu_hours": 7.162334759226488,
+  "projected_cost_usd": 2.291947122952476,
+  "projected_cpu_fit_hours": 0.7770510643550814,
+  "cpu_fits_left": 280,
+  "done_in_benchmark_seconds": {
+    "Maass calibration (saved, reused by FULL)": 1269.1689341068268,
+    "B1 and B2 on DS2 and the CV splits (kept)": 827.600168466568
+  },
+  "choice": {
+    "paper": {
+      "stack": true,
+      "chunks": false,
+      "why": "stacking test passed and faster"
+    },
+    "maass": {
+      "stack": true,
+      "chunks": true,
+      "option": "both",
+      "projected_seconds": {
+        "plain": 21605.01132928286,
+        "stacked": 14457.312400306351,
+        "chunked": 7052.707123655038,
+        "both": 5226.393295910237
+      },
+      "allowed": {
+        "plain": true,
+        "stacked": true,
+        "chunked": true,
+        "both": true
+      }
+    }
+  },
+  "benchmark_seconds": 6529.188634395599,
+  "checks": {
+    "fast_path": {
+      "ok": true,
+      "graphs": true,
+      "cases": {
+        "paper (graphs)": true,
+        "paper + adaptation (P3) (graphs)": true,
+        "paper, fixed thresholds (P3f-like) (graphs)": true,
+        "Maass (graphs)": true,
+        "Maass + adaptation (M3) (graphs)": true
+      }
+    },
+    "beat_order_labels": {
+      "ok": true,
+      "stored": "lsm__fixed_s2026_morph-robust-multi_svm__final__fee7afb5",
+      "beats": 49272
+    },
+    "machinery": {
+      "ok": true,
+      "same_predictions": 1.0,
+      "largest_score_difference": 0.0,
+      "macro_f1": 0.6197253684933735,
+      "stored_macro_f1": 0.6197253684933735,
+      "stored": "lsm__fixed_s2026_morph-robust-multi_svm__final__fee7afb5"
+    },
+    "adaptation_one_neuron": {
+      "ok": true,
+      "threshold_at_10Hz": 1.5667,
+      "u_after_spike": 2.0,
+      "second_spike_threshold": 1.55887,
+      "u_after_second_spike": 1.44113,
+      "want_after_second": 1.44113,
+      "rise_tau_1s": 0.05659,
+      "want_tau_1s": 0.0567,
+      "rise_tau_6s": 0.00944,
+      "want_tau_6s": 0.00945
+    },
+    "encoding_alignment": {
+      "ok": true,
+      "final/DS1": "0 of 3000 beats differ",
+      "final/DS2": "0 of 3000 beats differ",
+      "cv-r1f1/DS1": "0 of 3000 beats differ"
+    },
+    "window_alignment": {
+      "ok": true,
+      "beats": 500,
+      "differ": 0,
+      "agrees_with_existing_simulator": "one beat's 650-step input from rest"
+    },
+    "segments_vs_one_run": {
+      "ok": true,
+      "beats": 280,
+      "differ": 0,
+      "segment_steps": 998,
+      "adaptation_sum_rel_diff": 1.0653833534700778e-15
+    },
+    "end_of_record": {
+      "ok": true,
+      "steps_after_end": 700
+    },
+    "B1_vs_t1": {
+      "ok": null,
+      "note": "task 1's rows.json not found at ~/lsm_ecg/output_t1_rrcheck/t1_rrcheck/rows.json"
+    },
+    "B2_vs_t1": {
+      "ok": null,
+      "note": "task 1's rows.json not found"
+    },
+    "paper_stack_structure": {
+      "ok": true,
+      "liquids": 15,
+      "mismatches": []
+    },
+    "paper_stack_short_run": {
+      "ok": true,
+      "steps_compared": 2000,
+      "first_spike_difference_at_step": null,
+      "spikes_matched": 1061032,
+      "max_voltage_difference": 0.0,
+      "tolerance": 0.0001
+    },
+    "paper_stacked_vs_alone_spikes": {
+      "ok": null,
+      "report": true,
+      "beats_differ": 0,
+      "liquids": 15,
+      "beats_compared": 42945,
+      "differ_first_half": 0,
+      "differ_second_half": 0
+    },
+    "paper_chunked_vs_unbroken": {
+      "ok": false,
+      "beats": 2863,
+      "beats_differ": 15,
+      "share_beats_differ": 0.005239259517988124,
+      "counts_differ": 19,
+      "differ_first_half": 0,
+      "differ_second_half": 15,
+      "note": "the paper's rows run unchunked anyway"
+    },
+    "thresholds_of_1_are_P1": {
+      "ok": true,
+      "beats_differ": 0,
+      "beats_compared": 2863
+    },
+    "adaptation_on_P3": {
+      "ok": true,
+      "mean_threshold_adaptive": 1.3664577390416273,
+      "n_adaptive": 206,
+      "n_adaptive_inhibitory": 46
+    },
+    "frozen_P3f": {
+      "ok": false,
+      "median_abs_rate_ratio": 0.0502,
+      "p90_abs_rate_ratio": 0.1002,
+      "qrs_rate_diff": 0.0032,
+      "between_rate_diff": 0.0114,
+      "adaptive_neurons": 206,
+      "averaged_over": "DS1 records only"
+    },
+    "maass_stack_structure": {
+      "ok": true,
+      "liquids": 2,
+      "mismatches": []
+    },
+    "maass_stack_short_run": {
+      "ok": true,
+      "steps_compared": 2000,
+      "first_spike_difference_at_step": null,
+      "spikes_matched": 12419,
+      "max_voltage_difference": 0.0,
+      "tolerance": 0.0001
+    },
+    "maass_stacked_vs_plain_spikes": {
+      "ok": null,
+      "report": true,
+      "beats_differ": 0,
+      "beats_compared": 5726,
+      "differ_first_half": 0,
+      "differ_second_half": 0
+    },
+    "maass_chunked_vs_unbroken": {
+      "ok": true,
+      "beats_differ": 0,
+      "beats_compared": 5726,
+      "note": "chunks are used only if identical"
+    },
+    "maass_stacked_chunked_vs_stacked": {
+      "ok": true,
+      "beats_differ": 0,
+      "beats_compared": 5726
+    },
+    "maass_segment_task": {
+      "ok": true,
+      "seed_2026": "older segments on 0.876 vs off 0.488",
+      "seed_69": "older segments on 0.794 vs off 0.624",
+      "seed_420": "older segments on 0.787 vs off 0.551",
+      "note": "the ytest notebook's build check; reported, the run goes on"
+    },
+    "frozen_M3f": {
+      "ok": false,
+      "note": "outside the bounds: M3f is reported as approximate (the plan), no tuning",
+      "median_abs_rate_ratio": 0.0382,
+      "p90_abs_rate_ratio": 0.6795,
+      "qrs_rate_diff": 0.0009,
+      "between_rate_diff": 0.0188,
+      "adaptive_neurons": 54,
+      "averaged_over": "DS1 records only"
+    }
+  }
+}

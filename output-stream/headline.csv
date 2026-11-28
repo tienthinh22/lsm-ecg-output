@@ -1,0 +1,2 @@
+row,label,ds2_f1_SVEB_mean,B1_f1_SVEB_mean,diff_by_seed,beats_B1_by_margin_all_seeds,n_splits,cv_diff,ci_low,ci_high,p,p_holm,cv_verdict,rule
+B2,B2 no liquid,0.10747502583534274,0.09565973382711579,"69: +0.0085, 420: +0.0091, 2026: +0.0179",False,12,-0.04309513594742274,-0.18160070138965273,0.09541042949480727,0.5076289790095452,,inconclusive,outside the family (reported)

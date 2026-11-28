@@ -1,0 +1,215 @@
+session 20261128_114741: everything printed is also written to /root/lsm_ecg/output-stream/logs/session_20261128_114741.log (and /root/lsm_ecg/output-stream/logs/latest.log)
+GPU: Tesla P40, compute capability 6.1: supported by PyTorch 2.14.1+cu126 (CUDA 12.6)
+              python: 3.13.13
+            platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+               torch: 2.14.1+cu126
+  torch_pinned_2_4_0: False
+            snntorch: 0.9.4
+             sklearn: 1.7.2
+               numpy: 2.1.3
+               scipy: 1.14.1
+              pandas: 2.2.3
+                wfdb: 4.3.1
+              device: cuda
+           cpu_count: 38
+              ram_gb: 113.3
+           on_kaggle: False
+             machine: local
+          smoke_test: False
+            pipeline: True
+           cpu_model: Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+                 gpu: Tesla P40
+        gpu_sm_count: 30
+      gpu_capability: 6.1
+          gpu_mem_gb: 24.0
+                cuda: 12.6
+              brian2: 2.10.1
+authors' code at 02e45c4f32; 24 configurations loaded
+lsm2: 9 files at /root/lsm_ecg/output-stream/scratch/lsm2
+cache: 0 done, 0 failed
+MIT-BIH at: /root/lsm_ecg/mitdb-1.0.0/mit-bih-arrhythmia-database-1.0.0
+checksums: 704 files checked, 0 mismatches, 0 missing
+datasets built in 103s
+DS1 order identical to authors' file: True | counts: {'DS1': [45827, 943, 3787], 'DS2': [44216, 1837, 3219]}
+authors' fold indices regenerate exactly: True
+[  0.03 h] records: 44 filtered (22.07 h of ECG, 7 s)
+[  0.03 h] stream notebook: MODE BENCHMARK, rows ['B1', 'B2', 'P1', 'P2', 'P3', 'P3f', 'P4', 'P5', 'M0', 'M1', 'M3', 'M3f'], seeds [2026, 69, 420], exact CV True, work dir /root/lsm_ecg/output-stream
+[  0.03 h] == checks
+[  0.04 h]   check fast_path: PASS (graphs True)
+[  0.04 h]   check beat_order_labels: PASS (stored lsm__fixed_s2026_morph-robust-multi_svm__final__fee7afb5, beats 49272)
+[  0.08 h]   check machinery: PASS (same_predictions 1.0, largest_score_difference 0.0, macro_f1 0.6197253684933735, stored_macro_f1 0.6197253684933735, stored lsm__fixed_s2026_morph-robust-multi_svm__final__fee7afb5)
+[  0.08 h]   check adaptation_one_neuron: PASS (threshold_at_10Hz 1.5667, u_after_spike 2.0, second_spike_threshold 1.55887, u_after_second_spike 1.44113, want_after_second 1.44113, rise_tau_1s 0.05659, want_tau_1s 0.0567, rise_tau_6s 0.00944, want_tau_6s 0.00945)
+[  0.08 h]   check encoding_alignment: PASS (final/DS1 0 of 3000 beats differ, final/DS2 0 of 3000 beats differ, cv-r1f1/DS1 0 of 3000 beats differ)
+[  0.08 h]   check window_alignment: PASS (beats 500, differ 0, agrees_with_existing_simulator one beat's 650-step input from rest)
+[  0.08 h]   check segments_vs_one_run: PASS (beats 280, differ 0, segment_steps 998, adaptation_sum_rel_diff 1.0653833534700778e-15)
+[  0.08 h]   check end_of_record: PASS (steps_after_end 700)
+[  0.08 h] == B1 and B2 on DS2 and the CV splits (task 1's checks)
+[  0.10 h]     B1 seed 2026 final: A_in 1.2240, firing 10.76 Hz, 39 s
+[  0.11 h]     row B2, seed None, split final: Macro-F1 0.6092, SVEB recall 0.085, SVEB F1 0.107, VEB recall 0.912 (63 s)
+[  0.11 h]     B1 seed 69 final: A_in 1.2240, firing 10.68 Hz, 39 s
+[  0.13 h]     B1 seed 420 final: A_in 1.2240, firing 10.65 Hz, 39 s
+[  0.13 h]     row B1, seed 2026, split final: Macro-F1 0.6158, SVEB recall 0.079, SVEB F1 0.090, VEB recall 0.929 (109 s)
+[  0.14 h]     B1 seed 2026 cv-r1f1: A_in 1.2080, firing 10.79 Hz, 20 s
+[  0.14 h]     B1 seed 69 cv-r1f1: A_in 1.2080, firing 10.70 Hz, 20 s
+[  0.14 h]     row B2, seed None, split cv-r1f1: Macro-F1 0.5698, SVEB recall 0.369, SVEB F1 0.494, VEB recall 0.439 (48 s)
+[  0.15 h]     row B1, seed 69, split final: Macro-F1 0.6182, SVEB recall 0.085, SVEB F1 0.099, VEB recall 0.931 (108 s)
+[  0.15 h]     B1 seed 420 cv-r1f1: A_in 1.2080, firing 10.67 Hz, 20 s
+[  0.16 h]     row B1, seed 420, split final: Macro-F1 0.6171, SVEB recall 0.083, SVEB F1 0.098, VEB recall 0.936 (109 s)
+[  0.16 h]     B1 seed 2026 cv-r1f2: A_in 1.2416, firing 10.51 Hz, 20 s
+[  0.16 h]     row B1, seed 2026, split cv-r1f1: Macro-F1 0.5946, SVEB recall 0.235, SVEB F1 0.322, VEB recall 0.846 (80 s)
+[  0.16 h]     B1 seed 69 cv-r1f2: A_in 1.2416, firing 10.24 Hz, 20 s
+[  0.16 h]     row B1, seed 69, split cv-r1f1: Macro-F1 0.5880, SVEB recall 0.201, SVEB F1 0.290, VEB recall 0.853 (80 s)
+[  0.17 h]     row B2, seed None, split cv-r1f2: Macro-F1 0.6602, SVEB recall 0.298, SVEB F1 0.444, VEB recall 0.700 (47 s)
+[  0.17 h]     B1 seed 420 cv-r1f2: A_in 1.2416, firing 10.23 Hz, 20 s
+[  0.17 h]     row B1, seed 420, split cv-r1f1: Macro-F1 0.5922, SVEB recall 0.201, SVEB F1 0.293, VEB recall 0.861 (80 s)
+[  0.18 h]     B1 seed 2026 cv-r1f3: A_in 1.2960, firing 10.75 Hz, 20 s
+[  0.18 h]     row B1, seed 2026, split cv-r1f2: Macro-F1 0.7575, SVEB recall 0.332, SVEB F1 0.487, VEB recall 0.762 (80 s)
+[  0.19 h]     B1 seed 69 cv-r1f3: A_in 1.2960, firing 10.88 Hz, 20 s
+[  0.19 h]     row B1, seed 69, split cv-r1f2: Macro-F1 0.7388, SVEB recall 0.337, SVEB F1 0.491, VEB recall 0.685 (80 s)
+[  0.19 h]     row B2, seed None, split cv-r1f3: Macro-F1 0.5718, SVEB recall 0.309, SVEB F1 0.063, VEB recall 0.702 (43 s)
+[  0.19 h]     B1 seed 420 cv-r1f3: A_in 1.2960, firing 11.05 Hz, 20 s
+[  0.19 h]     row B1, seed 420, split cv-r1f2: Macro-F1 0.7516, SVEB recall 0.322, SVEB F1 0.473, VEB recall 0.746 (80 s)
+[  0.20 h]     row B1, seed 2026, split cv-r1f3: Macro-F1 0.5835, SVEB recall 0.243, SVEB F1 0.052, VEB recall 0.803 (72 s)
+[  0.20 h]     B1 seed 2026 cv-r1f4: A_in 1.2355, firing 10.20 Hz, 20 s
+[  0.21 h]     row B1, seed 69, split cv-r1f3: Macro-F1 0.5820, SVEB recall 0.235, SVEB F1 0.049, VEB recall 0.819 (72 s)
+[  0.21 h]     B1 seed 69 cv-r1f4: A_in 1.2355, firing 10.13 Hz, 20 s
+[  0.21 h]     row B2, seed None, split cv-r1f4: Macro-F1 0.6104, SVEB recall 0.024, SVEB F1 0.024, VEB recall 0.928 (45 s)
+[  0.21 h]     row B1, seed 420, split cv-r1f3: Macro-F1 0.5866, SVEB recall 0.221, SVEB F1 0.048, VEB recall 0.808 (73 s)
+[  0.21 h]     B1 seed 420 cv-r1f4: A_in 1.2355, firing 10.10 Hz, 20 s
+[  0.22 h]     row B1, seed 2026, split cv-r1f4: Macro-F1 0.6701, SVEB recall 0.201, SVEB F1 0.210, VEB recall 0.973 (78 s)
+[  0.23 h]     B1 seed 2026 cv-r2f1: A_in 1.3517, firing 10.53 Hz, 20 s
+[  0.23 h]     row B1, seed 69, split cv-r1f4: Macro-F1 0.6854, SVEB recall 0.262, SVEB F1 0.251, VEB recall 0.971 (77 s)
+[  0.23 h]     B1 seed 69 cv-r2f1: A_in 1.3517, firing 10.61 Hz, 20 s
+[  0.23 h]     row B2, seed None, split cv-r2f1: Macro-F1 0.5402, SVEB recall 0.148, SVEB F1 0.050, VEB recall 0.779 (47 s)
+[  0.24 h]     row B1, seed 420, split cv-r1f4: Macro-F1 0.6631, SVEB recall 0.203, SVEB F1 0.224, VEB recall 0.978 (77 s)
+[  0.24 h]     B1 seed 420 cv-r2f1: A_in 1.3517, firing 10.67 Hz, 20 s
+[  0.25 h]     B1 seed 2026 cv-r2f2: A_in 1.2332, firing 10.27 Hz, 20 s
+[  0.25 h]     row B1, seed 2026, split cv-r2f1: Macro-F1 0.5829, SVEB recall 0.383, SVEB F1 0.164, VEB recall 0.793 (80 s)
+[  0.25 h]     B1 seed 69 cv-r2f2: A_in 1.2332, firing 10.20 Hz, 20 s
+[  0.25 h]     row B1, seed 69, split cv-r2f1: Macro-F1 0.5751, SVEB recall 0.284, SVEB F1 0.127, VEB recall 0.807 (81 s)
+[  0.25 h]     row B2, seed None, split cv-r2f2: Macro-F1 0.7587, SVEB recall 0.535, SVEB F1 0.393, VEB recall 0.835 (47 s)
+[  0.26 h]     B1 seed 420 cv-r2f2: A_in 1.2332, firing 10.17 Hz, 20 s
+[  0.26 h]     row B1, seed 420, split cv-r2f1: Macro-F1 0.5792, SVEB recall 0.321, SVEB F1 0.142, VEB recall 0.797 (80 s)
+[  0.27 h]     B1 seed 2026 cv-r2f3: A_in 1.1994, firing 10.55 Hz, 20 s
+[  0.27 h]     row B1, seed 2026, split cv-r2f2: Macro-F1 0.8237, SVEB recall 0.768, SVEB F1 0.521, VEB recall 0.929 (80 s)
+[  0.28 h]     B1 seed 69 cv-r2f3: A_in 1.1994, firing 10.46 Hz, 20 s
+[  0.28 h]     row B1, seed 69, split cv-r2f2: Macro-F1 0.8363, SVEB recall 0.778, SVEB F1 0.558, VEB recall 0.930 (80 s)
+[  0.28 h]     row B2, seed None, split cv-r2f3: Macro-F1 0.4525, SVEB recall 0.166, SVEB F1 0.238, VEB recall 0.453 (45 s)
+[  0.28 h]     B1 seed 420 cv-r2f3: A_in 1.1994, firing 10.42 Hz, 20 s
+[  0.28 h]     row B1, seed 420, split cv-r2f2: Macro-F1 0.8241, SVEB recall 0.778, SVEB F1 0.522, VEB recall 0.930 (81 s)
+[  0.29 h]     row B1, seed 2026, split cv-r2f3: Macro-F1 0.5011, SVEB recall 0.222, SVEB F1 0.276, VEB recall 0.539 (75 s)
+[  0.29 h]     B1 seed 2026 cv-r2f4: A_in 1.2409, firing 10.29 Hz, 20 s
+[  0.30 h]     row B1, seed 69, split cv-r2f3: Macro-F1 0.5052, SVEB recall 0.342, SVEB F1 0.374, VEB recall 0.521 (75 s)
+[  0.30 h]     B1 seed 69 cv-r2f4: A_in 1.2409, firing 10.28 Hz, 20 s
+[  0.30 h]     row B2, seed None, split cv-r2f4: Macro-F1 0.5377, SVEB recall 0.434, SVEB F1 0.233, VEB recall 0.452 (44 s)
+[  0.30 h]     row B1, seed 420, split cv-r2f3: Macro-F1 0.5083, SVEB recall 0.265, SVEB F1 0.325, VEB recall 0.571 (76 s)
+[  0.30 h]     B1 seed 420 cv-r2f4: A_in 1.2409, firing 10.36 Hz, 20 s
+[  0.31 h]     row B1, seed 2026, split cv-r2f4: Macro-F1 0.6365, SVEB recall 0.395, SVEB F1 0.260, VEB recall 0.931 (75 s)
+[  0.31 h]     B1 seed 2026 cv-r3f1: A_in 1.4014, firing 10.36 Hz, 20 s
+[  0.32 h]     row B1, seed 69, split cv-r2f4: Macro-F1 0.6317, SVEB recall 0.382, SVEB F1 0.249, VEB recall 0.929 (74 s)
+[  0.32 h]     B1 seed 69 cv-r3f1: A_in 1.4014, firing 10.56 Hz, 20 s
+[  0.32 h]     row B2, seed None, split cv-r3f1: Macro-F1 0.4803, SVEB recall 0.388, SVEB F1 0.143, VEB recall 0.666 (47 s)
+[  0.32 h]     row B1, seed 420, split cv-r2f4: Macro-F1 0.6348, SVEB recall 0.395, SVEB F1 0.253, VEB recall 0.926 (75 s)
+[  0.33 h]     B1 seed 420 cv-r3f1: A_in 1.4014, firing 10.55 Hz, 20 s
+[  0.34 h]     B1 seed 2026 cv-r3f2: A_in 1.2151, firing 10.49 Hz, 20 s
+[  0.34 h]     row B1, seed 2026, split cv-r3f1: Macro-F1 0.5844, SVEB recall 0.282, SVEB F1 0.183, VEB recall 0.959 (81 s)
+[  0.34 h]     B1 seed 69 cv-r3f2: A_in 1.2151, firing 10.40 Hz, 20 s
+[  0.34 h]     row B1, seed 69, split cv-r3f1: Macro-F1 0.5862, SVEB recall 0.291, SVEB F1 0.190, VEB recall 0.962 (81 s)
+[  0.34 h]     row B2, seed None, split cv-r3f2: Macro-F1 0.5488, SVEB recall 0.000, SVEB F1 0.000, VEB recall 0.504 (47 s)
+[  0.35 h]     B1 seed 420 cv-r3f2: A_in 1.2151, firing 10.36 Hz, 20 s
+[  0.35 h]     row B1, seed 420, split cv-r3f1: Macro-F1 0.5723, SVEB recall 0.272, SVEB F1 0.136, VEB recall 0.962 (80 s)
+[  0.36 h]     row B1, seed 2026, split cv-r3f2: Macro-F1 0.6278, SVEB recall 0.065, SVEB F1 0.071, VEB recall 0.710 (80 s)
+[  0.36 h]     B1 seed 2026 cv-r3f3: A_in 1.2402, firing 10.49 Hz, 20 s
+[  0.36 h]     B1 seed 69 cv-r3f3: A_in 1.2402, firing 10.15 Hz, 20 s
+[  0.36 h]     row B1, seed 69, split cv-r3f2: Macro-F1 0.6426, SVEB recall 0.084, SVEB F1 0.098, VEB recall 0.735 (80 s)
+[  0.36 h]     row B2, seed None, split cv-r3f3: Macro-F1 0.4402, SVEB recall 0.047, SVEB F1 0.074, VEB recall 0.791 (44 s)
+[  0.37 h]     B1 seed 420 cv-r3f3: A_in 1.2402, firing 10.12 Hz, 20 s
+[  0.37 h]     row B1, seed 420, split cv-r3f2: Macro-F1 0.6351, SVEB recall 0.093, SVEB F1 0.093, VEB recall 0.710 (80 s)
+[  0.38 h]     row B1, seed 2026, split cv-r3f3: Macro-F1 0.4863, SVEB recall 0.057, SVEB F1 0.093, VEB recall 0.867 (75 s)
+[  0.38 h]     B1 seed 2026 cv-r3f4: A_in 1.1640, firing 10.94 Hz, 20 s
+[  0.38 h]     row B1, seed 69, split cv-r3f3: Macro-F1 0.4661, SVEB recall 0.053, SVEB F1 0.091, VEB recall 0.872 (75 s)
+[  0.39 h]     B1 seed 69 cv-r3f4: A_in 1.1640, firing 10.84 Hz, 20 s
+[  0.39 h]     row B2, seed None, split cv-r3f4: Macro-F1 0.6010, SVEB recall 0.120, SVEB F1 0.056, VEB recall 0.831 (44 s)
+[  0.39 h]     row B1, seed 420, split cv-r3f3: Macro-F1 0.4776, SVEB recall 0.053, SVEB F1 0.091, VEB recall 0.871 (76 s)
+[  0.39 h]     B1 seed 420 cv-r3f4: A_in 1.1640, firing 10.83 Hz, 20 s
+[  0.40 h]     row B1, seed 2026, split cv-r3f4: Macro-F1 0.5912, SVEB recall 0.135, SVEB F1 0.053, VEB recall 0.848 (74 s)
+[  0.41 h]     row B1, seed 69, split cv-r3f4: Macro-F1 0.5964, SVEB recall 0.150, SVEB F1 0.060, VEB recall 0.859 (73 s)
+[  0.41 h]     row B1, seed 420, split cv-r3f4: Macro-F1 0.5927, SVEB recall 0.165, SVEB F1 0.065, VEB recall 0.833 (73 s)
+[  0.41 h]   check B1_vs_t1: not run (note task 1's rows.json not found at ~/lsm_ecg/output_t1_rrcheck/t1_rrcheck/rows.json)
+[  0.41 h]   check B2_vs_t1: not run (note task 1's rows.json not found)
+[  0.41 h] == benchmark
+[  0.42 h]     bench paper plain: P1_s2026: 44 streams x 108060 steps in 19 s (3.92 us per stream-step)
+[  0.42 h]     bench paper plain: P2_s2026: 44 streams x 108060 steps in 19 s (3.93 us per stream-step)
+[  0.43 h]     bench paper plain: P3_s2026: 44 streams x 108060 steps in 26 s (5.41 us per stream-step)
+[  0.44 h]     bench paper plain: P4_s2026: 44 streams x 108060 steps in 26 s (5.44 us per stream-step)
+[  0.44 h]     bench paper plain: P5_s2026: 44 streams x 108060 steps in 26 s (5.53 us per stream-step)
+[  0.45 h]     bench paper plain: P1_s69: 44 streams x 108060 steps in 19 s (4.04 us per stream-step)
+[  0.46 h]     bench paper plain: P2_s69: 44 streams x 108060 steps in 19 s (3.96 us per stream-step)
+[  0.46 h]     bench paper plain: P3_s69: 44 streams x 108060 steps in 26 s (5.39 us per stream-step)
+[  0.47 h]     bench paper plain: P4_s69: 44 streams x 108060 steps in 26 s (5.37 us per stream-step)
+[  0.48 h]     bench paper plain: P5_s69: 44 streams x 108060 steps in 26 s (5.42 us per stream-step)
+[  0.48 h]     bench paper plain: P1_s420: 44 streams x 108060 steps in 19 s (3.97 us per stream-step)
+[  0.49 h]     bench paper plain: P2_s420: 44 streams x 108060 steps in 19 s (3.95 us per stream-step)
+[  0.49 h]     bench paper plain: P3_s420: 44 streams x 108060 steps in 26 s (5.40 us per stream-step)
+[  0.50 h]     bench paper plain: P4_s420: 44 streams x 108060 steps in 26 s (5.38 us per stream-step)
+[  0.51 h]     bench paper plain: P5_s420: 44 streams x 108060 steps in 26 s (5.40 us per stream-step)
+[  0.57 h]     bench paper stacked: stacked P1_s2026, P2_s2026, P3_s2026, P4_s2026, P5_s2026, P1_s69, P2_s69, P3_s69, P4_s69, P5_s69, P1_s420, P2_s420, P3_s420, P4_s420, P5_s420: 44 streams x 108060 steps in 212 s (2.97 us per stream-step)
+[  0.57 h]     bench paper chunked: P3_s2026: 220 streams x 43840 steps in 12 s (1.27 us per stream-step)
+[  0.66 h]     bench paper stacked+chunked: stacked P1_s2026, P2_s2026, P3_s2026, P4_s2026, P5_s2026, P1_s69, P2_s69, P3_s69, P4_s69, P5_s69, P1_s420, P2_s420, P3_s420, P4_s420, P5_s420: 220 streams x 43840 steps in 305 s (2.11 us per stream-step)
+[  0.66 h]   check paper_stack_structure: PASS (liquids 15)
+[  0.66 h]   check paper_stack_short_run: PASS (steps_compared 2000, first_spike_difference_at_step None, spikes_matched 1061032, max_voltage_difference 0.0, tolerance 0.0001)
+[  0.66 h]   check paper_stacked_vs_alone_spikes: reported (beats_differ 0, liquids 15, beats_compared 42945, differ_first_half 0, differ_second_half 0)
+[  0.66 h]   check paper_chunked_vs_unbroken: FAIL (beats 2863, beats_differ 15, share_beats_differ 0.005239259517988124, counts_differ 19, differ_first_half 0, differ_second_half 15, note the paper's rows run unchunked anyway)
+[  0.67 h]     bench P1 with fixed thresholds of 1: P1thr1: 44 streams x 108060 steps in 19 s (3.99 us per stream-step)
+[  0.67 h]   check thresholds_of_1_are_P1: PASS (beats_differ 0, beats_compared 2863)
+[  0.67 h]   check adaptation_on_P3: PASS (mean_threshold_adaptive 1.3664577390416273, n_adaptive 206, n_adaptive_inhibitory 46)
+[  0.67 h]     bench P3f plain: P3f_s2026: 44 streams x 108060 steps in 19 s (3.99 us per stream-step)
+[  0.68 h]     bench P3f plain: P3f_s69: 44 streams x 108060 steps in 19 s (4.00 us per stream-step)
+[  0.68 h]     bench P3f plain: P3f_s420: 44 streams x 108060 steps in 19 s (4.00 us per stream-step)
+[  0.69 h]     bench P3f stacked: stacked P3f_s2026, P3f_s69, P3f_s420: 44 streams x 108060 steps in 26 s (1.80 us per stream-step)
+[  0.69 h]   check frozen_P3f: FAIL (median_abs_rate_ratio 0.0502, p90_abs_rate_ratio 0.1002, qrs_rate_diff 0.0032, between_rate_diff 0.0114, adaptive_neurons 206, averaged_over DS1 records only)
+[  0.73 h]     bench paper CV-shape stacked: stacked P1_s2026, P2_s2026, P3_s2026, P4_s2026, P5_s2026, P1_s69, P2_s69, P3_s69, P4_s69, P5_s69, P1_s420, P2_s420, P3_s420, P4_s420, P5_s420: 22 streams x 108060 steps in 150 s (4.20 us per stream-step)
+[  0.74 h]     bench paper CV-shape plain: P3_s2026: 22 streams x 108060 steps in 27 s (11.31 us per stream-step)
+[  0.75 h]   Maass's input: input-receiving neurons fire 8.14 Hz (recurrence off)
+[  0.81 h]     factor-5 input size s = 0.0056085 (rate 8.190 Hz, target 8.145 Hz); Maass's own 0.12
+[  0.81 h]   gain sweep on ECG beats, seeds [2026, 69, 420]
+[  0.83 h]     g=0          abs=0 rate=2.49 Hz in_band=True sep=23.59 gen=9.29 gap=14.30 twin=0.00
+[  0.85 h]     g=0.1        abs=0.002096 rate=2.50 Hz in_band=True sep=23.60 gen=9.30 gap=14.31 twin=0.00
+[  0.87 h]     g=0.3        abs=0.006288 rate=2.51 Hz in_band=True sep=23.61 gen=9.56 gap=14.05 twin=0.00
+[  0.88 h]     g=1          abs=0.02096 rate=2.61 Hz in_band=True sep=23.76 gen=9.28 gap=14.48 twin=0.00
+[  0.90 h]     g=3          abs=0.06288 rate=3.51 Hz in_band=True sep=26.50 gen=9.67 gap=16.83 twin=0.04
+[  0.92 h]     g=10         abs=0.2096 rate=6.96 Hz in_band=True sep=33.11 gen=17.64 gap=15.47 twin=0.13
+[  0.94 h]     g=30         abs=0.6288 rate=14.41 Hz in_band=True sep=40.52 gen=34.13 gap=6.39 twin=0.69
+[  0.95 h]     g=100        abs=2.096 rate=31.38 Hz in_band=True sep=41.53 gen=37.61 gap=3.92 twin=4.37
+[  0.97 h]     g=300        abs=6.288 rate=104.14 Hz in_band=True sep=66.98 gen=66.38 gap=0.60 twin=6.16
+[  0.99 h]     g=1000       abs=20.96 rate=158.21 Hz in_band=True sep=66.19 gen=66.10 gap=0.08 twin=9.50
+[  1.01 h]     g=1.093      abs=0.02291 rate=2.64 Hz in_band=True sep=23.93 gen=9.20 gap=14.73 twin=0.00
+[  1.02 h]     g=1.531      abs=0.03208 rate=2.78 Hz in_band=True sep=24.23 gen=9.61 gap=14.63 twin=0.02
+[  1.04 h]     g=2.143      abs=0.04491 rate=3.06 Hz in_band=True sep=25.13 gen=9.60 gap=15.53 twin=0.02
+[  1.06 h]     g=4.2        abs=0.08803 rate=4.24 Hz in_band=True sep=27.83 gen=11.64 gap=16.19 twin=0.06
+[  1.08 h]     g=5.88       abs=0.1232 rate=5.10 Hz in_band=True sep=29.27 gen=13.07 gap=16.20 twin=0.08
+[  1.09 h]     g=8.232      abs=0.1725 rate=6.17 Hz in_band=True sep=31.96 gen=16.23 gap=15.73 twin=0.11
+[  1.09 h] Maass calibration: input size 0.005608 (input neurons 8.19 Hz vs Maass's 8.14 Hz), g = {'2026': 2.142857142857143, '69': 2.142857142857143, '420': 2.142857142857143} ((e)'s rank measure on ECG beats), 1269 s
+[  1.25 h]     bench Maass plain: M1_s2026: 44 streams x 108060 steps in 569 s (119.72 us per stream-step)
+[  1.43 h]     bench Maass plain: M3_s2026: 44 streams x 108060 steps in 627 s (131.84 us per stream-step)
+[  1.65 h]     bench Maass stacked: stacked M1_s2026, M3_s2026: 44 streams x 108060 steps in 800 s (84.17 us per stream-step)
+[  1.74 h]     bench Maass chunked: M1_s2026: 220 streams x 43840 steps in 323 s (33.51 us per stream-step)
+[  1.84 h]     bench Maass chunked: M3_s2026: 220 streams x 43840 steps in 354 s (36.68 us per stream-step)
+[  1.98 h]     bench Maass stacked+chunked: stacked M1_s2026, M3_s2026: 220 streams x 43840 steps in 502 s (26.01 us per stream-step)
+[  1.98 h]   check maass_stack_structure: PASS (liquids 2)
+[  2.04 h]   check maass_stack_short_run: PASS (steps_compared 2000, first_spike_difference_at_step None, spikes_matched 12419, max_voltage_difference 0.0, tolerance 0.0001)
+[  2.04 h]   check maass_stacked_vs_plain_spikes: reported (beats_differ 0, beats_compared 5726, differ_first_half 0, differ_second_half 0)
+[  2.04 h]   check maass_chunked_vs_unbroken: PASS (beats_differ 0, beats_compared 5726, note chunks are used only if identical)
+[  2.04 h]   check maass_stacked_chunked_vs_stacked: PASS (beats_differ 0, beats_compared 5726)
+[  2.05 h]     segment task (g = 4.83), seed 2026: on [0.754, 0.998, 0.876, 1.0] (4.89 Hz), off [0.498, 0.468, 0.498, 1.0] (2.43 Hz)
+[  2.05 h]     segment task (g = 4.85), seed 69: on [0.786, 0.976, 0.62, 0.988] (4.61 Hz), off [0.494, 0.884, 0.494, 0.982] (2.17 Hz)
+[  2.06 h]     segment task (g = 4.73), seed 420: on [0.624, 0.746, 0.99, 0.994] (4.73 Hz), off [0.5, 0.478, 0.674, 0.992] (2.23 Hz)
+[  2.06 h]   check maass_segment_task: PASS (seed_2026 older segments on 0.876 vs off 0.488, seed_69 older segments on 0.794 vs off 0.624, seed_420 older segments on 0.787 vs off 0.551, note the ytest notebook's build check; reported, the run goes on)
+[  2.22 h]     bench M3f: M3f_s2026: 44 streams x 108060 steps in 575 s (120.90 us per stream-step)
+[  2.22 h]   check frozen_M3f: FAIL (note outside the bounds: M3f is reported as approximate (the plan), no tuning, median_abs_rate_ratio 0.0382, p90_abs_rate_ratio 0.6795, qrs_rate_diff 0.0009, between_rate_diff 0.0188, adaptive_neurons 54, averaged_over DS1 records only)
+[  2.23 h] benchmark: projected FULL 7.16 GPU-h ($2.29), CPU fits 0.8 h; choice {'paper': {'stack': True, 'chunks': False, 'why': 'stacking test passed and faster'}, 'maass': {'stack': True, 'chunks': True, 'option': 'both', 'projected_seconds': {'plain': 21605.01132928286, 'stacked': 14457.312400306351, 'chunked': 7052.707123655038, 'both': 5226.393295910237}, 'allowed': {'plain': True, 'stacked': True, 'chunked': True, 'both': True}}}
+[  2.23 h] summary: /root/lsm_ecg/output-stream/summary.md
+[  2.23 h] done: /root/lsm_ecg/output-stream/summary.md
+results: /root/lsm_ecg/output-stream
+summary: /root/lsm_ecg/output-stream/summary.md
+session time: 2.23 h

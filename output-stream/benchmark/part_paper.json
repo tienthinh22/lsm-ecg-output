@@ -1,0 +1,232 @@
+{
+  "T": {
+    "plain": 0.003189970922761331,
+    "stacked": 0.001959044935966716,
+    "chunked_one": 0.00028009103597515693,
+    "both": 0.0069568203748577705,
+    "second_plain": 0.0005273987115940826,
+    "second_stacked": 0.0002375819827370482,
+    "cv_stacked": 0.0013855420967263026,
+    "cv_plain_one": 0.00024886862913502735
+  },
+  "flag": true,
+  "timings": {
+    "paper_seconds_per_step": {
+      "plain": 0.003189970922761331,
+      "stacked": 0.001959044935966716,
+      "chunked_one": 0.00028009103597515693,
+      "both": 0.0069568203748577705,
+      "second_plain": 0.0005273987115940826,
+      "second_stacked": 0.0002375819827370482,
+      "cv_stacked": 0.0013855420967263026,
+      "cv_plain_one": 0.00024886862913502735
+    },
+    "paper_liquids": 15
+  },
+  "equality": {
+    "paper_stacked_vs_alone": {
+      "beats_differ": 0,
+      "per_liquid": {
+        "P1_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P2_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P3_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P4_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P5_s2026": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P1_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P2_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P3_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P4_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P5_s69": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P1_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P2_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P3_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P4_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        },
+        "P5_s420": {
+          "beats": 2863,
+          "beats_differ": 0,
+          "share_beats_differ": 0.0,
+          "counts_differ": 0,
+          "share_counts_differ": 0.0,
+          "differ_first_half": 0,
+          "differ_second_half": 0
+        }
+      }
+    },
+    "paper_chunked_vs_unbroken": {
+      "beats": 2863,
+      "beats_differ": 15,
+      "share_beats_differ": 0.005239259517988124,
+      "counts_differ": 19,
+      "share_counts_differ": 6.046278598261319e-07,
+      "differ_first_half": 0,
+      "differ_second_half": 15
+    }
+  },
+  "extra": {},
+  "checks": {
+    "paper_stack_structure": {
+      "ok": true,
+      "liquids": 15,
+      "mismatches": []
+    },
+    "paper_stack_short_run": {
+      "ok": true,
+      "steps_compared": 2000,
+      "first_spike_difference_at_step": null,
+      "spikes_matched": 1061032,
+      "max_voltage_difference": 0.0,
+      "tolerance": 0.0001
+    },
+    "paper_stacked_vs_alone_spikes": {
+      "ok": null,
+      "report": true,
+      "beats_differ": 0,
+      "liquids": 15,
+      "beats_compared": 42945,
+      "differ_first_half": 0,
+      "differ_second_half": 0
+    },
+    "paper_chunked_vs_unbroken": {
+      "ok": false,
+      "beats": 2863,
+      "beats_differ": 15,
+      "share_beats_differ": 0.005239259517988124,
+      "counts_differ": 19,
+      "differ_first_half": 0,
+      "differ_second_half": 15,
+      "note": "the paper's rows run unchunked anyway"
+    },
+    "thresholds_of_1_are_P1": {
+      "ok": true,
+      "beats_differ": 0,
+      "beats_compared": 2863
+    },
+    "adaptation_on_P3": {
+      "ok": true,
+      "mean_threshold_adaptive": 1.3664577390416273,
+      "n_adaptive": 206,
+      "n_adaptive_inhibitory": 46
+    },
+    "frozen_P3f": {
+      "ok": false,
+      "median_abs_rate_ratio": 0.0502,
+      "p90_abs_rate_ratio": 0.1002,
+      "qrs_rate_diff": 0.0032,
+      "between_rate_diff": 0.0114,
+      "adaptive_neurons": 206,
+      "averaged_over": "DS1 records only"
+    }
+  }
+}

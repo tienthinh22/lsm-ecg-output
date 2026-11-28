@@ -2,7 +2,6 @@ venv/*
 output-merge/*
 mitdb-1.0.0/*
 output*/scratch/*
-output/states/*
+output*/states/*
 output-replica/*
-*smoke*
-*benchmark*
+*smoke/*

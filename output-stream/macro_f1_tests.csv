@@ -1,0 +1,2 @@
+label,n_splits,cv_diff,ci_low,ci_high,p,ds2_diff_mean,p_holm,cv_verdict
+B2 no liquid,12,-0.0549074286299713,-0.10517078168622415,-0.004644075573718445,0.03496269728233306,-0.007827114500191357,,meaningful
