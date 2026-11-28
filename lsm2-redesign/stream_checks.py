@@ -198,6 +198,16 @@ check("  one spike per input", int(o["step_counts"].sum()) == T // per)
 x = np.zeros((1, 2, 1), np.uint8); x[0, 0, 0] = 1
 o = sm.run(x, np.zeros((1, 1)), 1, rec={"keep_state": True})
 check("reset subtracts the current threshold (1 at rest): u = 3 - 1", abs(float(o["u_end"][0, 0]) - 2.0) < 1e-12)
+# two spikes in a row at tau_a = 100 ms: the second crosses the raised threshold 1 + c (1 - rho) / h, and the reset
+# subtracts exactly that (Salaj et al. 2021, Eqs. 3 and 5), not 1 and not the threshold after its own rise
+for fast in (True, False):
+    sm2 = LS.Simulator(one_neuron(c, 100.0), device="cpu", dtype=torch.float64, g=1.0, in_scale=1.0)
+    x = np.zeros((1, 2, 1), np.uint8); x[0, :, 0] = 1
+    o = sm2.run(x, np.zeros((1, 1)), 2, rec={"windows": (1, 2)}, fast=fast)
+    thr2 = 1.0 + c * (1.0 - math.exp(-LC.SAMPLE_MS / 100.0)) / LC.SAMPLE_MS
+    u2 = float(o["u_end"][0, 0])
+    check(f"raised-threshold reset ({'fast' if fast else 'plain'} loop): u = 3 - {thr2:.4f}",
+          o["windows"][0, :, 0].tolist() == [1, 1] and abs(u2 - (3.0 - thr2)) < 1e-12, f"u = {u2:.6f}")
 
 # frozen threshold
 for push, want in ((1.4, 0), (1.6, 1)):
@@ -216,12 +226,20 @@ check("frozen_thresholds: adaptive neurons at 1 + c * mean b, others 1",
 fc = SS.frozen_copy(liq, thr)
 check("frozen_copy: no adaptation, thresholds fixed, threshold reset kept", fc.adapt_c is None and fc.reset_to_thr
       and np.array_equal(fc.thr_base, thr))
-# strength 0 = no adaptation, exactly
-l0 = x_liq(1); l1 = x_liq(1, dict(SAL, beta=0.0))
+# fixed thresholds of exactly 1 with the threshold reset run the per-neuron threshold code and must give the plain
+# liquid's spikes (a strength of 0 would switch that code off, so it could not test it)
+l0 = x_liq(1)
+l1 = SS.frozen_copy(x_liq(1), np.ones(l0.N)); l1.reset_to_thr = True
 X = spikes(2, 800, 40, 0.03, seed=12)
+s1 = LS.Simulator(l1, dtype=DT, g=1.0, in_scale=0.3)
+check("fixed thresholds of 1 take the per-neuron threshold path", s1.var_thr and not s1.adapt)
 a = LS.Simulator(l0, dtype=DT, g=1.0, in_scale=0.3).run(X, np.zeros((2, l0.N)), 800, rec={"step_counts": True})["step_counts"]
-b = LS.Simulator(l1, dtype=DT, g=1.0, in_scale=0.3).run(X, np.zeros((2, l1.N)), 800, rec={"step_counts": True})["step_counts"]
-check("adaptation strength 0 = no adaptation (identical spikes)", torch.equal(a, b))
+b = s1.run(X, np.zeros((2, l1.N)), 800, rec={"step_counts": True})["step_counts"]
+check("fixed thresholds of 1 = the plain liquid (identical spikes)", torch.equal(a, b))
+for fast in (True, False):
+    bb = s1.run(X, np.zeros((2, l1.N)), 800, rec={"windows": (20, 40)}, fast=fast)["windows"]
+    aa = LS.Simulator(l0, dtype=DT, g=1.0, in_scale=0.3).run(X, np.zeros((2, l0.N)), 800, rec={"windows": (20, 40)}, fast=fast)["windows"]
+    check(f"  same in the {'fast' if fast else 'plain'} loop", torch.equal(aa, bb))
 # the adaptive branch runs: thresholds above 1 change the spikes
 l2 = x_liq(1, dict(SAL, tau_ms=(100.0, 300.0)))
 c2 = LS.Simulator(l2, dtype=DT, g=1.0, in_scale=0.3).run(X, np.zeros((2, l2.N)), 800, rec={"step_counts": True})["step_counts"]
